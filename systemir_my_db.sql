@@ -29,63 +29,63 @@ DELIMITER $$
 -- Procedures
 --
 DROP PROCEDURE IF EXISTS `SP_cat_deleteCatById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_deleteCatById` (IN `_cat_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_deleteCatById` (IN `_cat_id` INT)  BEGIN
 	DELETE FROM tbl_cat WHERE id=_cat_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_cat_getAllCats`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_getAllCats` ()  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_getAllCats` ()  BEGIN
 	SELECT * FROM tbl_cat where tbl_cat.id not in(1) ORDER BY tbl_cat.id ;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_cat_getCatById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_getCatById` (IN `_cat_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_getCatById` (IN `_cat_id` INT)  BEGIN
 	SELECT * FROM tbl_cat WHERE id=_cat_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_cat_getCatsByParentId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_getCatsByParentId` (IN `_cat_parent` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_getCatsByParentId` (IN `_cat_parent` INT)  BEGIN
 	SELECT * FROM tbl_cat WHERE cat_parent=_cat_parent AND tbl_cat.id not in(1);
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_cat_getCatsCount`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_getCatsCount` ()  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_getCatsCount` ()  BEGIN
 	SELECT count(id)
 		from tbl_cat;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_cat_insertCat`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_cat_insertCat` (IN `_cat_name` VARCHAR(20) CHARSET utf8, IN `_cat_parent` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_cat_insertCat` (IN `_cat_name` VARCHAR(20) CHARSET utf8, IN `_cat_parent` INT)  BEGIN
 	INSERT INTO tbl_cat(cat_name, cat_parent) VALUES(_cat_name,_cat_parent);
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_deleteCommentById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_deleteCommentById` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_deleteCommentById` (IN `_id` INT)  BEGIN
 	DELETE FROM tbl_comment WHERE id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_deleteCommentsByPostId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_deleteCommentsByPostId` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_deleteCommentsByPostId` (IN `_id` INT)  BEGIN
 	DELETE FROM tbl_comment WHERE post_id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_getAllComments`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_getAllComments` ()  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_getAllComments` ()  BEGIN
 	SELECT * FROM tbl_comment ORDER BY time DESC;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_getCommentById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_getCommentById` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_getCommentById` (IN `_id` INT)  BEGIN
 	SELECT * FROM tbl_comment WHERE id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_getCommentsByPostId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_getCommentsByPostId` (IN `_post_id` INT, IN `_parent_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_getCommentsByPostId` (IN `_post_id` INT, IN `_parent_id` INT)  BEGIN
 	SELECT * FROM tbl_comment WHERE post_id=_post_id AND parent_id=_parent_id AND id>1 ORDER BY time DESC;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_comment_insertComment`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_insertComment` (IN `_full_name` VARCHAR(45) CHARSET utf8, IN `_mail` VARCHAR(45), IN `_website` VARCHAR(45), IN `_c_text` VARCHAR(1500) CHARSET utf8, IN `_time` INT, IN `_post_id` INT, IN `_parent_id` INT, IN `_u_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_comment_insertComment` (IN `_full_name` VARCHAR(45) CHARSET utf8, IN `_mail` VARCHAR(45), IN `_website` VARCHAR(45), IN `_c_text` VARCHAR(1500) CHARSET utf8, IN `_time` INT, IN `_post_id` INT, IN `_parent_id` INT, IN `_u_id` INT)  BEGIN
 	
     INSERT INTO tbl_comment(full_name,   mail,   website,  c_text,  `time`,  post_id,  parent_id,  u_id) 
 					 VALUES(_full_name, _mail,  _website, _c_text,  _time,  _post_id, _parent_id, _u_id);
@@ -93,17 +93,17 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_comment_insertComment` (IN `
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_acceptFollowRequest`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_acceptFollowRequest` (IN `_user_1` INT, IN `_user_2` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_acceptFollowRequest` (IN `_user_1` INT, IN `_user_2` INT)  BEGIN
 	UPDATE tbl_friendship SET accepted = 1 WHERE u_id_1 = _user_1 AND u_id_2 = _user_2;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_getFollowingUsersIds`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_getFollowingUsersIds` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_getFollowingUsersIds` (IN `_id` INT)  BEGIN
 	SELECT u_id_2 FROM tbl_friendship WHERE u_id_1=_id AND accepted=1;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_getUserFollowers`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_getUserFollowers` (IN `_id` INT, IN `_accepted` TINYINT(1))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_getUserFollowers` (IN `_id` INT, IN `_accepted` TINYINT(1))  BEGIN
 	SELECT  tbl_friendship.u_id_1,
 			tbl_friendship.u_id_2,
             tbl_friendship.accepted,
@@ -117,7 +117,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_getUserFollowers`
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_getUserFollowings`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_getUserFollowings` (IN `_id` INT, IN `_accepted` TINYINT(1))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_getUserFollowings` (IN `_id` INT, IN `_accepted` TINYINT(1))  BEGIN
 	SELECT  tbl_friendship.u_id_1,
 			tbl_friendship.u_id_2,
             tbl_friendship.accepted,
@@ -131,19 +131,19 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_getUserFollowings
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_rejectFollowRequest`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_rejectFollowRequest` (IN `_user_1` INT, IN `_user_2` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_rejectFollowRequest` (IN `_user_1` INT, IN `_user_2` INT)  BEGIN
 	DELETE FROM tbl_friendship WHERE u_id_1 = _user_1 AND u_id_2 = _user_2;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_friendship_sendFollowRequest`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_friendship_sendFollowRequest` (IN `_sender` INT, IN `_target` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_friendship_sendFollowRequest` (IN `_sender` INT, IN `_target` INT)  BEGIN
 	IF (NOT EXISTS(SELECT * FROM tbl_friendship WHERE u_id_1=_sender AND u_id_2=_target)) THEN 
     	INSERT INTO tbl_friendship(u_id_1,u_id_2,accepted) VALUES (_sender, _target, 0);
     END IF;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_getInformationsOfUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_getInformationsOfUser` (IN `_u_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_getInformationsOfUser` (IN `_u_id` INT)  BEGIN
 
 select
         
@@ -166,27 +166,27 @@ select
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_getLikesOfUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_getLikesOfUser` (IN `_u_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_getLikesOfUser` (IN `_u_id` INT)  BEGIN
 	SELECT COUNT(*) FROM tbl_like where u_id_2 = _u_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_pic_deletePicById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_deletePicById` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_pic_deletePicById` (IN `_id` INT)  BEGIN
 	DELETE FROM tbl_pic WHERE id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_pic_deletePicsOfUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_deletePicsOfUser` (IN `_u_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_pic_deletePicsOfUser` (IN `_u_id` INT)  BEGIN
 	DELETE FROM tbl_pic WHERE u_id=_u_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_pic_getPicsCountOfUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_getPicsCountOfUser` (IN `_u_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_pic_getPicsCountOfUser` (IN `_u_id` INT)  BEGIN
 	SELECT COUNT(*) FROM tbl_pic WHERE u_id=_u_id;    
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_pic_getPicsOfUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_getPicsOfUser` (IN `_u_id` INT, IN `_limit` INT, IN `_start` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_pic_getPicsOfUser` (IN `_u_id` INT, IN `_limit` INT, IN `_start` INT)  BEGIN
 	
 	IF( _limit > 0) THEN
 		SELECT * FROM tbl_pic ORDER BY `date` DESC LIMIT _start,_limit;    
@@ -197,37 +197,37 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_getPicsOfUser` (IN `_u_i
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_pic_insertPic`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_pic_insertPic` (IN `_pic_name` VARCHAR(45), IN `_u_id` INT, IN `_date` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_pic_insertPic` (IN `_pic_name` VARCHAR(45), IN `_u_id` INT, IN `_date` INT)  BEGIN
 	INSERT INTO tbl_pic(pic_name, u_id, date) VALUES(_pic_name,_u_id,_date);
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_cat_deletePostCatByCatId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_cat_deletePostCatByCatId` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_cat_deletePostCatByCatId` (IN `_id` INT)  BEGIN
 	DELETE FROM tbl_post_cat WHERE cat_id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_cat_deletePostCatByPostId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_cat_deletePostCatByPostId` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_cat_deletePostCatByPostId` (IN `_id` INT)  BEGIN
 	DELETE FROM tbl_post_cat WHERE post_id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_cat_getPostCatByPostAndCat`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_cat_getPostCatByPostAndCat` (IN `_post_id` INT, IN `_cat_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_cat_getPostCatByPostAndCat` (IN `_post_id` INT, IN `_cat_id` INT)  BEGIN
 	SELECT * FROM tbl_post_cat WHERE post_id=_post_id AND cat_id=_cat_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_cat_getPostCatByPostId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_cat_getPostCatByPostId` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_cat_getPostCatByPostId` (IN `_id` INT)  BEGIN
 	SELECT * FROM tbl_post_cat WHERE post_id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_cat_insertPostCats`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_cat_insertPostCats` (IN `_post_id` INT(11), IN `_cat_id` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_cat_insertPostCats` (IN `_post_id` INT(11), IN `_cat_id` INT(11))  BEGIN
 	INSERT INTO tbl_post_cat(post_id,cat_id) VALUES (_post_id,_cat_id);
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_getAllPosts`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getAllPosts` (IN `_published` BOOLEAN, IN `_deleted` BOOLEAN, IN `_limit` INT, IN `_start` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_getAllPosts` (IN `_published` BOOLEAN, IN `_deleted` BOOLEAN, IN `_limit` INT, IN `_start` INT)  BEGIN
 	
 	IF( _limit > 0) THEN
 		SELECT tbl_post.*, u_name, f_name, l_name
@@ -254,7 +254,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getAllPosts` (IN `_publ
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_Post_getPostById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_Post_getPostById` (IN `_p_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_Post_getPostById` (IN `_p_id` INT)  BEGIN
 	SELECT tbl_post.*,
 			tbl_user.u_name, 
             tbl_user.f_name,
@@ -264,7 +264,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_Post_getPostById` (IN `_p_id
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_getPostsByUserId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getPostsByUserId` (IN `_u_id` INT, IN `_published` INT, IN `_limit` INT, IN `_start` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_getPostsByUserId` (IN `_u_id` INT, IN `_published` INT, IN `_limit` INT, IN `_start` INT)  BEGIN
 	
 	IF( _limit > 0) THEN
 		SELECT tbl_post.*, u_name, f_name, l_name
@@ -288,7 +288,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getPostsByUserId` (IN `
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_getPostsCount`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getPostsCount` ()  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_getPostsCount` ()  BEGIN
 
 	DECLARE _published, _unpublished, _deleted INT default 0;
     
@@ -301,7 +301,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_getPostsCount` ()  BEGI
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_insertPost`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_insertPost` (IN `_p_title` VARCHAR(50) CHARSET utf8, IN `_p_content` TEXT CHARSET utf8, IN `_p_image` VARCHAR(100), IN `_u_id` INT, IN `_published` TINYINT(1), IN `_allow_comments` TINYINT(1), IN `_creation_time` INT)  begin
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_insertPost` (IN `_p_title` VARCHAR(50) CHARSET utf8, IN `_p_content` TEXT CHARSET utf8, IN `_p_image` VARCHAR(100), IN `_u_id` INT, IN `_published` TINYINT(1), IN `_allow_comments` TINYINT(1), IN `_creation_time` INT)  begin
 INSERT INTO tbl_post(			    p_title,
                                         p_content,
                                         p_image,
@@ -322,27 +322,27 @@ SELECT LAST_INSERT_ID();
 end$$
 
 DROP PROCEDURE IF EXISTS `SP_post_publishPost`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_publishPost` (IN `_p_id` INT, IN `_published` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_publishPost` (IN `_p_id` INT, IN `_published` INT)  BEGIN
 	UPDATE tbl_post SET 
 						published=_published
                     WHERE tbl_post.id=_p_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_restorePost`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_restorePost` (IN `_p_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_restorePost` (IN `_p_id` INT)  BEGIN
 	UPDATE tbl_post SET 
 						deleted=0
                     WHERE tbl_post.id=_p_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_set`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_set` (IN `_property_name` VARCHAR(20), IN `_property_value` VARCHAR(20), IN `_id` INT)  BEGIN	
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_set` (IN `_property_name` VARCHAR(20), IN `_property_value` VARCHAR(20), IN `_id` INT)  BEGIN	
     UPDATE tbl_post SET _property_name = _property_value 
     WHERE id = _id ;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_post_updatePost`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_updatePost` (IN `_p_id` INT(11), IN `_p_title` VARCHAR(50) CHARSET utf8, IN `_p_content` TEXT CHARSET utf8, IN `_p_image` VARCHAR(100) CHARSET utf8, IN `_u_id` INT(11), IN `_published` TINYINT(1), IN `_allow_comments` TINYINT(1), IN `_last_modify` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_post_updatePost` (IN `_p_id` INT(11), IN `_p_title` VARCHAR(50) CHARSET utf8, IN `_p_content` TEXT CHARSET utf8, IN `_p_image` VARCHAR(100) CHARSET utf8, IN `_u_id` INT(11), IN `_published` TINYINT(1), IN `_allow_comments` TINYINT(1), IN `_last_modify` INT(11))  BEGIN
 	UPDATE tbl_post SET 
 						p_title=_p_title,
 						p_content=_p_content,
@@ -355,35 +355,35 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_post_updatePost` (IN `_p_id`
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_sent_mails_checkEmailExists`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_sent_mails_checkEmailExists` (IN `_u_email` VARCHAR(45), IN `_now_time` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_sent_mails_checkEmailExists` (IN `_u_email` VARCHAR(45), IN `_now_time` INT(11))  BEGIN
 	SELECT COUNT(*) FROM tbl_sent_mails WHERE u_email=_u_email AND 'time'>_now_time-3600;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_sent_mails_insertSendRecord`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_sent_mails_insertSendRecord` (IN `_u_email` VARCHAR(45), IN `_time` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_sent_mails_insertSendRecord` (IN `_u_email` VARCHAR(45), IN `_time` INT(11))  BEGIN
 	INSERT INTO tbl_sent_mails(u_email,time) VALUES(_u_email, _time);
     DELETE FROM tbl_sent_mails WHERE time<_time-3600;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_activateUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_activateUser` (IN `_u_name` VARCHAR(25), IN `_activation_code` VARCHAR(32))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_activateUser` (IN `_u_name` VARCHAR(25), IN `_activation_code` VARCHAR(32))  BEGIN
 	IF(EXISTS(SELECT * FROM tbl_user WHERE u_name=_u_name AND activation_code=_activation_code)) THEN
 		UPDATE tbl_user SET activated=1 WHERE u_name=_u_name;
     END IF;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_authenticateUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_authenticateUser` (IN `_u_name` VARCHAR(25), IN `_u_pass` VARCHAR(32))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_authenticateUser` (IN `_u_name` VARCHAR(25), IN `_u_pass` VARCHAR(32))  BEGIN
 	SELECT * FROM tbl_user WHERE u_name =_u_name AND u_pass =_u_pass AND activated = 1;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_changeUserTypeById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_changeUserTypeById` (IN `_id` INT, IN `_u_type` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_changeUserTypeById` (IN `_id` INT, IN `_u_type` INT)  BEGIN
 	UPDATE tbl_user SET u_type=_u_type WHERE id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_checkDosAndChangeUserPass`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_checkDosAndChangeUserPass` (IN `_u_email` VARCHAR(45), IN `_time` INT(11), IN `_u_name` VARCHAR(25), IN `_u_pass` VARCHAR(32))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_checkDosAndChangeUserPass` (IN `_u_email` VARCHAR(45), IN `_time` INT(11), IN `_u_name` VARCHAR(25), IN `_u_pass` VARCHAR(32))  BEGIN
 	DECLARE mail_count INT;
     DECLARE result INT;
     
@@ -424,7 +424,7 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_checkDosAndChangeUserPa
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_deleteUserById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_deleteUserById` (IN `_id` INT, IN `_permanent` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_deleteUserById` (IN `_id` INT, IN `_permanent` INT)  BEGIN
 
 	IF (NOT EXISTS(SELECT * FROM tbl_user WHERE id=_id AND u_type=1)) THEN 
 		IF(_permanent = 0) THEN
@@ -438,66 +438,66 @@ CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_deleteUserById` (IN `_i
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_getAllUsers`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_getAllUsers` ()  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_getAllUsers` ()  BEGIN
 	SELECT * FROM tbl_user ORDER BY id ;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_getRandomHash`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_getRandomHash` (IN `_u_name` VARCHAR(20))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_getRandomHash` (IN `_u_name` VARCHAR(20))  BEGIN
 	SELECT random_hash FROM tbl_user WHERE u_name=_u_name;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_getUserById`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_getUserById` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_getUserById` (IN `_id` INT)  BEGIN
 	SELECT * FROM tbl_user WHERE id=_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_getUserByName`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_getUserByName` (IN `_u_name` VARCHAR(25))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_getUserByName` (IN `_u_name` VARCHAR(25))  BEGIN
 	SELECT * FROM tbl_user WHERE u_name=_u_name;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_getUserIdByPostId`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_getUserIdByPostId` (IN `_id` INT)  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_getUserIdByPostId` (IN `_id` INT)  BEGIN
 	SELECT * FROM tbl_user,tbl_post WHERE tbl_user.id = tbl_post.u_id AND tbl_post.id =_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_insertUser`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_insertUser` (IN `_u_name` VARCHAR(25) CHARSET utf8, IN `_u_pass` VARCHAR(32) CHARSET utf8, IN `_u_email` VARCHAR(45), IN `_f_name` VARCHAR(45) CHARSET utf8, IN `_l_name` VARCHAR(45) CHARSET utf8, IN `_age` TINYINT(2), IN `_sex` TINYINT(1), IN `_bio` VARCHAR(450) CHARSET utf8, IN `_avatar` VARCHAR(45) CHARSET utf8, IN `_signup_time` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_insertUser` (IN `_u_name` VARCHAR(25) CHARSET utf8, IN `_u_pass` VARCHAR(32) CHARSET utf8, IN `_u_email` VARCHAR(45), IN `_f_name` VARCHAR(45) CHARSET utf8, IN `_l_name` VARCHAR(45) CHARSET utf8, IN `_age` TINYINT(2), IN `_sex` TINYINT(1), IN `_bio` VARCHAR(450) CHARSET utf8, IN `_avatar` VARCHAR(45) CHARSET utf8, IN `_signup_time` INT(11))  BEGIN
 	INSERT INTO 
     tbl_user( u_name,u_pass,u_email,f_name,l_name,age,sex,bio,avatar,signup_time)  
     VALUES  (_u_name,_u_pass,_u_email,_f_name,_l_name,_age,_sex,_bio,_avatar,_signup_time);
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_set`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_set` (IN `_propertyname` VARCHAR(20), IN `_propertyvalue` VARCHAR(250), IN `_id` INT)  BEGIN	
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_set` (IN `_propertyname` VARCHAR(20), IN `_propertyvalue` VARCHAR(250), IN `_id` INT)  BEGIN	
 	declare a varchar(30);
     set a = (CONCAT(' ',_propertyname,' '));
     UPDATE tbl_user SET a = _propertyvalue WHERE id = _id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_setRandomHash`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_setRandomHash` (IN `_u_name` VARCHAR(20), IN `_random_hash` VARCHAR(32))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_setRandomHash` (IN `_u_name` VARCHAR(20), IN `_random_hash` VARCHAR(32))  BEGIN
 	UPDATE tbl_user SET random_hash=_random_hash WHERE u_name=_u_name;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_updateActivationCode`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_updateActivationCode` (IN `_activation_code` VARCHAR(32), IN `_u_name` VARCHAR(25))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_updateActivationCode` (IN `_activation_code` VARCHAR(32), IN `_u_name` VARCHAR(25))  BEGIN
 	UPDATE tbl_user SET activation_code=_activation_code WHERE u_name=_u_name;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_updateUserAvatar`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_updateUserAvatar` (IN `_path` VARCHAR(45), IN `_u_id` INT(11))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_updateUserAvatar` (IN `_path` VARCHAR(45), IN `_u_id` INT(11))  BEGIN
 	UPDATE tbl_user SET avatar=_path WHERE id=_u_id;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_updateUserPassByEmail`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_updateUserPassByEmail` (IN `_u_pass` VARCHAR(32), IN `_u_email` VARCHAR(45))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_updateUserPassByEmail` (IN `_u_pass` VARCHAR(32), IN `_u_email` VARCHAR(45))  BEGIN
 	UPDATE tbl_user SET u_pass=_u_pass WHERE u_email=_u_email;
 END$$
 
 DROP PROCEDURE IF EXISTS `SP_user_updateUserPassByUserName`$$
-CREATE DEFINER=`systemir`@`localhost` PROCEDURE `SP_user_updateUserPassByUserName` (IN `_u_pass` VARCHAR(32), IN `_u_name` VARCHAR(25))  BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_updateUserPassByUserName` (IN `_u_pass` VARCHAR(32), IN `_u_name` VARCHAR(25))  BEGIN
 UPDATE tbl_user SET u_pass=_u_pass WHERE u_name=_u_name;
 END$$
 
@@ -505,7 +505,7 @@ END$$
 -- Functions
 --
 DROP FUNCTION IF EXISTS `FUNC_checkCommentSpam`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_checkCommentSpam` (`_u_id` INT, `_time` INT) RETURNS TINYINT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_checkCommentSpam` (`_u_id` INT, `_time` INT) RETURNS TINYINT(1) BEGIN
 
     declare com_counts int;
     
@@ -520,7 +520,7 @@ CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_checkCommentSpam` (`_u_id` 
 END$$
 
 DROP FUNCTION IF EXISTS `FUNC_like`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_like` (`_u_id` INT, `_p_id` INT, `_like_dislike` INT) RETURNS TINYINT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_like` (`_u_id` INT, `_p_id` INT, `_like_dislike` INT) RETURNS TINYINT(1) BEGIN
 	declare result int default 0;
 	declare tmp int;
 			
@@ -555,7 +555,7 @@ CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_like` (`_u_id` INT, `_p_id`
 END$$
 
 DROP FUNCTION IF EXISTS `FUNC_user_checkDosAndChangeUserPass`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkDosAndChangeUserPass` (`_email` VARCHAR(45), `_pass` VARCHAR(32), `_time` INT(11)) RETURNS TINYINT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_user_checkDosAndChangeUserPass` (`_email` VARCHAR(45), `_pass` VARCHAR(32), `_time` INT(11)) RETURNS TINYINT(1) BEGIN
 	DECLARE _user_mail_count INT;
 	DECLARE _server_mail_count INT;
     DECLARE _time_hour INT; 
@@ -588,7 +588,7 @@ CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkDosAndChangeUserP
 END$$
 
 DROP FUNCTION IF EXISTS `FUNC_user_checkEmailExists`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkEmailExists` (`_u_email` VARCHAR(45)) RETURNS BIT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_user_checkEmailExists` (`_u_email` VARCHAR(45)) RETURNS BIT(1) BEGIN
 	IF(EXISTS (SELECT * FROM tbl_user WHERE u_email=_u_email)) THEN
 		return 1;
     ELSE
@@ -597,7 +597,7 @@ CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkEmailExists` (`_u
 END$$
 
 DROP FUNCTION IF EXISTS `FUNC_user_checkUserNameExists`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkUserNameExists` (`_u_name` VARCHAR(25)) RETURNS BIT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_user_checkUserNameExists` (`_u_name` VARCHAR(25)) RETURNS BIT(1) BEGIN
 	IF(EXISTS (SELECT * FROM tbl_user WHERE u_name=_u_name)) THEN
 		return 1;
     ELSE
@@ -606,7 +606,7 @@ CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_checkUserNameExists` (
 END$$
 
 DROP FUNCTION IF EXISTS `FUNC_user_getUserType`$$
-CREATE DEFINER=`systemir`@`localhost` FUNCTION `FUNC_user_getUserType` (`_id` INT) RETURNS TINYINT(1) BEGIN
+CREATE DEFINER=`systemir_mehran`@`localhost` FUNCTION `FUNC_user_getUserType` (`_id` INT) RETURNS TINYINT(1) BEGIN
 
 	return (SELECT u_type FROM tbl_user WHERE id=_id);
 

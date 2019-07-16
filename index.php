@@ -41,25 +41,9 @@ ob_start();
     <link rel="stylesheet" href="styles/css.css">
     <link rel="stylesheet" href="styles/rtl.css">
     <link rel="stylesheet" href="styles/devicon.min.css">
-    <script>//change-answer 
-            function changeAnswer(commentId,name) {
-                var cancel = "<span id='cancel-reply' class='btn btn-sm btn-outline-secondary mr-4 reply-comment-title'>انصراف</span>";
-                $("#c_answer_id").val(commentId);
-                $("#comment-title").removeClass('failure-res').removeClass('success-res').addClass('res').html(' دیدگاه خود را در پاسخ به '+'<span>'+name+'</span>'+' بنویسید : ');     
-
-                $("#comment-title").append(cancel);
-
-                $("#cancel-reply").click(function(){
-                    $("#c_answer_id").val(0);
-                    $("#comment-title").html("دیدگاه خود را درمورد این مطلب بنویسید :").addClass('res').removeClass("failure-res").removeClass("success-res"); 
-                });
-
-                location.href = "#send-comment";
-            }    
-    </script>
 </head>
 <body id="home">
-<div id="spinner"></div>
+<!--<div id="spinner"></div>-->
 <div id="body" style="display:block;">
     <!------------------------------------------------  HEADER  -------------------------------------------------->
     <header id="navbar">
@@ -800,6 +784,7 @@ ob_start();
             </div>
         </div>
     </div>
+
     <!-- sign-up form -->
     <div id="sign-up-overlay">
         <div id="sign-up-frame">
@@ -864,6 +849,7 @@ ob_start();
             </div>
         </div>
     </div>
+
     <!-- forget-password form -->
     <div id="forget-overlay">
         <div id="forget-frame">
@@ -887,8 +873,10 @@ ob_start();
             </div>
         </div>
     </div>
+
     <!-- go top -->
     <a href="#home" id="go-to-top"><i class="fa fa-chevron-up"></i></a>
+
     <!-- popup box -->
     <div id="popup-box" class="border-lr-red">
         <div class="popup-right">
@@ -898,6 +886,7 @@ ob_start();
             ابتدا باید به حساب کاربری خود وارد شوید!
         </div>
     </div>
+
     <!--scripts-->
     <script src="scripts/jquery-3.3.1.js"></script>
     <script src="scripts/popper.min.js"></script>
@@ -908,6 +897,7 @@ ob_start();
     <script src="scripts/js.js"></script>
     <script src="scripts/show-post.js"></script>
     <script src="scripts/login.js"></script>
+    <script src="scripts/changeAnswer.js"></script>
 </div>
 </body>
 </html>

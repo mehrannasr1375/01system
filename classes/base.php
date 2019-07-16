@@ -9,11 +9,11 @@ class Base
 {
     protected static function connect()
     {
-        try{
+        try {
             $dsn = "mysql:host=".HOST_NAME.";dbname=".DB_NAME.";charset=utf8";
             $conn = new PDO($dsn,DB_USER,DB_PASS);
-            //$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);   //auto exception made
-            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT);        //disble errors
+            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);   //auto exception made
+            //$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT);        //disble errors
             //$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);     //return all errors
             return $conn;//returns 'false' or an object from 'PDOStatement' class
         }
