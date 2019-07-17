@@ -60,22 +60,22 @@
 
 
     <!-- navbar -->
-    <?php require_once "navbar.php"; ?>
+    <?php require_once "index/navbar.php"; ?>
 
 
 
     <!-- home or postPage  -->
     <?php
         if (isset($_GET['post']) and is_numeric($_GET['post']))
-            require_once "showPost.php";
+            require_once "index/showPost.php";
         else
-            require_once "showHomePage.php";
+            require_once "index/showHomePage.php";
     ?>
 
 
 
     <!-- footer -->
-    <?php require_once "footer.php"; ?>
+    <?php require_once "index/footer.php"; ?>
 
 
 
