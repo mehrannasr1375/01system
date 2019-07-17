@@ -10,6 +10,7 @@
     $u_avatar         =   $user -> avatar;
     $signup_time      =   convertDate( $user -> signup_time );
     $p_content        =   str_replace( "--more--", " ", $post->p_content );
+    $creation         =   convertDate( $post -> creation_time );
 ?>
 
 
@@ -18,20 +19,17 @@
 <div>
     <div id="p-header-container">
         <div class="p-header">
-            <p>
-                <?=$post->p_title?>
-                <br/>
-                <span class="post-date">
-                    <i class="fa fa-clock-o"></i>
-                    نوشته شده در :
-                    <?php $creation = convertDate($post->creation_time);echo $creation['day'] . " " . $creation['month_name'] . " " . $creation['year'];echo " ساعت " . $creation['minute'] . " : " . $creation['hour']; ?>
-                    <span class="mr-3">
+                <p class="mb-3"><?= $post -> p_title ?></p>
+                <span class="post-date pt-5">
+                    <i class="fa fa-calendar-times-o"></i>
+                    <?= $creation['day'] . " " . $creation['month_name'] . " " . $creation['year'] ; ?>
+                    <i class="fa fa-clock-o mr-4"></i>
+                    <?= $creation['minute'] . " : " . $creation['hour']; ?>
+                    <span class="mr-4">
                         <i class="fa fa-user"></i>
-                        توسط
-                        <?=$user_name?>
+                        <?= $user_name ?>
                     </span>
                 </span>
-            </p>
         </div>
     </div>
     <div class="p-img-container shadow">
@@ -47,21 +45,17 @@
 
 
     <!--  post categories  -->
-    <div class="container">
-        <div class="p-cats">
-            <p class="text-vsm mb-3">نوشته شده در گروه : </p>
-            <?php
-            if ($cats_ids=$post->cats) {
-                foreach ($cats_ids as $cat_id) {
-                    $cat_object=Cat::getCatById($cat_id);
-                    $cat_name=$cat_object->cat_name;
-                    echo "<a class='cat'><i class='fa fa-tag p-1'></i>$cat_name</a>";
-                }
-            } else
+    <div class="p-cats">
+        <p>نوشته شده در گروه : </p>
+        <?php
+            if ( $cats_ids = $post -> cats )
+                foreach ( $cats_ids as $cat_id )
+                    echo "<a class='cat'><i class='fa fa-tag p-1'></i>" . Cat::getCatById($cat_id) -> cat_name . "</a>";
+            else
                 echo "<p class='cat'><i class='fa fa-tag p-1'></i>بدون دسته بندی</p>";
-            ?>
-        </div>
+        ?>
     </div>
+
 
 
     <div class="row">
