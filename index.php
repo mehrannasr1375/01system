@@ -1,28 +1,28 @@
 <?php
-/*
-    show post or show home  * show page
-    depends on 'post=x' parameter on query string
-*/
-require_once ("include_all.php");
-session_start();
-if (isset($_COOKIE['remember'])) {
-    if ($user = User::getUserByName($_COOKIE['u_name'])) {
-        if (isset($_COOKIE['hash'])) {
-            $hash_1 = $_COOKIE['hash'];
-            $hash_2 = User::getRandomHash($_COOKIE['u_name']);
-            if ($hash_1 == $hash_2) {
-                $_SESSION['u_id']    =  $user ->  id;
-                $_SESSION['u_name']  =  $user ->  u_name;
-                $_SESSION['u_type']  =  $user ->  u_type;
-                $_SESSION['f_name']  =  $user ->  f_name;
-                $_SESSION['l_name']  =  $user ->  l_name;
-                $_SESSION['avatar']  =  $user ->  avatar;
-                setcookie("remember",$user->u_name,time()+REMEMBER_TIME,null ,null ,null ,true);
+    /*
+     *  show post or show home
+     *  show page depends on 'post=x' parameter on query string
+     */
+    require_once ("include_all.php");
+    session_start();
+    if (isset($_COOKIE['remember'])) {
+        if ($user = User::getUserByName($_COOKIE['u_name'])) {
+            if (isset($_COOKIE['hash'])) {
+                $hash_1 = $_COOKIE['hash'];
+                $hash_2 = User::getRandomHash($_COOKIE['u_name']);
+                if ($hash_1 == $hash_2) {
+                    $_SESSION['u_id']    =  $user ->  id;
+                    $_SESSION['u_name']  =  $user ->  u_name;
+                    $_SESSION['u_type']  =  $user ->  u_type;
+                    $_SESSION['f_name']  =  $user ->  f_name;
+                    $_SESSION['l_name']  =  $user ->  l_name;
+                    $_SESSION['avatar']  =  $user ->  avatar;
+                    setcookie("remember", $user->u_name,time()+REMEMBER_TIME, null, null, null, true);
+                }
             }
         }
     }
-}
-ob_start();
+    ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +47,15 @@ ob_start();
 </head>
 <body id="home">
 
-<!--<div id="spinner"></div>-->
-<div id="body" style="display:block;">
+
+
+<!-- spinner -->
+<?php if (DEVELOPING_MODE === false)  echo "<div id='spinner'></div>"; ?>
+
+
+
+<!-- html body parent -->
+<div id="body">
 
 
 
@@ -71,10 +78,6 @@ ob_start();
     <?php require_once "footer.php"; ?>
 
 
-
-
-
-    <!-- COMMON ------------------------------------------------------------->
 
     <!-- login form -->
     <div id="sign-in-overlay">

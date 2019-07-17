@@ -94,11 +94,14 @@ $(".login-close").on('click',function(){
 
 
 //waiting spinner for load page
-
 $(window).on("load",function(){
-    //setTimeout(function(){
+    if ($("#spinner").css('display') == 'block') {
+        setTimeout(function(){
+            $('#body').show();
+            $('#spinner').hide();
+            new WOW().init();
+        }, 500);
+    } else {
         $('#body').show();
-        $('#spinner').hide();
-        new WOW().init();
-    //}, 500);
+    }
 });

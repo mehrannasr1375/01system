@@ -1,4 +1,12 @@
 <?php
+
+//PUBLIC CONFIGURE
+define("DEVELOPING_MODE",true);
+define("MAX_POST",5);
+define("MAX_POSTS_TABLE",7);
+define("MAX_PICS_GRID",10);
+define("MAX_LAST_POST",10);
+
 //DATABASE CONFIGURE
 define("HOST_NAME","localhost");
 define("DB_NAME","systemir_my_db");
@@ -26,11 +34,7 @@ define("MEDIA_IMG_QAL_16X9",50);
 define("MEDIA_IMG_QAL_4X3",50);
 define("MEDIA_IMG_QAL_2X2",30);
 
-//PUBLIC CONFIGURE
-define("MAX_POST",5);
-define("MAX_POSTS_TABLE",7);
-define("MAX_PICS_GRID",10);
-define("MAX_LAST_POST",10);
+
 
 
 
