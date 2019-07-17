@@ -94,14 +94,14 @@ $(".login-close").on('click',function(){
 
 
 //waiting spinner for load page
-$(window).on("load",function(){
+$(window).on("load",function() {
     if ($("#spinner").css('display') == 'block') {
         setTimeout(function(){
             $('#body').show();
             $('#spinner').hide();
             new WOW().init();
         }, 500);
-    } else {
+    } else
         $('#body').show();
-    }
+    
 });

@@ -135,9 +135,9 @@
                 $comments = Comment::getCommentsByPostId($post_id);
                 if($comments) {
                     foreach ($comments as $comment) {
-                        $creation_time=convertDate($comment->time);
-                        if ($comment->parent_id == 1) $class=" ";
-                        else $class="mr-7";
+                        $creation_time = convertDate($comment->time);
+                        if ( $comment->parent_id == 1 ) $class = " ";
+                        else $class = "mr-7";
                         ?>
                         <div class="comment-frame row <?=$class?>">
                             <div class="comment-right col-12 col-md-3 col-xl-2">
@@ -148,17 +148,17 @@
                                     if ($class == "mr-7") {
                                         $comment_father_author=Comment::getCommentById($comment->parent_id)->full_name;
                                         echo "<span class='text-black-50 '> در پاسخ به </span>".$comment_father_author."<span class='text-black-50'> گفته : </span>";
-                                    } else
+                                    } else 
                                         echo "<span class='text-black-50'> گفته : </span>";
                                     ?>
                                 </p>
                                 <br/>
                                 <p class="text-vsm">
-                                    <?=$creation_time['year']."/".$creation_time['month_num']."/".$creation_time['day']." - ".$creation_time['hour'].":".$creation_time['minute']?>
+                                    <?= $creation_time['year']."/".$creation_time['month_num']."/".$creation_time['day']." - ".$creation_time['hour'].":".$creation_time['minute']?>
                                 </p>
                             </div>
                             <div class="comment-left col-12 col-md-9 col-xl-10">
-                                <p><?=$comment->c_text?></p>
+                                <p><?= $comment->c_text ?></p>
                                 <div class="comment-footer">
                                     <a href="#comment-target" class="btn btn-info btn-reply-comment" onclick="changeAnswer(<?=$comment->id?>,'<?=$comment->full_name?>');"> ارسال پاسخ <i class="fa fa-reply"></i></a>
                                 </div>

@@ -37,9 +37,9 @@
         </div>
         <ul class="list-unstyled">
             <li><a class="btn1" href="./index.php"><i class="fa fa-home"></i> صفحه اصلی </a></li>
-            <li><a class="btn1" href="./index.php#order-sequences"><i class="fa fa-chain"></i>روند سفارش</a></li>
-            <li><a class="btn1" href="./index.php#works"><i class="fa fa-product-hunt"></i>زمینه های کاری</a></li>
-            <li><a class="btn1" href="./index.php#skills"><i class="fa fa-product-hunt"></i>مهارت ها</a></li>
+            <li><a class="btn1" href="./index.php#order-sequences"><i class="fa fa-handshake-o"></i>روند سفارش</a></li>
+            <li><a class="btn1" href="./index.php#works"><i class="fa fa-sitemap"></i>زمینه های کاری</a></li>
+            <li><a class="btn1" href="./index.php#skills"><i class="fa fa-code"></i>مهارت ها</a></li>
             <li><a class="btn1" href="./index.php#last-posts"><i class="fa fa-bold"></i> وبلاگ </a></li>
         </ul>
     </nav>

@@ -213,6 +213,10 @@ input[type=text]:hover, input[type=password]:hover, select:hover{
 }
 input[type=text]:focus, input[type=password]:focus, select:focus, input[type=email]:focus, input[type=textarea]:focus{
     border: 2px solid rgb(183, 144, 231);
+    box-shadow: none;
+}
+textarea{
+    transition-duration: .4s;
 }
 .btn-3{
     font-weight: 300;
@@ -267,8 +271,11 @@ input[type=text]:focus, input[type=password]:focus, select:focus, input[type=ema
     background-color: rgba(49, 44, 44, 0.9);
     border-left: 10px solid rgba(111, 99, 111, 0.5);
     transition-duration: .2s;
+    font-size: 14px;
+    font-weight: 500;
 }
 #nav a{
+    padding-bottom: 5px;
     color: white;
     display: block;
     margin: auto;
@@ -965,8 +972,6 @@ p#response-success{
 }
 
 .p-content~p{
-    /*padding-left: 70px !important;
-    padding-right: 70px !important;*/
     margin-bottom: 20px !important;
     font-size: 15px !important;
     line-height: 2;
@@ -981,9 +986,9 @@ p#response-success{
     width: 90%;
 }
 .p-content~ul, .p-content~ol{
-    padding-right: 130px !important;
+    padding-right: 70px !important;
     padding-left: 70px !important;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
     font-size: 15px !important;
     color: #565d64;
@@ -994,17 +999,13 @@ p#response-success{
 .p-content~h1, .p-content~h2, .p-content~h3, .p-content~h4, .p-content~h5, .p-content~h6{
     padding-right:20px;
     padding-left:20px;
-    /*margin-left: 65px !important;
-    margin-right: 65px !important;*/
     margin-top: 60px !important;
     margin-bottom: 15px !important;
     display:inline-block !important;
-    border-right:3px solid #e1e1e1;
-    border-left:3px solid #e1e1e1;
+    border-right:5px solid #e1e1e1;
     text-align:center !important;
-    border-radius:30%;
     line-height: 2.5;
-    color: #b9b9b9 !important;
+    color: #d6d1d1 !important;
     font-weight:600 !important;
 }
 .p-content~h1{
