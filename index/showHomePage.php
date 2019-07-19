@@ -48,7 +48,7 @@
 
 <!--order sequences -->
 <section id="order-sequences">
-    <h3 class="header-1 text-light my-5">راه اندازی وب سایت شخصی شما!</h3>
+    <h3 class="header-1 text-light">راه اندازی وب سایت شخصی شما!</h3>
     <h3 class="header-2 text-white-50 mb-3">روال کاری</h3>
     <div class="container">
         <div class="row position-relative">
@@ -105,8 +105,8 @@
 
 <!-- works -->
 <section id="works">
-    <div class="container mb-8">
-        <h3 class="header-1 text-dark mb-8">زمینه های کاری</h3>
+    <div class="container">
+        <h3 class="header-1 text-dark">زمینه های کاری</h3>
         <div class="row justify-content-center">
             <div class="wow fadeInUp col-12 col-sm-6 col-md-6 col-lg-3" data-wow-delay=".4s">
                 <div class="card-2">
@@ -167,9 +167,9 @@
 
 
 <!-- skills -->
-<section id="skills" class="">
-    <h4 class="header-1 text-dark my-5 pb-4">مهارت ها</h4>
-    <div class="">
+<section id="skills">
+    <h3 class="header-1">مهارت ها</h3>
+    <div class="container">
         <div class="d-flex justify-content-center flex-row flex-wrap">
             <div class="skill-part wow fadeIn" data-wow-delay=".2s">
                 <span class="float-right fa-stack fa-2x m-auto">
@@ -306,7 +306,7 @@
 
 <!-- last-posts -->
 <section id="last-posts" class="last-posts">
-    <div class="container-fluid pt-5">
+    <div class="container-fluid">
         <h3 class="header-1 text-dark">آخرین مطالب </h3>
         <div class="container">
             <div class="owl-carousel wow fadeIn" data-wow-delay=".4s">
@@ -372,7 +372,7 @@
 <!-- be a writer -->
 <section id="writer">
     <div class="container">
-        <h3 class="header-1 text-dark mb-8 wow fadeIn" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>
+        <h3 class="header-1 text-dark" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>
         <div class="d-flex justify-content-center align-items-center">
             <div class="wow fadeInUp" data-wow-delay=".6s">
                 <p class="text-vsm text-black-50">با کلیک بر روی دکمه ی ثبت نام در بالای مرورگر و تکمیل فرم خودتان نویسنده شوید و پست های تخصصی در زمینه ی تخصص های خود یا خدماتتان را با دیگر کاربران به اشتراک بگذارید!</p>

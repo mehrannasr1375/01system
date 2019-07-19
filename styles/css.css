@@ -1,6 +1,5 @@
 /*--------------------------------------------------  public  --------------------------------------------------*/
 
-
 #body{
     background-color: white;
     display:none;
@@ -68,8 +67,10 @@ p{
     margin-bottom: 6rem;
 }
 .header-1{
+    z-index: 1000;
     font-size: 1rem;
-    margin-bottom: 2rem !important;
+    margin-bottom: 3rem !important;
+    padding-top: 4rem !important;
     text-align: center;
     font-weight: 400;
 }
@@ -419,7 +420,7 @@ textarea{
 /*-----------------------------------------------  order-sequences  ------------------------------------------------------*/
 
 #order-sequences{
-    padding: 3rem 0;
+    padding-bottom: 2rem;
     position: relative;
     background: url("../includes/images/15.jpg") center / cover no-repeat;
 }
@@ -461,7 +462,15 @@ textarea{
 }
 
 @media (max-width: 600px){
-
+    #order-sequences .card-title{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        line-height: 32px !important;
+    }
+    #order-sequences p.sm-font{
+        font-size: 14px !important;
+        line-height: 30px !important;
+    }
 }
 
 /*---------------------------------------------------- works ---------------------------------------------------*/
@@ -469,8 +478,7 @@ textarea{
 #works{
     position: relative;
     background: url("../includes/images/b35.jpg") center / cover no-repeat fixed;
-    padding: 2rem 0;
-    padding-top: 4rem;
+    padding-bottom: 3rem;
 }
 #works::before{
     position: absolute;
@@ -507,7 +515,14 @@ textarea{
 }
 
 @media (max-width: 600px){
-
+    #works .card-title{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        line-height: 34px !important;
+    }
+    #works p.sm-font{
+        font-size: 14px !important;
+    }
 }
 
 /*--------------------------------------------------- skills -------------------------------------------------*/
@@ -516,9 +531,7 @@ textarea{
     background: url("../includes/images/b2.jpg") center / cover no-repeat;
     position: relative;
     color: white !important;
-    padding: 40px; /****/
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 2rem;
 }
 #skills::before{
     position: absolute;
@@ -528,6 +541,10 @@ textarea{
     height: 100%;
     background-color: rgba(22, 22, 22, 0.3);
     content: '';
+}
+#skills h3.header-1{
+    font-size: 18px !important;
+    color: black !important;
 }
 .skill-part{
     z-index: 100 ;
@@ -568,6 +585,9 @@ textarea{
         margin: 1px ;
         border-radius: 20% 20% 20% 20%/ 50% 50% 50% 50%;
     }
+    .card-2{
+        margin-bottom: 50px;
+    }
 }
 
 /*-------------------------------------------------- last-posts ------------------------------------------------*/
@@ -575,8 +595,7 @@ textarea{
 .last-posts{
     position: relative;
     z-index: 1;
-    padding: 2rem 0;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     background: url("../includes/images/b34.jpg") center / cover no-repeat fixed;
 }
 .last-posts::before {
@@ -736,14 +755,19 @@ textarea{
     margin: 0 !important;
 }
 
-@media (max-width: 600px){
-
+@media (max-width: 600px) {
+    .last-posts .header-1 {
+        margin-bottom: 1.5rem !important;
+        padding-top: 2.5rem !important;
+    }
+    div.container-fluid {
+        padding: 0 !important;
+    }
 }
 
     /*--------------------------------------------------- writer ---------------------------------------------------*/
 
 #writer {
-    padding: 2rem;
     padding-bottom: 5rem;
 }
 #writer p:first-child {
