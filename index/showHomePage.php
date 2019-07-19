@@ -5,7 +5,7 @@
 <section id="slider">
     <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('includes/images/slider/s1.jpg')">
+            <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">برنامه نویسی سمت سرور و کلاینت</h2>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('includes/images/slider/s3.jpg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s3.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">وبسایت های مدرن، سریع و واکنشگرا</h2>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('includes/images/slider/s2.jpg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s2.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">توسعه ی کسب و کار با وبسایت</h2>
@@ -167,69 +167,67 @@
 
 
 <!-- skills -->
-<section id="skills">
-    <div class="row">
-        <div class="col-0 col-lg-3 wow fadeInRight" id="my-skills-container-right" data-wow-delay="0.4s">
-            <p id="right-text" class=" fadeIn" data-wow-delay="1.2s">    مهارت هایی که تا کنون بدست آورده ام :</p>
-        </div>
-        <div class="col-12 col-lg-9 row d-flex justify-content-center" id="my-skills-container-left">
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".2s">
+<section id="skills" class="">
+    <h4 class="header-1 text-dark my-5 pb-4">مهارت ها</h4>
+    <div class="">
+        <div class="d-flex justify-content-center flex-row flex-wrap">
+            <div class="skill-part wow fadeIn" data-wow-delay=".2s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-php-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Php</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".6s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="fa fa-database fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">SQL Server</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".5s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-mysql-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">MySQL</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".6s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-csharp-line fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">#C</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.4s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-javascript-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Java Script</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".8s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".8s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-jquery-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">jQuery</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".9s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".9s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-bootstrap-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">BootStrap</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".5s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-laravel-plain  fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Laravel</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".7s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".7s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-html5-plain fa-stack-1x"></i>
@@ -237,70 +235,70 @@
                 <h4 class="skill-part-h">HTML</h4>
 
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.2s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-css3-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">CSS</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".7s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".7s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-linux-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Linux</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.1s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.1s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-wordpress-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Wordpress</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".6s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-github-original fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">GitHub</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".8s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".8s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-gitlab-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">GitLab</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.3s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.3s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="fa fa-laptop fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Hardware Repairs</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay=".5s">
+            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-photoshop-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Photoshop</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.2s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-apache-plain-wordmark fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Apache</h4>
             </div>
-            <div class="col-5 col-lg-3 skill-part wow fadeIn" data-wow-delay="1.4s">
+            <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
                 <span class="float-right fa-stack fa-2x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-dark"></i>
                     <i class="di devicon-angularjs-plain fa-stack-1x"></i>
                 </span>
                 <h4 class="skill-part-h">Angular</h4>
             </div>
-    </div>
+        </div>
     </div>
 </section>
 
@@ -373,9 +371,9 @@
 
 <!-- be a writer -->
 <section id="writer">
-    <div>
+    <div class="container">
         <h3 class="header-1 text-dark mb-8 wow fadeIn" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>
-        <div class="row justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
             <div class="wow fadeInUp" data-wow-delay=".6s">
                 <p class="text-vsm text-black-50">با کلیک بر روی دکمه ی ثبت نام در بالای مرورگر و تکمیل فرم خودتان نویسنده شوید و پست های تخصصی در زمینه ی تخصص های خود یا خدماتتان را با دیگر کاربران به اشتراک بگذارید!</p>
                 <p class="text-vvsm mt-2">به همین راحتی!</p>

@@ -5,14 +5,14 @@ new SmoothScroll('a[href*="#"]' , {
 });
 
 //right menu toggler
-$('#right-menu-toggler').on('click',function(){
+$('#right-menu-toggler').on('click',function() {
     var icon = $('#right-menu-toggler i');
     var nav = $('#nav');
-    if(nav.css('right') === '0px'){
+    if (nav.css('right') === '0px') {
         nav.css('right','-250px');
         icon.removeClass('fa-times').addClass('fa-bars');
     }
-    else{
+    else {
         nav.css('right','0px');
         icon.removeClass('fa-bars').addClass('fa-times');
     }

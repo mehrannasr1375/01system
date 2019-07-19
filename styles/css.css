@@ -429,7 +429,7 @@ textarea{
     right: 0;
     width: 100%;
     height: 100%;
-    /*background-color: rgba(255, 255, 255, 0.1);*/
+    background-color: rgba(255, 255, 255, 0.1);
     content: '';
 }
 #order-sequences .card{
@@ -458,6 +458,10 @@ textarea{
     position: absolute;
     top: 72px;
     left: 120px;
+}
+
+@media (max-width: 600px){
+
 }
 
 /*---------------------------------------------------- works ---------------------------------------------------*/
@@ -502,12 +506,19 @@ textarea{
     margin-bottom: 2rem;
 }
 
+@media (max-width: 600px){
+
+}
+
 /*--------------------------------------------------- skills -------------------------------------------------*/
 
 #skills{
     background: url("../includes/images/b2.jpg") center / cover no-repeat;
     position: relative;
     color: white !important;
+    padding: 40px; /****/
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 #skills::before{
     position: absolute;
@@ -518,27 +529,15 @@ textarea{
     background-color: rgba(22, 22, 22, 0.3);
     content: '';
 }
-#skills #my-skills-container-right{
-    background-color: rgba(22,0,22,.4);
-    font-size: 14px;
-}
-#skills #right-text{
-    text-align: center;
-    padding: 20px;
-}
-#skills #my-skills-container-left{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-right: 2rem;
-    padding-left: 0;
-}
 .skill-part{
+    z-index: 100 ;
+    float: right;
     background-color: rgba(90, 90, 90, 0.3);
     padding: .5rem;
+    width:180px;
     margin: 1px ;
     text-align: center;
     overflow: hidden;
-    max-width: 250px;
     transition-duration: .2s;
     border-radius: 20% 20% 20% 20%/ 50% 50% 50% 50%;
 }
@@ -555,6 +554,20 @@ textarea{
 }
 .card-2{
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    #skills{
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .skill-part{
+        padding: .25rem;
+        width:150px;
+        margin: 1px ;
+        border-radius: 20% 20% 20% 20%/ 50% 50% 50% 50%;
+    }
 }
 
 /*-------------------------------------------------- last-posts ------------------------------------------------*/
@@ -723,25 +736,17 @@ textarea{
     margin: 0 !important;
 }
 
+@media (max-width: 600px){
 
-/*--------------------------------------------------- writer ---------------------------------------------------*/
-#writer{
-    position: relative;
-    z-index: 1;
-    padding: 2rem 0;
+}
+
+    /*--------------------------------------------------- writer ---------------------------------------------------*/
+
+#writer {
+    padding: 2rem;
     padding-bottom: 5rem;
 }
-#writer::before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 1);
-}
-#writer p:first-child{
+#writer p:first-child {
     max-width: 500px;
 }
 
@@ -768,7 +773,6 @@ textarea{
     display: inline-block;
     padding-top: 10px !important;
 }
-
 
 /*--------------------------------------------------- go top ---------------------------------------------------*/
 
@@ -1007,6 +1011,7 @@ p#response-success{
     line-height: 2.5;
     color: #d6d1d1 !important;
     font-weight:600 !important;
+    text-align:right !important;
 }
 .p-content~h1{
     font-size:2rem !important;
