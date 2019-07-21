@@ -21,19 +21,25 @@ $('#right-menu-toggler').on('click',function() {
 //top navbar styles & go top btn
 $(window).on('scroll load',function () {
         //show & hide top-menu background
-        if ($(window).scrollTop() > 300){
-            $('#navbar').css('background-color','rgba(22,22,22,.95)').css('padding','4px 10px').css('box-shadow','0 0 1px 0 rgba(222,222,222,.5)');
-            $('#sign-in-btn-group').css('top','5px');
-            $('#right-menu-toggler').css('font-size','16px').css('top','5px');
+        if ($(window).scrollTop() > 300) {
+            if ($(window).width() >= 876) {
+                $('#navbar').css('background-color','rgba(22,22,22,.95)').css('padding','4px 10px').css('box-shadow','0 0 1px 0 rgba(222,222,222,.5)');
+                $('#sign-in-btn-group').css('top','5px');
+                $('#right-menu-toggler').css('font-size','16px').css('top','5px');
+            } else {
+                $('#navbar').css('background-color','rgba(22,22,22,.95)').css('box-shadow','0 0 1px 0 rgba(222,222,222,.5)');
+                $('#sign-in-btn-group').css('top','5px');
+                $('#right-menu-toggler');
+            }
         }
-        else{
+        else {
             $('#navbar').css('background-color','rgba(66,55,66,.4)').css('padding','8px 10px').css('box-shadow','0 0 0 0');
             $('#sign-in-btn-group').css('top','10px');
             $('#right-menu-toggler').css('font-size','32px').css('top','8px');
         }
 
         //go top
-        if ($(window).scrollTop() > 400){
+        if ($(window).scrollTop() > 400) {
             $('#go-to-top').css('opacity','1');
         } else {
             $('#go-to-top').css('opacity','0'); 

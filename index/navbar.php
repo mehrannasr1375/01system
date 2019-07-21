@@ -1,5 +1,3 @@
-<!-- Navbar -->
-
 
 
 <header id="navbar">
