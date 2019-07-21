@@ -17,7 +17,7 @@
                     $_SESSION['f_name']  =  $user ->  f_name;
                     $_SESSION['l_name']  =  $user ->  l_name;
                     $_SESSION['avatar']  =  $user ->  avatar;
-                    setcookie("remember", $user->u_name,time()+REMEMBER_TIME, null, null, null, true);
+                    setcookie("remember", $user->u_name, time() + REMEMBER_TIME, null, null, null, true);
                 }
             }
         }
@@ -78,7 +78,7 @@
     <?php require_once "index/footer.php"; ?>
 
 
-z
+
 
     <!-- go top -->
     <a href="#home" id="go-to-top"><i class="fa fa-chevron-up"></i></a>
