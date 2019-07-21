@@ -2,7 +2,7 @@
 
 
 <footer id="footer">
-    <p class="text-center pt-5 pb-4">طراحی و توسعه از 01system . کلیه ی حقوق محفوظ است &copy;</p></p>
+    <p class="text-center pt-5 pb-3">طراحی و توسعه از 01system . کلیه ی حقوق محفوظ است &copy;</p></p>
     <hr class="bg-white-50"/>
     <div class="p-2 text-center">
         <!--<a href="#" class="text-white-50"><i class="fa fa-google-plus fa-2x mx-2"></i></a>-->

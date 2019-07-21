@@ -1,3 +1,4 @@
+<!-- navbar -->
 
 
 <header id="navbar">
@@ -12,8 +13,8 @@
     <nav id="nav">
         <div id="login-state">
             <?php
-            if (isset($_SESSION['u_name'])){
-                $u=$_SESSION['u_name'];
+            if (isset($_SESSION['u_name'])) {
+                $u = $_SESSION['u_name'];
                 echo "<span id='sign-in-btn-group'>
                          <a id='btn-profile' class='btn-sign-in' href='management_system/cpanel.php'>
                              <i class='fa fa-user-circle-o'></i> $u

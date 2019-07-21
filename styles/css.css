@@ -419,12 +419,12 @@ textarea{
 
 /*-----------------------------------------------  order-sequences  ------------------------------------------------------*/
 
-#order-sequences{
+#order-sequences {
     padding-bottom: 2rem;
     position: relative;
     background: url("../includes/images/15.jpg") center / cover no-repeat;
 }
-#order-sequences::before{
+#order-sequences::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -433,7 +433,7 @@ textarea{
     background-color: rgba(255, 255, 255, 0.1);
     content: '';
 }
-#order-sequences .card{
+#order-sequences .card {
     border: 0 !important;
     max-width: 330px !important;
     margin:40px auto;
@@ -441,18 +441,18 @@ textarea{
     background-color: transparent;
     overflow: visible !important;
 }
-#order-sequences .card-title{
+#order-sequences .card-title {
     color: #ffffff;
     font-size: 15px !important;
     font-weight: 300;
 }
-#order-sequences hr{
+#order-sequences hr {
     width: 80%;
 }
-#order-sequences span.fa-stack{
+#order-sequences span.fa-stack {
     z-index: 100;
 }
-.dashed-hr{
+.dashed-hr {
     z-index: 100;
     height: 0;
     border: 1px dashed rgba(2, 184, 179, 0.64);
@@ -461,26 +461,26 @@ textarea{
     left: 120px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     #order-sequences .card-title{
         font-size: 16px !important;
         font-weight: 600 !important;
-        line-height: 32px !important;
+        line-height: 30px !important;
     }
     #order-sequences p.sm-font{
         font-size: 14px !important;
-        line-height: 30px !important;
+        line-height: 24px !important;
     }
 }
 
 /*---------------------------------------------------- works ---------------------------------------------------*/
 
-#works{
+#works {
     position: relative;
     background: url("../includes/images/b35.jpg") center / cover no-repeat fixed;
     padding-bottom: 3rem;
 }
-#works::before{
+#works::before {
     position: absolute;
     content: '';
     background-color: rgba(255 , 255 , 255 , 0.8);
@@ -544,12 +544,12 @@ textarea{
 }
 #skills h3.header-1{
     font-size: 18px !important;
-    color: black !important;
+    color: rgb(151, 146, 146) !important;
 }
 .skill-part{
     z-index: 100 ;
     float: right;
-    background-color: rgba(90, 90, 90, 0.3);
+    background-color: rgba(151, 142, 142, 0.3);
     padding: .5rem;
     width:180px;
     margin: 1px ;
@@ -608,7 +608,7 @@ textarea{
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
 }
-.owl-stage-outer, owl-stage {
+.owl-stage-outer, .owl-stage {
     max-height: 780px !important;
 }
 .last-posts .owl-dots{
@@ -1012,6 +1012,7 @@ p#response-success{
     margin-top:30px;
     margin-bottom:30px;
     width: 90%;
+    width:100vw !important;
 }
 .p-content~ul, .p-content~ol{
     padding-right: 70px !important;

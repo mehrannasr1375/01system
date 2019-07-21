@@ -1,3 +1,4 @@
+
 <!-- main slider -->
 <section id="slider">
     <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
@@ -46,7 +47,7 @@
 <!--order sequences -->
 <section id="order-sequences">
     <h3 class="header-1 text-light">راه اندازی وب سایت شخصی شما!</h3>
-    <h3 class="header-2 text-white-50 mb-3">روال کاری</h3>
+    <h3 class="header-2 text-white-50 mb-2">روال کاری</h3>
     <div class="container">
         <div class="row position-relative">
             <hr class="dashed-hr d-none d-lg-block wow fadeIn" data-wow-delay="1.4s"/>
