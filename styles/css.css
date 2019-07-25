@@ -608,9 +608,26 @@ textarea{
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
 }
-.owl-stage-outer, .owl-stage {
-    max-height: 780px !important;
+.owl-stage-outer{
+    padding: 14px 0 ;
 }
+.owl-stage-outer, .owl-stage {
+    max-height: 480px !important;
+}
+.last-posts .owl-item {
+    min-width: 260px !important;
+    max-height: 399px !important;
+    transition-duration: .3s;
+    margin: 0px;
+}
+.last-posts .owl-item .m-1 {
+    margin-top: 0 !important;
+}
+
+
+
+
+/* post slider dots */
 .last-posts .owl-dots{
     text-align: center;
 }
@@ -633,113 +650,92 @@ textarea{
 .owl-dot:last-child{
     border-radius: 10px 0 0 10px;
 }
-.last-posts .owl-item{
-    min-width: 230px !important;
-    max-height: 780px !important;
-    transition-duration: .3s;
-    margin: 0px;
-}
-.last-posts .owl-item .m-1 {
-    margin-top: 0 !important;
-}
-.owl-stage-outer{
-    padding: 14px 0 ;
-}
 
-.p-card{
-    margin:5px;
+
+
+
+/* post cart */
+.p-card {
+    position: relative;
+    margin:8px;
     max-height: 760px !important;
     box-shadow: 0 0 1px 0 #9c9c9c;
-    border-radius: 3px;
-    position: relative;
+    border-radius: 3px;  
     text-align: center;
     overflow: hidden;
     background-color: white;
+    box-shadow: 0 0 10px 0 lightgrey;
 }
-.owl-item{
-    max-height: 399px !important;
-}
-.p-card:hover{
-    /*box-shadow:0 0 1px 0 #9c9c9c, 0 8px 15px -4px #d6d3d3;*/
-}
-    .p-card:hover .p-card-content{
-        font-size: 12px;
-        bottom: 0px;
-        text-overflow: ellipsis;
-    }
-    .p-card:hover .p-card-liking{
-        background-color: rgba(0, 60, 85, 0.51);
-        top: 0px;
-        transform: scale(1);
-    }
-    .p-card:hover .p-card-btn{
-        transform: translateX(20px) ;
-    }
 .p-card-img-container{
     position: relative;
     height:260px;
     overflow: hidden;
 }
-    .p-card-img{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 260px;
-
-    }
-    .p-card-content {
-        position: absolute;
-        height:160px;
-        bottom: -160px;
-        width: 100%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        font-size: 13px;
-        font-weight: 300;
-        transition:.3s ease-in-out all;
-        background-color: #ffffff;
-        color:black;
-    }
-    .p-card-liking {
-        position: absolute;
-        height:50px;
-        top: 250px;
-        width: 100%;
-        padding: 10px;
-        color:white;
-        font-size: 13px;
-        font-weight: 300;
-        transition-duration:.5s;
-        transform: scale(0);
-    }
-        .p-card-liking p{
-            display: inline;
-        }
+.p-card-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 260px;
+}
+.p-card-content {
+    position: absolute;
+    height:160px;
+    bottom: -160px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(60, 60, 85, 0.9);
+    font-size: 13px;
+    font-weight: 300;
+    transition-duration:.2s;
+    color:white;
+}
+.p-card:hover .p-card-content{
+    font-size: 12px;
+    bottom: 0px;
+    text-overflow: ellipsis;
+}
+.p-card-liking {
+    position: absolute;
+    height:50px;
+    top: -50px;
+    width: 100%;
+    padding: 10px;
+    color:white;
+    font-size: 13px;
+    font-weight: 300;
+    transition-duration:.2s;
+    background-color: rgba(60, 60, 85, 0.7);
+}
+.p-card:hover .p-card-liking{
+    top: 0px;
+}        
+.p-card-liking p{
+    display: inline;
+} 
 .p-card-title{
     padding: 14px 0;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 800;
     color:#928e8e;
 }
 .p-card-footer{
-    padding: 10px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*background-color: rgba(0, 0, 0, 0.05);*/
 }
-    .p-card-date {
-        margin-right: 20px;
-        font-size: 10px;
-        font-weight: 200;
-        color:#8a8989;
-    }
+.p-card-date {
+    margin-right: 20px;
+    font-size: 10px;
+    font-weight: 200;
+    color:#8a8989;
+}
 .p-card-btn{
-    width:50px;
-    height:50px;
+    width:42px;
+    height:42px;
     text-align: center;
     border-radius: 50%;
-    padding: 13px;
+    padding: 8px;
     font-size: 11px;
     font-weight: 900;
     color:#ffffff;

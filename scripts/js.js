@@ -48,7 +48,7 @@ $(window).on('scroll load',function () {
 
 //last posts slider
 $(".owl-carousel").owlCarousel({
-    autoplay: true,
+    autoplay: false,
     loop: true,
     rtl:true,
     responsive: {

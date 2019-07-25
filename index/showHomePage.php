@@ -319,31 +319,39 @@
                         ?>
                         <div class="p-card">
                             <div class="p-card-img-container">
+                                
                                 <img class="p-card-img" src="includes/images/uploads/posts/260x260/<?=$post->p_image?>" />
+                                
                                 <div class="p-card-content">
                                     <?=$content?>
                                 </div>
+
                                 <div class="p-card-liking">
-                                <span class="m-3">
-                                    <p>+<?=$post->like_count?></p>
-                                    <i class="fa fa-heart"></i>
-                                </span> |
                                     <span class="m-3">
-                                    <p>+<?=$post->dislike_count?></p>
-                                    <i class="fa fa-heart-o"></i>
-                                </span> |
-                                    <span class="m-3">
-                                    <p>+<?=$post->comment_count?></p>
-                                    <i class="fa fa-reply"></i>
-                                </span>
+                                        <p>+<?=$post->like_count?></p>
+                                        <i class="fa fa-heart"></i>
+                                    </span> |
+                                        <span class="m-3">
+                                        <p>+<?=$post->dislike_count?></p>
+                                        <i class="fa fa-heart-o"></i>
+                                    </span> |
+                                        <span class="m-3">
+                                        <p>+<?=$post->comment_count?></p>
+                                        <i class="fa fa-reply"></i>
+                                    </span>
                                 </div>
+
                             </div>
+
+
 
                             <a href="./?post=<?= $post->id ?>">
                                 <div class="p-card-title">
                                     <?=$post->p_title?>
                                 </div>
                             </a>
+
+
 
                             <hr/>
 
