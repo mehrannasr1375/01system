@@ -57,7 +57,7 @@
     </div>
 
 
-
+    <!--  right & left sidebar`s  -->
     <div class="row">
 
 
@@ -231,7 +231,113 @@
 
 
         <!-- left sidebar -->
-        <div class="col-12 col-lg-3 bg-light">
+        <div id="leftbar" class="col-12 col-lg-3 bg-light">
+
+
+            <div class="left-part">
+                <div class="left-part-header">
+                    <p>جستجو در مطالب</p>
+                </div>
+                <div class="left-part-body">
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
+                        <div class="input-group-append">
+                            <button id="btn-search" class="input-group-text"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="left-part">
+                <div class="left-part-header">
+                    <p>آخرین مطالب</p>
+                </div>
+                <div class="left-part-body">
+
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1563262053.53667242.jpg" />
+                        <div class="left-post-title">
+                            <p>ترجمه مقاله وایت پیپر بیت کوین</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1554968680.1130644086.png" />
+                        <div class="left-post-title">
+                            <p>معماری MVC چیست؟</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1548251662.392394052.jpg" />
+                        <div class="left-post-title">
+                            <p>ویژگی های php 7</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
+                        <div class="left-post-title">
+                            <p>رفع رایت پروتکت فلش مموری</p>
+                            <span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="left-part">
+                <div class="left-part-header">
+                    <p>برترین مطالب</p>
+                </div>
+                <div class="left-part-body">
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1563262053.53667242.jpg" />
+                        <div class="left-post-title">
+                            <p>ترجمه مقاله وایت پیپر بیت کوین</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1554968680.1130644086.png" />
+                        <div class="left-post-title">
+                            <p>معماری MVC چیست؟</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1548251662.392394052.jpg" />
+                        <div class="left-post-title">
+                            <p>ویژگی های php 7</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
+                        <div class="left-post-title">
+                            <p>رفع رایت پروتکت فلش مموری</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
+                        <div class="left-post-title">
+                            <p>رفع رایت پروتکت فلش مموری</p>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-post-con d-flex">
+                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
+                        <div class="left-post-title">
+                            <p>رفع رایت پروتکت فلش مموری</p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>
