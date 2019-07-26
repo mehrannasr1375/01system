@@ -43,7 +43,6 @@
 <div class="container">
 
 
-
     <!--  post categories  -->
     <div class="p-cats">
         <p>نوشته شده در گروه : </p>

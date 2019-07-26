@@ -233,27 +233,31 @@ class Post extends Base //18 attributes
     public static function searchPosts($query,$titleSearch=true,$contentSearch=true,$published=true,$limit=0,$start=0)
     {
         $conn = self::connect();
-        if($limit > 0)
+
+        if ($limit > 0)
             $limiter = "LIMIT $start,$limit";
         else
             $limiter = " ";
-        if($titleSearch and $contentSearch)
+
+        if ($titleSearch and $contentSearch)
             $condition = "(p_title LIKE '%$query%' OR p_content LIKE '%$query%')";
-        elseif ($titleSearch)
+        else if ($titleSearch)
             $condition = "p_title LIKE '%$query%'";
-        elseif ($contentSearch)
+        else if ($contentSearch)
             $condition = "p_content LIKE '%$query%'";
         else
             return false;
-        if($published == true)
+
+        if ($published == true)
             $condition .= "AND published=1";
+
         $query = "SELECT tbl_post.*,u_name,f_name,l_name FROM tbl_post,tbl_user 
                   WHERE tbl_post.u_id=tbl_user.id AND $condition ORDER BY creation_time DESC $limiter"; //InnerJoin(user & post)
         $result = $conn -> query($query);
-        if($result -> rowCount()) {
+        if ($result -> rowCount()) {
             $posts = array();
-            foreach ($result -> fetchAll(PDO::FETCH_ASSOC) as $row){
-                if($cats = Post_Cat::getPostCatByPostId($row['id'])) {
+            foreach ($result -> fetchAll(PDO::FETCH_ASSOC) as $row) {
+                if ($cats = Post_Cat::getPostCatByPostId($row['id'])) {
                     foreach ($cats as $cat) {
                         $row['cats'][] = $cat -> cat_id;
                     }
@@ -261,7 +265,7 @@ class Post extends Base //18 attributes
                 $posts[] = new Post($row);
             }
             $ret = $posts;
-        }else
+        } else
             $ret = false;
         self::disconnect($conn);
         return $ret;
