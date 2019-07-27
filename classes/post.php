@@ -56,7 +56,7 @@ class Post extends Base //18 attributes
             die("invalid property!");
     }//ok
     public function __get($property)
-    {
+    {     
 //        $keys=["id","p_title","p_content","p_rate","p_image","u_id","published","allow_comments","creation_time","last_modify","like_count","dislike_count","comment_count","deleted"];
 //        if(in_array($property, $keys))
             return $this->$property;
@@ -230,7 +230,7 @@ class Post extends Base //18 attributes
         self::disconnect($conn);
         return $ret;
     }//ok
-    public static function searchPosts($query,$titleSearch=true,$contentSearch=true,$published=true,$limit=0,$start=0)
+    public static function searchPosts($query, $titleSearch=true, $contentSearch=true, $published=true, $limit=0, $start=0)
     {
         $conn = self::connect();
 
@@ -249,20 +249,20 @@ class Post extends Base //18 attributes
             return false;
 
         if ($published == true)
-            $condition .= "AND published=1";
+            $condition .= " AND published=1";
 
         $query = "SELECT tbl_post.*,u_name,f_name,l_name FROM tbl_post,tbl_user 
                   WHERE tbl_post.u_id=tbl_user.id AND $condition ORDER BY creation_time DESC $limiter"; //InnerJoin(user & post)
         $result = $conn -> query($query);
         if ($result -> rowCount()) {
             $posts = array();
-            foreach ($result -> fetchAll(PDO::FETCH_ASSOC) as $row) {
+            foreach ($result -> fetchAll() as $row) {
                 if ($cats = Post_Cat::getPostCatByPostId($row['id'])) {
                     foreach ($cats as $cat) {
                         $row['cats'][] = $cat -> cat_id;
                     }
                 }
-                $posts[] = new Post($row);
+                $posts[] = new Post($row['id'],$row['p_title'],$row['p_content'],$row['p_rate'],$row['p_image'],$row['u_id'],$row['published'],$row['allow_comments'],$row['creation_time'],$row['last_modify'],$row['like_count'],$row['dislike_count'],$row['comment_count'],$row['deleted'],$row['u_name'],$row['f_name'],$row['l_name'],$row['cats']);
             }
             $ret = $posts;
         } else

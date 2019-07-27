@@ -1269,8 +1269,21 @@ input:focus {
     .p-cats{
         margin:0 20px;
     }
+}
 
 
+/*-------------------------------------- show searched posts page -------------------------------------------*/
+
+#search-posts-parent {
+    padding-top: 100px;
+
+}
+#search-posts-parent .post-con {
+    background-color: #b3dbeb60;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10%;
+    box-shadow: 0 0 4px 0 lightgray;
 }
 
 /*------------------------------------------------- comments --------------------------------------------------*/
