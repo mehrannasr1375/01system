@@ -276,7 +276,8 @@ class Post extends Base //18 attributes
         $query = "SELECT tbl_post.*, u_name, f_name, l_name
                     FROM tbl_post, tbl_user 
                     WHERE tbl_post.u_id=tbl_user.id 
-                    AND  published=1 AND p_rate >= 5 
+                    AND published=1 
+                    AND p_rate >= 5
                     AND tbl_post.id NOT IN (1) 
                     LIMIT $limit";
         $stmt = $conn -> prepare($query);
@@ -284,9 +285,9 @@ class Post extends Base //18 attributes
         if($stmt->rowCount()) {
             $posts=array();
             $rows=$stmt->fetchAll();
-            foreach($rows as $row) {
-                if($category_rows=Post_Cat::getPostCatByPostId($row['id']))
-                    foreach($category_rows as $category_row)
+            foreach ($rows as $row) {
+                if ($category_rows=Post_Cat::getPostCatByPostId($row['id']))
+                    foreach ($category_rows as $category_row)
                         $row['cats'][]=$category_row->cat_id;
                 else
                     $row['cats']=null;
@@ -307,14 +308,15 @@ class Post extends Base //18 attributes
                     WHERE tbl_post.u_id=tbl_user.id 
                     AND published=1 
                     AND tbl_post.id NOT IN (1) 
-                    ORDER BY creation_time DESC LIMIT $limit";
+                    ORDER BY creation_time DESC
+                    LIMIT $limit";
         $stmt = $conn -> prepare($query);
         $stmt -> execute();
-        if($stmt->rowCount()) {
+        if ($stmt->rowCount()) {
             $posts=array();
             $rows=$stmt->fetchAll();
-            foreach($rows as $row) {
-                if($category_rows=Post_Cat::getPostCatByPostId($row['id']))
+            foreach ($rows as $row) {
+                if ($category_rows=Post_Cat::getPostCatByPostId($row['id']))
                     foreach($category_rows as $category_row)
                         $row['cats'][]=$category_row->cat_id;
                 else
