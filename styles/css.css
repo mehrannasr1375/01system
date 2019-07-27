@@ -1230,7 +1230,7 @@ input:focus {
 .left-post-con {
     cursor: pointer;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 .left-post-con:hover .left-post-img {
     border-radius: 8%;

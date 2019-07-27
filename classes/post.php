@@ -273,22 +273,61 @@ class Post extends Base //18 attributes
     public static function getTopPosts($limit=5)
     {
         $conn = self::connect();
-        $query = "SELECT * FROM tbl_post WHERE published=1 AND p_rate >= 5 ";
+        $query = "SELECT tbl_post.*, u_name, f_name, l_name
+                    FROM tbl_post, tbl_user 
+                    WHERE tbl_post.u_id=tbl_user.id 
+                    AND  published=1 AND p_rate >= 5 
+                    AND tbl_post.id NOT IN (1) 
+                    LIMIT $limit";
         $stmt = $conn -> prepare($query);
         $stmt -> execute();
-        if($stmt -> rowCount()){
-            $res = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-            $posts = array();
-            foreach ($res as $row){
-                $posts[] = new Post($row);
+        if($stmt->rowCount()) {
+            $posts=array();
+            $rows=$stmt->fetchAll();
+            foreach($rows as $row) {
+                if($category_rows=Post_Cat::getPostCatByPostId($row['id']))
+                    foreach($category_rows as $category_row)
+                        $row['cats'][]=$category_row->cat_id;
+                else
+                    $row['cats']=null;
+                $posts[]=new Post($row['id'],$row['p_title'],$row['p_content'],$row['p_rate'],$row['p_image'],$row['u_id'],$row['published'],$row['allow_comments'],$row['creation_time'],$row['last_modify'],$row['like_count'],$row['dislike_count'],$row['comment_count'],$row['deleted'],$row['u_name'],$row['f_name'],$row['l_name'],$row['cats']);
             }
-            $ret = $posts;
+            $ret=$posts;
         }
         else
-            $ret = false;
+            $ret=false;
         self::disconnect($conn);
         return $ret;
-    }//ok
+    }
+    public static function getLastPosts($limit=5)
+    {
+        $conn = self::connect();
+        $query = "SELECT tbl_post.*, u_name, f_name, l_name
+                    FROM tbl_post, tbl_user
+                    WHERE tbl_post.u_id=tbl_user.id 
+                    AND published=1 
+                    AND tbl_post.id NOT IN (1) 
+                    ORDER BY creation_time DESC LIMIT $limit";
+        $stmt = $conn -> prepare($query);
+        $stmt -> execute();
+        if($stmt->rowCount()) {
+            $posts=array();
+            $rows=$stmt->fetchAll();
+            foreach($rows as $row) {
+                if($category_rows=Post_Cat::getPostCatByPostId($row['id']))
+                    foreach($category_rows as $category_row)
+                        $row['cats'][]=$category_row->cat_id;
+                else
+                    $row['cats']=null;
+                $posts[]=new Post($row['id'],$row['p_title'],$row['p_content'],$row['p_rate'],$row['p_image'],$row['u_id'],$row['published'],$row['allow_comments'],$row['creation_time'],$row['last_modify'],$row['like_count'],$row['dislike_count'],$row['comment_count'],$row['deleted'],$row['u_name'],$row['f_name'],$row['l_name'],$row['cats']);
+            }
+            $ret=$posts;
+        }
+        else
+            $ret=false;
+        self::disconnect($conn);
+        return $ret;
+    }
     public static function getPostsCounts()
     {
         $conn=self::connect();

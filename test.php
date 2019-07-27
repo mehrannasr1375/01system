@@ -26,7 +26,7 @@ class Test extends Base
 
 
 
-/* sql injection test part */
+/* sql injection test part
 if (isset($_GET['id'])) {
     $result = Test::testFunction($_GET['id']);
     if (!$result)
@@ -35,6 +35,8 @@ if (isset($_GET['id'])) {
         var_dump($result);  
 } else
     echo "no parameters sended! insert id as an query string parameter at the end of url!";
+*/
 
 
-
+$a = Post::getTopPosts(5);
+var_dump($a);

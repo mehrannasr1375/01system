@@ -11,6 +11,9 @@
     $signup_time      =   convertDate( $user -> signup_time );
     $p_content        =   str_replace( "--more--", " ", $post->p_content );
     $creation         =   convertDate( $post -> creation_time );
+
+    $last_posts = Post::getLastPosts(5);
+    $top_posts  = Post::getTopPosts(5);
 ?>
 
 
@@ -254,34 +257,21 @@
                 </div>
                 <div class="left-part-body">
 
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1563262053.53667242.jpg" />
-                        <div class="left-post-title">
-                            <p>ترجمه مقاله وایت پیپر بیت کوین</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1554968680.1130644086.png" />
-                        <div class="left-post-title">
-                            <p>معماری MVC چیست؟</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1548251662.392394052.jpg" />
-                        <div class="left-post-title">
-                            <p>ویژگی های php 7</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
-                        <div class="left-post-title">
-                            <p>رفع رایت پروتکت فلش مموری</p>
-                            <span></span>
-                        </div>
-                    </div>
+                    <?php
+                    if (count((array)$last_posts) > 1) {
+                        foreach ($last_posts as $last_post) {
+                            ?>
+                            <div class="left-post-con d-flex">
+                                <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$last_post->p_image?>" />
+                                <div class="left-post-title">
+                                    <p><?=$last_post->p_title?></p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
 
                 </div>
             </div>
@@ -292,48 +282,23 @@
                     <p>برترین مطالب</p>
                 </div>
                 <div class="left-part-body">
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1563262053.53667242.jpg" />
-                        <div class="left-post-title">
-                            <p>ترجمه مقاله وایت پیپر بیت کوین</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1554968680.1130644086.png" />
-                        <div class="left-post-title">
-                            <p>معماری MVC چیست؟</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1548251662.392394052.jpg" />
-                        <div class="left-post-title">
-                            <p>ویژگی های php 7</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
-                        <div class="left-post-title">
-                            <p>رفع رایت پروتکت فلش مموری</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
-                        <div class="left-post-title">
-                            <p>رفع رایت پروتکت فلش مموری</p>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="left-post-con d-flex">
-                        <img class="left-post-img" src="includes/images/uploads/posts/260x260/1549722229.1061337146.png" />
-                        <div class="left-post-title">
-                            <p>رفع رایت پروتکت فلش مموری</p>
-                            <span></span>
-                        </div>
-                    </div>
+
+                    <?php
+                    if (count((array)$top_posts) > 1) {
+                        foreach ($top_posts as $top_post) {
+                            ?>
+                            <div class="left-post-con d-flex">
+                                <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$top_post->p_image?>" />
+                                <div class="left-post-title">
+                                    <p><?=$top_post->p_title?></p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
+
                 </div>
             </div>
 
