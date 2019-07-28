@@ -134,6 +134,23 @@ $(function () {
         }
     });
 
+
+    //search ajax
+    $("#search").keydown(function () {
+        var text =  $("#search").val();
+        console.log('text = '+ text);
+        if (text !== '') {
+            $.ajax({
+                url:"../actions/show-post-actions.php",
+                method:"POST",
+                data:{text:text},
+                success:function (data) {
+
+                }
+            });
+        }
+    });
+
 });
 
 

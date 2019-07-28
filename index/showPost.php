@@ -22,8 +22,8 @@
 <div>
     <div id="p-header-container">
         <div class="p-header">
-                <p class="mb-3"><?= $post -> p_title ?></p>
-                <span class="post-date pt-5">
+            <h1 class="mb-3"><?= $post -> p_title ?></h1>
+            <span class="post-date pt-5">
                     <i class="fa fa-calendar-times-o"></i>
                     <?= $creation['day'] . " " . $creation['month_name'] . " " . $creation['year'] ; ?>
                     <i class="fa fa-clock-o mr-4"></i>
@@ -68,12 +68,10 @@
         <div class="col-12 col-lg-9">
 
 
-
             <!-- post content -->
-            <div class="container">
+            <div class="container px-0 px-md-3">
                 <p class="p-content"><?=$p_content?></p>
             </div>
-
 
 
             <!-- liking panel -->
@@ -89,7 +87,6 @@
                     <span id="like-counter"><?=$post->like_count?></span>
                 </div>
             </div>
-
 
 
             <!-- about-author part -->
@@ -125,7 +122,6 @@
             </div>
 
 
-
             <!-- show comments-part -->
             <div class="comments container shadow-lg">
 
@@ -150,7 +146,7 @@
                                     if ($class == "mr-7") {
                                         $comment_father_author=Comment::getCommentById($comment->parent_id)->full_name;
                                         echo "<span class='text-black-50 '> در پاسخ به </span>".$comment_father_author."<span class='text-black-50'> گفته : </span>";
-                                    } else 
+                                    } else
                                         echo "<span class='text-black-50'> گفته : </span>";
                                     ?>
                                 </p>
@@ -172,7 +168,6 @@
                     echo "<p class='text-center text-black-50 pt-3'>در رابطه با این پست نظری وجود ندارد</p>";
                 ?>
             </div>
-
 
 
             <!-- send comment-part -->
@@ -242,7 +237,7 @@
                 </div>
                 <div class="left-part-body">
                     <div class="input-group">
-                        <input type="text" name="search" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
+                        <input type="text" id="search" name="search" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
                         <div class="input-group-append">
                             <button id="btn-search" class="input-group-text"><i class="fa fa-search"></i></button>
                         </div>
@@ -256,23 +251,21 @@
                     <p>آخرین مطالب</p>
                 </div>
                 <div class="left-part-body">
-
                     <?php
-                    if (count((array)$last_posts) > 1) {
+                    if (count((array)$last_posts) >= 1) {
                         foreach ($last_posts as $last_post) {
                             ?>
-                            <div class="left-post-con d-flex">
+                            <a href="/01system/?post=<?=$last_post->id?>" class="left-post-con d-flex">
                                 <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$last_post->p_image?>" />
                                 <div class="left-post-title">
                                     <p><?=$last_post->p_title?></p>
                                     <span></span>
                                 </div>
-                            </div>
+                            </a>
                             <?php
                         }
                     }
                     ?>
-
                 </div>
             </div>
 
@@ -282,23 +275,21 @@
                     <p>برترین مطالب</p>
                 </div>
                 <div class="left-part-body">
-
                     <?php
-                    if (count((array)$top_posts) > 1) {
+                    if (count((array)$top_posts) >= 1) {
                         foreach ($top_posts as $top_post) {
                             ?>
-                            <div class="left-post-con d-flex">
+                            <a href="/01system/?post=<?=$top_post->id?>" class="left-post-con d-flex">
                                 <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$top_post->p_image?>" />
                                 <div class="left-post-title">
                                     <p><?=$top_post->p_title?></p>
                                     <span></span>
                                 </div>
-                            </div>
+                            </a>
                             <?php
                         }
                     }
                     ?>
-
                 </div>
             </div>
 

@@ -968,7 +968,11 @@ p#response-success{
         font-size: 22px;
         font-weight: 700;
         text-shadow: 1px 1px 5px #575757;
-     }
+    }
+    .p-header h1 {
+        font-size: 24px !important;
+        font-weight: 700;
+    }
     .p-header .post-date{
         padding: 5px !important;
         font-size: 13px;
@@ -977,7 +981,8 @@ p#response-success{
     }
     .p-img-container{
         margin: 100px;
-        margin-top: -140px !important;
+        margin-top: -130px !important;
+        margin-bottom: 100px !important;
         border-radius: 5px !important;
         overflow: hidden;
         background-size: cover !important;
@@ -1004,8 +1009,8 @@ p#response-success{
     margin-right: auto;
     margin-top:30px;
     margin-bottom:30px;
-    width: 90%;
-    width:100vw !important;
+    width:50vw !important;
+    height:auto !important;
 }
 .p-content~ul, .p-content~ol{
     padding-right: 70px !important;
@@ -1026,22 +1031,22 @@ p#response-success{
     display:inline-block !important;
     border-right:5px solid #e1e1e1;
     text-align:center !important;
-    line-height: 2.5;
+    line-height: 2;
     color: #d6d1d1 !important;
     font-weight:600 !important;
     text-align:right !important;
 }
 .p-content~h1{
-    font-size:2rem !important;
-}
-.p-content~h2{
     font-size:1.75rem !important;
 }
-.p-content~h3{
+.p-content~h2{
     font-size:1.5rem !important;
 }
-.p-content~h4{
+.p-content~h3{
     font-size:1.25rem !important;
+}
+.p-content~h4{
+    font-size:1rem !important;
 }
 .p-content~h5{
     font-size:1rem !important;
@@ -1125,8 +1130,8 @@ input:focus {
 }
     .author-right img.author-avatar{
         border-radius: 50%;
-        width:90px;
-        height:90px;
+        width:60px;
+        height:60px;
     }
     .author-right p{
          margin-top: 20px;
@@ -1138,24 +1143,26 @@ input:focus {
         font-size: 12px;
     }
 .author-left{
-    padding: 20px 60px;
+    padding: 15px 50px;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     color: #5b636a;
-    line-height: 2;
+    line-height: 1.75;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .p-cats{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 10px;
-    border-right: 4px solid #00b8ff !important;
+    border-right: 2px solid #c47fff !important;
+    /*border-left: 2px solid #c47fff !important;*/
     background-color: rgba(111, 111, 111, 0.05);
     box-shadow: inset 1px 0 1px 0 lightgrey;
     text-align: right;
     margin-left:-14px;
     margin-right:14px;
+    /*border-radius: 15px;*/
 }
 .p-cats:first-child{
     font-size: 12px;
@@ -1181,14 +1188,46 @@ input:focus {
     background-color: rgba(59, 192, 255, 0.67);
     box-shadow: 0 6px 6px -5px rgba(176, 176, 176, 0.7);
 }
+@media (max-width: 768px) {
+    .p-content p{
+
+    }
+    .p-content~p img{
+        width:80vw !important;
+        height:auto !important;
+    }
+    .p-content~p {
+        padding-left: -15px !important;
+        padding-right: -15px !important;
+    }
+    .p-content~h1{
+        font-size:1.5rem !important;
+    }
+    .p-content~h2{
+        font-size:1.25rem !important;
+    }
+    .p-content~h3{
+        font-size:1em !important;
+    }
+    .p-content~h4{
+        font-size:.75rem !important;
+    }
+    .p-content~h5{
+        font-size:.75rem !important;
+    }
+    .p-content~h6{
+        font-size:.5rem !important;
+    }
+}
 
 
 /********************** left sidebar *********************/
 #leftbar {
     border-radius: 15px;
+    box-shadow: inset 0 0 2px 0 lightgrey;
 }
 .left-part {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .left-part-header {
     padding: 10px 0;
@@ -1199,7 +1238,7 @@ input:focus {
     color:grey;
 }
 .left-part-body {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     padding: 10px 0;
 }
 .left-part-body input {
@@ -1250,6 +1289,7 @@ input:focus {
     padding: 0 10px;
     font-weight: 600;
     font-size: 12px;
+    line-height: 1.7;
 }
 .left-post-title p {
     transition-duration: .4s;
@@ -1290,8 +1330,6 @@ input:focus {
 
 .comments{
     border-top:2px solid rgba(160, 111, 191, 1);
-    /*background-color: rgb(250, 250, 250);*/
-    /*box-shadow: 0 10px 70px -25px #424242;*/
     position: relative;
     width:100%;
     border-radius: 3px;
