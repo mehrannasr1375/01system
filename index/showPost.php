@@ -65,7 +65,7 @@
 
 
         <!--  rightbar  -->
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-lg-9 ">
 
 
             <!-- post content -->
@@ -90,7 +90,7 @@
 
 
             <!-- about-author part -->
-            <div class="comments container shadow-lg">
+            <div class="comments container shadow">
                 <div class="comments-baner">
                     درباره نویسنده
                 </div>
@@ -123,7 +123,7 @@
 
 
             <!-- show comments-part -->
-            <div class="comments container shadow-lg">
+            <div class="comments container shadow">
 
                 <div class="comments-baner ">
                     دیدگاه ها
@@ -175,7 +175,7 @@
             if ($post->allow_comments)
             {
                 ?>
-                <div id="send-comment" class="send-comment container shadow-lg">
+                <div id="send-comment" class="send-comment container shadow">
                     <div class="comments-baner" id="comment-target">ارسال دیدگاه</div>
                     <p id="comment-title"></p><!--====(title)====-->
                     <input type="hidden" id="c_answer_id" name="c_answer_id" value="0" />
@@ -255,7 +255,7 @@
                     if (count((array)$last_posts) >= 1) {
                         foreach ($last_posts as $last_post) {
                             ?>
-                            <a href="/01system/?post=<?=$last_post->id?>" class="left-post-con d-flex">
+                            <a href="/?post=<?=$last_post->id?>" class="left-post-con d-flex">
                                 <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$last_post->p_image?>" />
                                 <div class="left-post-title">
                                     <p><?=$last_post->p_title?></p>
@@ -279,7 +279,7 @@
                     if (count((array)$top_posts) >= 1) {
                         foreach ($top_posts as $top_post) {
                             ?>
-                            <a href="/01system/?post=<?=$top_post->id?>" class="left-post-con d-flex">
+                            <a href="/?post=<?=$top_post->id?>" class="left-post-con d-flex">
                                 <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$top_post->p_image?>" />
                                 <div class="left-post-title">
                                     <p><?=$top_post->p_title?></p>

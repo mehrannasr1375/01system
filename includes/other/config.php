@@ -1,7 +1,7 @@
 <?php
 
 //PUBLIC CONFIGURE
-define("DEVELOPING_MODE",true);
+define("DEVELOPING_MODE",false);
 define("MAX_POST",5);
 define("MAX_POSTS_TABLE",7);
 define("MAX_PICS_GRID",10);
