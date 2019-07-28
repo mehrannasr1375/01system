@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
+
     // login
     $('#btn-sign-in').click(function () {
+        console.log('clicked!');
         var uname = $('#user').val();
         var upass = $('#pass').val();
         var remember = true;
@@ -17,13 +19,14 @@ $(document).ready(function () {
                 success:function (data) {
                     if (data == false)
                         $('#response-signin').html('نام کاربری یا کلمه ی عبور اشتباه است!');
-                    else if(data == true)
+                    else if (data == true)
                         location.reload();
                 }
             });
         } else
             $('#response-signin').html('نام کاربری یا کلمه ی عبور اشتباه است!');
     });//should check remember chk-box
+
 
     // logout
     $('#btn-sign-out').click(function () {
@@ -36,6 +39,7 @@ $(document).ready(function () {
             }
         });
     });
+
 
     // forget pass
     $('#btn-forget-mail').click(function () {
@@ -74,6 +78,7 @@ $(document).ready(function () {
         }
     });
 
+
     // chkuser
     $('#username').keyup(function () {
         var username = $('#username').val();
@@ -97,6 +102,7 @@ $(document).ready(function () {
         }
     })
 
+
     // chkemail
     $('#email').keyup(function () {
         var email = $("#email").val();
@@ -119,6 +125,7 @@ $(document).ready(function () {
             });
         }
     });
+
 
     // signup
     $('#btn-sign-up').click(function () {

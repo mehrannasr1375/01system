@@ -136,7 +136,7 @@ $(function () {
 
 
     //search ajax
-    $("#search").keydown(function () {
+    /*$("#search").keydown(function () {
         var text =  $("#search").val();
         console.log('text = '+ text);
         if (text !== '') {
@@ -149,7 +149,7 @@ $(function () {
                 }
             });
         }
-    });
+    });*/
 
 });
 
