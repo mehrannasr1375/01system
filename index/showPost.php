@@ -231,6 +231,7 @@
         <div id="leftbar" class="col-12 col-lg-3 bg-light">
 
 
+            <!-- search -->
             <div class="left-part">
                 <div class="left-part-header">
                     <p>جستجو در مطالب</p>
@@ -246,13 +247,14 @@
             </div>
 
 
+            <!-- last posts -->
             <div class="left-part">
                 <div class="left-part-header">
                     <p>آخرین مطالب</p>
                 </div>
                 <div class="left-part-body">
                     <?php
-                    if (count((array)$last_posts) >= 1 && $last_posts!==false) {
+                    if (count((array)$last_posts)>=1 && $last_posts!==false) {
                         foreach ($last_posts as $last_post) {
                             ?>
                             <a href="/?post=<?=$last_post->id?>" class="left-post-con d-flex">
@@ -270,13 +272,14 @@
             </div>
 
 
+            <!-- top posts -->
             <div class="left-part">
                 <div class="left-part-header">
                     <p>برترین مطالب</p>
                 </div>
                 <div class="left-part-body">
                     <?php
-                    if (count((array)$top_posts) >= 1 && $top_posts!==false) {
+                    if (count((array)$top_posts)>=1 && $top_posts!==false) {
                         foreach ($top_posts as $top_post) {
                             ?>
                             <a href="/?post=<?=$top_post->id?>" class="left-post-con d-flex">

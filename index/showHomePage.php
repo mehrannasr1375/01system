@@ -3,7 +3,7 @@
 <section id="slider">
     <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpg')">
+            <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpgg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">برنامه نویسی سمت سرور و کلاینت</h2>
@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('./includes/images/slider/s3.jpg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s3.jpgg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">وبسایت های مدرن، سریع و واکنشگرا</h2>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('./includes/images/slider/s2.jpg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s2.jpgg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">توسعه ی کسب و کار با وبسایت</h2>
@@ -372,6 +372,39 @@
         </div>
     </div>
 </section>
+
+
+
+
+
+
+<!--  -->
+<div id="last-works" class="">
+    <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
+    <div class="samples-slider-container">
+        <div class="box">
+            <img src="https://source.unsplash.com/1000x800">
+            <span>1</span>
+        </div>
+        <div class="box">
+            <img src="https://source.unsplash.com/1000x802">
+            <span>2</span>
+        </div>
+        <div class="box">
+            <img src="https://source.unsplash.com/1000x804">
+            <span>3</span>
+        </div>
+        <div class="box">
+            <img src="https://source.unsplash.com/1000x806">
+            <span>4</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 
 
