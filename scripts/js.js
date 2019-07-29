@@ -56,7 +56,8 @@ $(".owl-carousel").owlCarousel({
         478:  {items: 2},
         768:  {items: 2},
         992:  {items: 4},
-        1200: {items: 4}
+        1200: {items: 5},
+        1600: {items: 6}
     }
 });
 

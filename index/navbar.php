@@ -40,6 +40,7 @@
             <li><a class="btn1" href="./index.php#works"><i class="fa fa-sitemap"></i>زمینه های کاری</a></li>
             <li><a class="btn1" href="./index.php#skills"><i class="fa fa-code"></i>مهارت ها</a></li>
             <li><a class="btn1" href="./index.php#last-posts"><i class="fa fa-bold"></i> وبلاگ </a></li>
+            <li><a class="btn1" href="./index.php#last-works"><i class="fa fa-magic"></i> نمونه کارها </a></li>
         </ul>
     </nav>
 </header>

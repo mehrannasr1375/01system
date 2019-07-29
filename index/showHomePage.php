@@ -3,7 +3,7 @@
 <section id="slider">
     <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpgg')">
+            <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">برنامه نویسی سمت سرور و کلاینت</h2>
@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('./includes/images/slider/s3.jpgg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s3.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">وبسایت های مدرن، سریع و واکنشگرا</h2>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item " style="background-image: url('./includes/images/slider/s2.jpgg')">
+            <div class="carousel-item " style="background-image: url('./includes/images/slider/s2.jpg')">
                 <div class="carousel-overlay">
                     <div class="carousel-content text-center wow fadeInUp" data-wow-delay=".5s">
                         <h2 class="carousel-title">توسعه ی کسب و کار با وبسایت</h2>
@@ -306,7 +306,7 @@
 <section id="last-posts" class="last-posts">
     <div class="container-fluid">
         <h3 class="header-1 text-dark">آخرین مطالب </h3>
-        <div class="container">
+        <div>
             <div class="owl-carousel wow fadeIn" data-wow-delay=".4s">
                 <?php
                 if ($last_posts = Post::getAllPosts(1, 0, 6, 0)) {
@@ -375,36 +375,34 @@
 
 
 
-
-
-
 <!-- last samples -->
 <div id="last-works" class="">
-    <h3 class="header-1 text-light">آخرین نمونه کارها</h3>
-    <div class="samples-slider-container">
-        <div class="box">
-            <img src="./includes/images/b35.jpg">
-            <span class="text-caption">وب سایت شرکتی</span>
-        </div>
-        <div class="box">
-            <img src="./includes/images/43.jpg">
-            <span class="text-caption">CMS مرکز دانلود pdf</span>
-        </div>
-        <div class="box">
-            <img src="./includes/images/b2.jpg">
-            <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
-        </div>
-        <div class="box">
-            <img src="./includes/images/b34.jpg">
-            <span class="text-caption">نرم افزار مدیریت </span>
+    <div class="container">
+        <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
+        <div class="samples-slider-container">
+            <div class="box">
+                <img src="./includes/images/sample-1.jpg">
+                <span class="text-caption">وب سایت شرکتی</span>
+                <span class="text-caption-sm">در یک هفته</span>
+            </div>
+            <div class="box">
+                <img src="./includes/images/sample-2.jpg">
+                <span class="text-caption">CMS مرکز دانلود pdf</span>
+                <span class="text-caption-sm">در یک ماه و نیم</span>
+            </div>
+            <div class="box">
+                <img src="./includes/images/sample-1.jpg">
+                <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
+                <span class="text-caption-sm">در یک ماه</span>
+            </div>
+            <div class="box">
+                <img src="./includes/images/sample-2.jpg">
+                <span class="text-caption">نرم افزار مدیریت </span>
+                <span class="text-caption-sm">در یک ماه</span>
+            </div>
         </div>
     </div>
 </div>
-
-
-
-
-
 
 
 
