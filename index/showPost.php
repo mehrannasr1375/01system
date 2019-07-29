@@ -252,7 +252,7 @@
                 </div>
                 <div class="left-part-body">
                     <?php
-                    if (count((array)$last_posts) >= 1) {
+                    if (count((array)$last_posts) >= 1 && $last_posts!==false) {
                         foreach ($last_posts as $last_post) {
                             ?>
                             <a href="/?post=<?=$last_post->id?>" class="left-post-con d-flex">
@@ -276,7 +276,7 @@
                 </div>
                 <div class="left-part-body">
                     <?php
-                    if (count((array)$top_posts) >= 1) {
+                    if (count((array)$top_posts) >= 1 && $top_posts!==false) {
                         foreach ($top_posts as $top_post) {
                             ?>
                             <a href="/?post=<?=$top_post->id?>" class="left-post-con d-flex">
