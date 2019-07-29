@@ -15,6 +15,6 @@
         <a href="#" class="text-white-50"><i class="fa fa-whatsapp fa-2x mx-2"></i></a>
         <br>
         <a href="#" class="phone-i text-white-50"><i class="fa fa-mobile fa-2x mx-2"></i>09035438619</a>
-        <p class="text-white-50 pr-2">2017-2019</p>
+        <p class="text-white-50 pr-2">2017 - 2019</p>
     </div>
 </footer>
