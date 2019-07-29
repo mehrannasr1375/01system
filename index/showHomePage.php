@@ -378,25 +378,25 @@
 
 
 
-<!--  -->
+<!-- last samples -->
 <div id="last-works" class="">
-    <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
+    <h3 class="header-1 text-light">آخرین نمونه کارها</h3>
     <div class="samples-slider-container">
         <div class="box">
-            <img src="https://source.unsplash.com/1000x800">
-            <span>1</span>
+            <img src="./includes/images/b35.jpg">
+            <span class="text-caption">وب سایت شرکتی</span>
         </div>
         <div class="box">
-            <img src="https://source.unsplash.com/1000x802">
-            <span>2</span>
+            <img src="./includes/images/43.jpg">
+            <span class="text-caption">CMS مرکز دانلود pdf</span>
         </div>
         <div class="box">
-            <img src="https://source.unsplash.com/1000x804">
-            <span>3</span>
+            <img src="./includes/images/b2.jpg">
+            <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
         </div>
         <div class="box">
-            <img src="https://source.unsplash.com/1000x806">
-            <span>4</span>
+            <img src="./includes/images/b34.jpg">
+            <span class="text-caption">نرم افزار مدیریت </span>
         </div>
     </div>
 </div>

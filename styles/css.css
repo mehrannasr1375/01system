@@ -1550,7 +1550,7 @@ input:focus {
 
 
 
-/*--------------------------------  ----------------------------------*/
+/*-------------------------------------- last-works -------------------------------------*/
 #last-works {
     position: relative;
     z-index: 1;
@@ -1605,4 +1605,8 @@ input:focus {
     width: 100%;
     height: 100%;
 }
-  
+.text-caption {
+    font-weight: 400;
+    font-size: 13px !important;
+    color:rgb(235, 230, 230);
+}  
