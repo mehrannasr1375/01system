@@ -10,9 +10,10 @@
         <!--<a href="#" class="text-white-50"><i class="fa fa-youtube fa-2x mx-2"></i></a>-->
         <a href="https://t.me/MehranNasr1375" class="text-white-50"><i class="fa fa-telegram fa-2x mx-2"></i></a>
         <a href="https://www.instagram.com/mehrannasr1375" class="text-white-50"><i class="fa fa-instagram fa-2x mx-2"></i></a>
+        <a href="#" class="text-white-50"><i class="fa fa-whatsapp fa-2x mx-2"></i></a>
         <a href="https://github.com/mehrannasr1375" class="text-white-50"><i class="fa fa-github fa-2x mx-2"></i></a>
         <a href="https://www.linkedin.com/in/mehran-nasr" class="text-white-50"><i class="fa fa-linkedin fa-2x mx-2"></i></a>
-        <a href="#" class="text-white-50"><i class="fa fa-whatsapp fa-2x mx-2"></i></a>
+        <a href="https://codepen.io/mehran-nasr" class="text-white-50"><i class="fa fa-codepen fa-2x mx-2"></i></a>
         <br>
         <a href="#" class="phone-i text-white-50"><i class="fa fa-mobile fa-2x mx-2"></i>09035438619</a>
         <p class="text-white-50 pr-2">2017 - 2019</p>

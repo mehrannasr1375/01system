@@ -927,7 +927,6 @@ textarea {
 }
 #footer div.p-2 a:hover i {
     color: #ca3aff !important;
-    transition: .3s ease all;
 }
 .phone-i {
     display: inline-block;
