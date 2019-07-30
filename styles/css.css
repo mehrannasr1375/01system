@@ -426,6 +426,7 @@ textarea {
     padding-bottom: 2rem;
     position: relative;
     background: url("../includes/images/15.jpg") center / cover no-repeat;
+    border-radius:  0 0 40% 0;
 }
 #order-sequences::before {
     position: absolute;
@@ -435,6 +436,8 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    border-radius:0 0  40%  0;
+
 }
 #order-sequences .card {
     border: 0 !important;
@@ -544,21 +547,34 @@ textarea {
 #skills {
     background: url("../includes/images/b2.jpg") center / cover no-repeat;
     position: relative;
+    /*z-index: 102;*/
     color: white !important;
     padding-top: 3rem;
     min-height:100vh;
-    /*border-radius: 0 25% 0 25% / 0 25% 0 25% ;*/
+    /*border-radius: 20% 0 0 0 / 40% 0 0 0;*/
 }
 #skills::before {
     position: absolute;
+    /*z-index: 101;*/
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(8, 8, 32, 0.3);
     content: '';
-    /*border-radius: 0 25% 0 25% / 0 25% 0 25% ;*/
+    /*border-radius: 20% 0 0 0 /  40% 0 0 0;*/
 }
+/*.bg-skills {
+    position: absolute;
+    z-index: 98;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../includes/images/b35.jpg") center / cover no-repeat;
+    background-color: red;
+    content: '';
+}*/
 #skills h3.header-1 {
     font-size: 18px !important;
     margin-bottom: 5rem !important;
@@ -579,7 +595,7 @@ textarea {
 .skill-part:hover {
     background-color: rgba(90, 90, 90, .6);
     cursor: pointer;
-    transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.2,1.2,1.2);
 }
 .skill-part-h {
     margin-right: 4rem;
@@ -645,9 +661,6 @@ textarea {
 }
 .owl-stage-outer, .owl-stage {
     max-height: 460px !important;
-}
-.owl-stage {
-    /*overflow: visible !important;*/
 }
 .last-posts .owl-item {
     min-width: 260px !important;
@@ -804,7 +817,6 @@ textarea {
     padding-bottom: 2rem;
     background: url("../includes/images/b34.jpg") center / cover no-repeat fixed;
     border-radius: 75% 0 0 0 / 100% 0 0 0 ;
-
 }
 #last-works::before {
     position: absolute;
@@ -837,7 +849,7 @@ textarea {
     height: calc(100% - 10vh);
     -o-object-fit: cover;
     object-fit: cover;
-    transition: .5s;
+    transition: .4s;
 }
 .box:hover {
     flex: 1 1 50%;

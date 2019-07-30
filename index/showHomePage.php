@@ -166,135 +166,137 @@
 
 <!-- skills -->
 <section id="skills">
-    <h3 class="header-1">مهارت ها</h3>
-    <div class="container">
-        <div class="d-flex justify-content-center flex-row flex-wrap">
-            <div class="skill-part wow fadeIn" data-wow-delay=".2s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-php-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Php</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="fa fa-database fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">SQL Server</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-mysql-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">MySQL</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-csharp-line fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">#C</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-javascript-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Java Script</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".8s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-jquery-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">jQuery</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".9s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-bootstrap-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">BootStrap</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-laravel-plain  fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Laravel</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".7s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-html5-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">HTML</h4>
+    <div class="bg-skills">
+        <h3 class="header-1">مهارت ها</h3>
+        <div class="container">
+            <div class="d-flex justify-content-center flex-row flex-wrap">
+                <div class="skill-part wow fadeIn" data-wow-delay=".2s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-php-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Php</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="fa fa-database fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">SQL Server</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-mysql-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">MySQL</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-csharp-line fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">#C</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-javascript-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Java Script</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".8s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-jquery-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">jQuery</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".9s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-bootstrap-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">BootStrap</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-laravel-plain  fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Laravel</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".7s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-html5-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">HTML</h4>
 
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-css3-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">CSS</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".7s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-linux-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Linux</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.1s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-wordpress-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Wordpress</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".6s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-github-original fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">GitHub</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".8s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-gitlab-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">GitLab</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.3s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="fa fa-laptop fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Hardware Repairs</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay=".5s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-photoshop-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Photoshop</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-apache-plain-wordmark fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Apache</h4>
-            </div>
-            <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
-                <span class="float-right fa-stack fa-2x m-auto">
-                    <i class="fa fa-circle fa-stack-2x text-dark"></i>
-                    <i class="di devicon-angularjs-plain fa-stack-1x"></i>
-                </span>
-                <h4 class="skill-part-h">Angular</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-css3-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">CSS</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".7s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-linux-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Linux</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.1s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-wordpress-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Wordpress</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-github-original fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">GitHub</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".8s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-gitlab-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">GitLab</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.3s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="fa fa-laptop fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Hardware Repairs</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-photoshop-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Photoshop</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-apache-plain-wordmark fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Apache</h4>
+                </div>
+                <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
+                    <span class="float-right fa-stack fa-2x m-auto">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="di devicon-angularjs-plain fa-stack-1x"></i>
+                    </span>
+                    <h4 class="skill-part-h">Angular</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -393,11 +395,6 @@
             <div class="box">
                 <img src="./includes/images/sample-1.jpg">
                 <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
-                <span class="text-caption-sm">در یک ماه</span>
-            </div>
-            <div class="box">
-                <img src="./includes/images/sample-2.jpg">
-                <span class="text-caption">نرم افزار مدیریت </span>
                 <span class="text-caption-sm">در یک ماه</span>
             </div>
         </div>
