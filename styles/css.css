@@ -68,12 +68,22 @@ p {
     margin-bottom: 6rem;
 }
 .header-1 {
+    position: relative;
     z-index: 1000;
     font-size: 1rem;
     margin-bottom: 3rem !important;
     padding-top: 4rem !important;
     text-align: center;
     font-weight: 400;
+}
+.header-1:after {
+    position: absolute;
+    z-index:1000000000;
+    top:100%;
+    width: 100px;
+    margin: auto;
+    height:2px;
+    background-color: lightgray;
 }
 .header-2 {
     z-index: 1000;
@@ -272,10 +282,11 @@ textarea {
     line-height: 3rem;
     padding-top: 3rem;
     background-color: rgba(49, 44, 44, 0.9);
+    background: linear-gradient(45deg, rgba(77, 68, 68, 0.9), rgba(0, 0, 0, 0.9) 40%);
     border-left: 10px solid rgba(111, 99, 111, 0.5);
     transition-duration: .2s;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400;
 }
 #nav a {
     padding-bottom: 5px;
@@ -533,12 +544,12 @@ textarea {
 }
 @media (min-width: 1200px) {
     #works {
-        min-height:70vh;
+        min-height:75vh;
     }
 }
 @media (min-width: 1600px) {
     #works {
-        min-height:50vh;
+        min-height:55vh;
     }
 }
 
@@ -547,34 +558,19 @@ textarea {
 #skills {
     background: url("../includes/images/b2.jpg") center / cover no-repeat;
     position: relative;
-    /*z-index: 102;*/
     color: white !important;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     min-height:100vh;
-    /*border-radius: 20% 0 0 0 / 40% 0 0 0;*/
 }
 #skills::before {
     position: absolute;
-    /*z-index: 101;*/
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(8, 8, 32, 0.3);
     content: '';
-    /*border-radius: 20% 0 0 0 /  40% 0 0 0;*/
 }
-/*.bg-skills {
-    position: absolute;
-    z-index: 98;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../includes/images/b35.jpg") center / cover no-repeat;
-    background-color: red;
-    content: '';
-}*/
 #skills h3.header-1 {
     font-size: 18px !important;
     margin-bottom: 5rem !important;
@@ -625,12 +621,12 @@ textarea {
 }
 @media (min-width: 1200px) {
     #skills {
-        min-height:70vh;
+        min-height:85vh;
     }
 }
 @media (min-width: 1600px) {
     #skills {
-        min-height:50vh;
+        min-height:55vh;
     }
 }
 
@@ -793,6 +789,11 @@ textarea {
     margin: 0 !important;
 }
 
+@media (min-width: 1200px) {
+    .last-posts {
+        min-height:65vh;
+    }
+}
 @media (max-width: 600px) {
     .last-posts .header-1 {
         margin-bottom: 1.5rem !important;
@@ -802,9 +803,14 @@ textarea {
         padding: 0 !important;
     }
 }
-@media (min-width: 1200px) {
-    .last-posts {
-        min-height:65vh;
+@media(max-width:468px) {
+    .p-card {
+        margin:8px 50px;
+    }
+}
+@media(max-width:320px) {
+    .p-card {
+        margin:8px;
     }
 }
 
@@ -833,16 +839,14 @@ textarea {
     width: 100%;
     padding: 4% 2%;
     box-sizing: border-box;
-    height: 60vh;
+    height: 70vh;
 }
 .box {
     background-color: white;
     flex: 1;
     overflow: hidden;
     transition: .5s;
-    /*margin: 0 1px;*/
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    line-height: 0;
 }
 .box > img {
     width: 200%;
@@ -869,16 +873,32 @@ textarea {
 }
 .text-caption-sm {
     font-weight: 300;
-    font-size: 12px !important;
-    color:rgb(1, 1, 1);
-    line-height: 2.6;
+    font-size: 11px !important;
+    color:rgb(88, 86, 86);
+    line-height: 2;
     display: block;
     text-align: center;
 }
 
+@media (max-width: 400px) {
+    .samples-slider-container {
+        display: flex;
+        width: 100%;
+        padding: 2% 1%;
+        box-sizing: border-box;
+        height: 60vh;
+    }
+    .text-caption {
+        font-size: 11px !important;
+    }
+    .text-caption-sm {
+        font-weight: 300;
+        font-size: 9px !important;
+    }
+}
 @media (min-width: 1200px) {
     .samples-slider-container {
-        height: 40vh;
+        height: 70vh;
     }
 }
 
@@ -949,7 +969,7 @@ textarea {
     text-align: center;
     line-height: 2.2em;
     transition-duration: 0.3s;
-    box-shadow: 0 6px 1px 1px rgb(175, 95, 255); 
+    box-shadow: 0 6px 1px 0px rgb(175, 95, 255); 
 }
 #go-to-top:hover {
     color:white;

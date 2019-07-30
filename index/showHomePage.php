@@ -378,7 +378,7 @@
 
 
 <!-- last samples -->
-<div id="last-works" class="">
+<div id="last-works">
     <div class="container">
         <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
         <div class="samples-slider-container">
