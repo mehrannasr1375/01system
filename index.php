@@ -68,11 +68,11 @@
     <!-- home or postPage  -->
     <?php
 
-        if ( isset($_GET['post']) and is_numeric($_GET['post']) )
+        if ( isset($_GET['post']) && is_numeric($_GET['post']) )
             require_once "index/showPost.php";
 
-        else if ( isset($_GET['s']) )
-            require_once "index/searchPage.php";
+//        else if ( isset($_POST['search-text']) )
+//            require_once "index/showPost.php";
 
         else
             require_once "index/showHomePage.php";

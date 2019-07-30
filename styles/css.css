@@ -848,7 +848,7 @@ textarea {
     flex: 1;
     overflow: hidden;
     transition: .5s;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 .box > img {
     width: 200%;
@@ -1480,7 +1480,7 @@ input:focus {
 /*-------------------------------------- show searched posts page --------------------------------------------------*/
 
 #search-posts-parent {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
 
 }
 #search-posts-parent .post-con {

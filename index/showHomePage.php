@@ -383,19 +383,19 @@
         <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
         <div class="samples-slider-container">
             <div class="box">
-                <img src="./includes/images/sample-works/sample-1.jpg">
-                <span class="text-caption">وب سایت شرکتی</span>
-                <span class="text-caption-sm">در یک هفته</span>
+                <img src="./includes/images/sample-works/sample-2.jpg">
+                <span class="text-caption">CMS خبری - اجتماعی</span>
+                <span class="text-caption-sm">در 35 روز</span>
             </div>
             <div class="box">
-                <img src="./includes/images/sample-works/sample-2.jpg">
+                <img src="./includes/images/sample-works/sample-3.jpg">
                 <span class="text-caption">CMS مرکز دانلود pdf</span>
-                <span class="text-caption-sm">در یک ماه و نیم</span>
+                <span class="text-caption-sm">در 28 روز</span>
             </div>
             <div class="box">
                 <img src="./includes/images/sample-works/sample-1.jpg">
                 <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
-                <span class="text-caption-sm">در یک ماه</span>
+                <span class="text-caption-sm">در 14 روز</span>
             </div>
         </div>
     </div>

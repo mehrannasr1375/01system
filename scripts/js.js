@@ -1,8 +1,10 @@
+
 //smooth scroll
 new SmoothScroll('a[href*="#"]' , {
     easing: 'linear',
     speed: 500
 });
+
 
 //right menu toggler
 $('#right-menu-toggler').on('click',function() {
@@ -17,6 +19,7 @@ $('#right-menu-toggler').on('click',function() {
         icon.removeClass('fa-bars').addClass('fa-times');
     }
 });
+
 
 //top navbar styles & go top btn
 $(window).on('scroll load',function () {
@@ -33,7 +36,7 @@ $(window).on('scroll load',function () {
             }
         }
         else {
-            $('#navbar').css('background-color','rgba(66,55,66,.4)').css('padding','8px 10px').css('box-shadow','0 0 0 0');
+            $('#navbar').css('background-color','rgba(66,55,66,.95)').css('padding','8px 10px').css('box-shadow','0 0 0 0');
             $('#sign-in-btn-group').css('top','10px');
             $('#right-menu-toggler').css('font-size','32px').css('top','8px');
         }
@@ -45,6 +48,7 @@ $(window).on('scroll load',function () {
             $('#go-to-top').css('opacity','0'); 
         }
 });
+
 
 //last posts slider
 $(".owl-carousel").owlCarousel({
@@ -61,7 +65,9 @@ $(".owl-carousel").owlCarousel({
     }
 });
 
+
 //wow initialize
+
 
 // sign in section
 $("#btn-signin").on('click',function () {
@@ -96,7 +102,6 @@ $("#btn-forget").on('click',function () {
 $(".login-close").on('click',function(){
     $(this).parent().parent().parent().fadeToggle(0);
 });
-
 
 
 //waiting spinner for load page

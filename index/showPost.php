@@ -1,4 +1,9 @@
 <?php
+
+if (isset ( $_POST['search-text']) )
+    require_once "searchPage.php";
+
+else {
     $post_id          =   $_GET['post'];
     $post             =   Post::getPostById( $post_id );
     $user_id          =   $post -> u_id;
@@ -11,8 +16,7 @@
     $signup_time      =   convertDate( $user -> signup_time );
     $p_content        =   str_replace( "--more--", " ", $post->p_content );
     $creation         =   convertDate( $post -> creation_time );
-
-
+}
 ?>
 
 
@@ -225,10 +229,9 @@
         </div>
 
 
+        <!--  leftbar  -->
+        <?php require_once "leftbar.php"; ?>
 
-        <?php
-            require_once "leftbar.php";
-        ?>
 
 
     </div>

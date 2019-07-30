@@ -13,14 +13,16 @@
         <div class="left-part-header">
             <p>جستجو در مطالب</p>
         </div>
-        <div class="left-part-body">
-            <div class="input-group">
-                <input type="text" id="search" name="search" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
-                <div class="input-group-append">
-                    <button id="btn-search" class="input-group-text"><i class="fa fa-search"></i></button>
+        <form method="post" action="/01system/index.php" class="m-0 p-0">
+            <div class="left-part-body">
+                <div class="input-group">
+                    <input type="text" id="search" name="search-text" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
+                    <div class="input-group-append">
+                        <button id="btn-search" name="btn-search" class="input-group-text"><i class="fa fa-search"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
 

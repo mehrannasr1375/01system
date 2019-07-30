@@ -1,7 +1,8 @@
 <?php
-    $world = trim($_GET['s']);
+    $world = trim($_POST['search-text']);
     $world = htmlspecialchars($world, ENT_QUOTES);
     $last_posts = Post::searchPosts($world, true, true, true, 0, 10);
+    $count = count($last_posts);
 ?>
 
 
@@ -14,17 +15,20 @@
 
 
         <!-- right bar -->
-        <div id="search-posts-parent" class="col-10 row">
+        <div id="search-posts-parent" class="col-9">
             <?php
-                if ($last_posts) {
+                if ($last_posts)
+                {
+                    echo "<div class='alert alert-info'><p>"
+                        . $count
+                        . " نتیجه یافت شد! </p></div>";
                     foreach ($last_posts as $post) {
                         if ($pos = strpos($post->p_content, "--more--"))
-                            $content = substr($post->p_content, 0, $pos);
+                            $content = substr($post->p_content,0, $pos);
                         else
-                            $content = substr($post->p_content, 0, 300);
+                            $content = substr($post->p_content,0,300);
                         $rate = $post->p_rate;
                         ?>
-                        
                         <a href="/index.php?post=<?=$post->id?>">
                             <div class="card col-6">
                                 <div class="row no-gutters">
@@ -41,13 +45,14 @@
                                 </div>
                             </div>
                         </a>
-
                     <?php
                     }
-                } else {
+                }
+                else {
                     echo "
-                        <div class='badge'>
-                            <p>نتیجه ای یافت نشد</p>
+                        <div class='alert alert-danger'>
+                            <span class='font-weight-bold'>خطا : </span>
+                            <span>نتیجه ای یافت نشد!</span>
                         </div>
                     ";
                 }
@@ -59,11 +64,10 @@
 
 
         <!-- left bar -->
-        <div class="col-2">
-            <?php
-                require_once "leftbar.php";
-            ?>
-        </div>
+        <?php
+            require_once "leftbar.php";
+        ?>
+
 
 
 
