@@ -943,16 +943,18 @@ textarea {
     display: inline-block;
     width: 34px;
     height: 34px;
-    background-color: rgba(166, 162, 169, 0.5);
-    color:white;
+    color:rgb(175, 95, 255);
     font-weight: bold;
-    border-radius: 25%;
+    border-radius: 50%;
     text-align: center;
-    line-height: 2em;
-    transition-duration: 0.5s;
+    line-height: 2.2em;
+    transition-duration: 0.3s;
+    box-shadow: 0 6px 1px 1px rgb(175, 95, 255); 
 }
 #go-to-top:hover {
+    color:white;
     background-color: rgba(126, 0, 255, 0.9);
+    box-shadow: none;
 }
 
 /*--------------------------------------------------  login  -------------------------------------------------*/
