@@ -29,7 +29,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>صفحه اصلی</title>
+    <title>01System</title>
+    <link rel="icon" type="image/png" href="./includes/images/2.png"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139533490-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -218,6 +219,7 @@
     </div>
 
 
+    
     <!-- go top -->
     <a href="#home" id="go-to-top"><i class="fa fa-chevron-up"></i></a>
 
