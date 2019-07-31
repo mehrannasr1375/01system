@@ -17,8 +17,11 @@ $(document).ready(function () {
                 method:"POST",
                 data:{action:'login',user:uname, pass:upass, remember:remember},
                 success:function (data) {
+                    //console.log('result = ' + data);
                     if (data == false)
                         $('#response-signin').html('نام کاربری یا کلمه ی عبور اشتباه است!');
+                    else if (data == 'max-requests')
+                        $('#response-signin').html('حساب شما به طور موقت مسدود شد. لطفا 3 دقیقه ی دیگر مجددا تلاش نمایید ! (جهت امنیت حساب شما)');
                     else if (data == true)
                         location.reload();
                 }

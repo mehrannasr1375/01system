@@ -1,7 +1,7 @@
 <?php
 require_once ("include_all.php");
 /* a fake class for test sql injection  */
-class Test extends Base
+/*class Test extends Base
 {
     public static function testFunction($id)
     {
@@ -19,13 +19,7 @@ class Test extends Base
         Base::disconnect($con);
         return $ret;
     }
-}
-
-
-
-
-
-
+}*/
 /* sql injection test part
 if (isset($_GET['id'])) {
     $result = Test::testFunction($_GET['id']);
@@ -36,7 +30,6 @@ if (isset($_GET['id'])) {
 } else
     echo "no parameters sended! insert id as an query string parameter at the end of url!";
 */
+?>
 
 
-$a = Post::getTopPosts(5);
-var_dump($a);

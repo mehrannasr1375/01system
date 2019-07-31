@@ -1,7 +1,8 @@
 <?php
 require_once "base.php";
-class User extends Base //20 attributes
+class User extends Base
 {
+    //20
     private $id;
     private $u_name;
     private $u_pass;
@@ -53,7 +54,7 @@ class User extends Base //20 attributes
             return $this->$property;
         else
             return 'invalid property';
-    }//ok
+    }
     public function __set($key,$value)
     {
         $keys = ['u_rate','bio','avatar','deleted'];
@@ -87,7 +88,7 @@ class User extends Base //20 attributes
         }
         else
             return false;
-    }//ok
+    }
     public static function getUserById($id)
     {
         $conn=self::connect();
@@ -100,7 +101,7 @@ class User extends Base //20 attributes
         }
         else
             return false;
-    }//ok
+    }
     public static function getUserIdByPostId($id)
     {
         $conn=self::connect();
@@ -111,7 +112,7 @@ class User extends Base //20 attributes
             return $stmt->fetch()['u_id'];
         else
             return false;
-    }//ok
+    }
     public static function insertUser($u_name,$u_pass,$u_email,$f_name,$l_name,$age,$sex,$bio,$avatar='avatar_default.png')
     {
         try
@@ -135,7 +136,7 @@ class User extends Base //20 attributes
         }
         return $ret;
     }
-    public static function sendActivationEmail($u_name,$u_email)
+    public static function sendActivationEmail($u_name, $u_email)
     {
         $conn = self::connect();
 
@@ -169,8 +170,8 @@ class User extends Base //20 attributes
             return array(false,"خطا در ارسال ایمیل فعالسازی");
         }
 
-    }//ok
-    public static function activateUser($u_name,$activation_code)
+    }
+    public static function activateUser($u_name, $activation_code)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_activateUser(?,?);");
@@ -180,21 +181,47 @@ class User extends Base //20 attributes
             return true;
         else
             return false;
-    }//ok
-    public static function authenticateUser($u_name,$u_pass)
+    }
+    public static function authenticateUser($u_name, $u_pass)
     {
-        $conn=self::connect();
-        $salt="10-20/3&poonzdah";
-        $hashed_pass=md5($u_pass.$salt);
-        $stmt=$conn->prepare("CALL SP_user_authenticateUser(?,?);");
-        $stmt->execute([$u_name,$hashed_pass]);
+        // returns an object or false or 'max-requests'
+
+        // delete old records
+        $conn = self::connect();
+        $stmt = $conn->prepare("DELETE FROM tbl_login_history WHERE username=? AND `time` < DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 MINUTE );");
+        $stmt->execute([$u_name]);
         self::disconnect($conn);
-        $row=$stmt->fetch();
-        if($stmt->rowCount())
-            return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
-        else
-            return false;
-    }//ok
+
+        // save current request
+        $conn = self::connect();
+        $stmt = $conn->prepare("INSERT INTO tbl_login_history(`ip`, `username`, `time`) VALUES (?,?, CURRENT_TIMESTAMP);");
+        $stmt->execute([$_SERVER['REMOTE_ADDR'], $u_name]);
+        self::disconnect($conn);
+
+        // get requersts count
+        $conn = self::connect();
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM tbl_login_history WHERE username=? AND `time` > DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 MINUTE );");
+        $stmt->execute([$u_name]);
+        self::disconnect($conn);
+
+        // make last decesion (login || fail)
+        if ( $stmt->fetch()[0] > 3 )
+            die('max-requests') ;
+        else {
+            $conn = self::connect();
+            $salt = "10-20/3&poonzdah";
+            $hashed_pass = md5($u_pass.$salt);
+            $stmt = $conn->prepare("CALL SP_user_authenticateUser(?,?);");
+            $stmt->execute([$u_name, $hashed_pass]);
+            self::disconnect($conn);
+            $row = $stmt->fetch();
+            if ( $stmt->rowCount() )
+                return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
+            else
+                return false;
+        }
+
+    }
     public static function getUserByName($u_name)
     {
         $conn=self::connect();
@@ -206,7 +233,7 @@ class User extends Base //20 attributes
             return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
         else
             return false;
-    }//ok
+    }
     public static function checkUserNameExists($u_name)
     {
         $conn=self::connect();
@@ -217,7 +244,7 @@ class User extends Base //20 attributes
             return false;
         else
             return true;
-    }//ok
+    }
     public static function checkEmailExists($u_email)
     {
         $conn=self::connect();
@@ -228,7 +255,7 @@ class User extends Base //20 attributes
             return false;
         else
             return true;
-    }//ok
+    }
     public static function rememberUser($u_email)
     {
         $conn = self::connect();
@@ -263,8 +290,8 @@ EOS;
             return 3;//3 = شما از حداکثر سقف مجاز تعداد ارسال های خود استفاده نموده اید. لطفا بعدا تلاش نمایید!
         else
             return false;//0 = کاربری با این ایمیل ثبت نام نکرده است!
-    }//ok
-    public static function deleteUserById($user_id,$permanent=0)
+    }
+    public static function deleteUserById($user_id, $permanent=0)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_deleteUserById(?,?);");
@@ -274,8 +301,8 @@ EOS;
             return true;
         else
             return false;
-    }//ok
-    public static function changeUserTypeById($id,$u_type)
+    }
+    public static function changeUserTypeById($id, $u_type)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_changeUserTypeById(?,?);");
@@ -285,7 +312,7 @@ EOS;
             return true;
         else
             return false;
-    }//ok
+    }
     public static function getUserTypeById($id)
     {
         $conn=self::connect();
@@ -296,7 +323,7 @@ EOS;
             return $stmt->fetch()[0];
         else
             return false;
-    }//ok
+    }
     public static function getLikesOfUser($u_id)
     {
         $conn=self::connect();
@@ -307,8 +334,8 @@ EOS;
             return $stmt->fetch()[0];
         else
             return false;
-    }//ok
-    public static function updateUserAvatar($u_id,$new_path)
+    }
+    public static function updateUserAvatar($u_id, $new_path)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_updateUserAvatar(?,?);");
@@ -318,8 +345,8 @@ EOS;
             return true;
         else
             return false;
-    }//ok
-    public static function updateUserPassByEmail($u_pass,$u_email)
+    }
+    public static function updateUserPassByEmail($u_pass, $u_email)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_updateUserPassByEmail(?,?);");
@@ -331,8 +358,8 @@ EOS;
             return true;
         else
             return false;
-    }//ok
-    public static function updateUserPassByUserName($u_pass,$u_name)
+    }
+    public static function updateUserPassByUserName($u_pass, $u_name)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_updateUserPassByUserName(?,?);");
@@ -345,29 +372,29 @@ EOS;
         else
             return false;
 
-    }//ok
-    public static function setRandomHash($u_name,$random_hash)
+    }
+    public static function setRandomHash($u_name, $random_hash)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_setRandomHash(?,?);");
-        $stmt->execute([$u_name,$random_hash]);
+        $conn = self::connect();
+        $stmt = $conn->prepare("CALL SP_user_setRandomHash(?,?);");
+        $stmt->execute([$u_name, $random_hash]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if ( $stmt->rowCount() )
             return true;
         else
             return false;
-    }//ok
+    }
     public static function getRandomHash($u_name)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_getRandomHash(?);");
+        $conn = self::connect();
+        $stmt = $conn->prepare("CALL SP_user_getRandomHash(?);");
         $stmt->execute([$u_name]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if ( $stmt->rowCount() )
             return $stmt->fetch()[0];
         else
             return false;
-    }//ok
+    }
     public static function getUserInformations($u_id)
     {
         $conn=self::connect();
@@ -378,7 +405,7 @@ EOS;
             return $stmt->fetch();
         else
             return false;
-    }//ok
+    }
 
 }
 
