@@ -1,5 +1,3 @@
-<!-- navbar -->
-
 
 <header id="navbar">
     <a href="http://www.01system.ir">

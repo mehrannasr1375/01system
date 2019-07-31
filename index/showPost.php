@@ -1,9 +1,4 @@
 <?php
-
-if (isset ( $_POST['search-text']) )
-    require_once "searchPage.php";
-
-else {
     $post_id          =   $_GET['post'];
     $post             =   Post::getPostById( $post_id );
     $user_id          =   $post -> u_id;
@@ -16,8 +11,8 @@ else {
     $signup_time      =   convertDate( $user -> signup_time );
     $p_content        =   str_replace( "--more--", " ", $post->p_content );
     $creation         =   convertDate( $post -> creation_time );
-}
 ?>
+
 
 
 
@@ -45,8 +40,9 @@ else {
 
 
 
-<!-- post-categories, post-content, liking-panel, about-author, comments-part  -->
+<!-- post details all  -->
 <div class="container">
+
 
 
     <!--  post categories  -->
@@ -62,13 +58,14 @@ else {
     </div>
 
 
+
     <!--  right & left sidebar`s  -->
     <div class="row">
 
 
 
         <!--  rightbar  -->
-        <div class="col-12 col-lg-9 ">
+        <div class="col-12 col-lg-9">
 
 
             <!-- post content -->
@@ -229,12 +226,11 @@ else {
         </div>
 
 
+
         <!--  leftbar  -->
         <?php require_once "leftbar.php"; ?>
 
 
 
     </div>
-
-
 </div>

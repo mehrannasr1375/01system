@@ -1,5 +1,3 @@
-<!-- footer -->
-
 
 <footer id="footer">
     <p class="text-center pt-5 pb-3">طراحی و توسعه از 01system . کلیه ی حقوق محفوظ است &copy;</p></p>

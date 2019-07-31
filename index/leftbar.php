@@ -1,3 +1,8 @@
+<!--  
+    This page should be call inside a div with 'row' class
+    This page contains: 
+                        search-box, last-posts, top-posts
+-->
 <?php
     $last_posts = Post::getLastPosts(5);
     $top_posts  = Post::getTopPosts(5);
@@ -13,7 +18,7 @@
         <div class="left-part-header">
             <p>جستجو در مطالب</p>
         </div>
-        <form method="post" action="/01system/index.php" class="m-0 p-0">
+        <form method="post" action="/01system/index.php?action=search" class="m-0 p-0">
             <div class="left-part-body">
                 <div class="input-group">
                     <input type="text" id="search" name="search-text" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
@@ -36,7 +41,7 @@
             if (count((array)$last_posts)>=1 && $last_posts!==false) {
                 foreach ($last_posts as $last_post) {
                     ?>
-                    <a href="/?post=<?=$last_post->id?>" class="left-post-con d-flex">
+                    <a href="./?post=<?=$last_post->id?>" class="left-post-con d-flex">
                         <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$last_post->p_image?>" />
                         <div class="left-post-title">
                             <p><?=$last_post->p_title?></p>
@@ -61,7 +66,7 @@
             if (count((array)$top_posts)>=1 && $top_posts!==false) {
                 foreach ($top_posts as $top_post) {
                     ?>
-                    <a href="/?post=<?=$top_post->id?>" class="left-post-con d-flex">
+                    <a href="./?post=<?=$top_post->id?>" class="left-post-con d-flex">
                         <img class="left-post-img" src="includes/images/uploads/posts/260x260/<?=$top_post->p_image?>" />
                         <div class="left-post-title">
                             <p><?=$top_post->p_title?></p>

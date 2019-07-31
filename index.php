@@ -1,6 +1,6 @@
 <?php
     /*
-     *  show post or show home
+     *  show post or show home or show searchPage
      *  show page depends on 'post=x' parameter on query string
      */
     require_once ("include_all.php");
@@ -65,18 +65,14 @@
 
 
 
-    <!-- home or postPage  -->
+    <!-- home or postPage or searchPostsPage  -->
     <?php
-
         if ( isset($_GET['post']) && is_numeric($_GET['post']) )
             require_once "index/showPost.php";
-
-//        else if ( isset($_POST['search-text']) )
-//            require_once "index/showPost.php";
-
+        else if ( isset($_GET['action']) && $_GET['action']=='search' )
+            require_once "index/searchPage.php";
         else
             require_once "index/showHomePage.php";
-
     ?>
 
 
@@ -249,8 +245,5 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/changeAnswer.js"></script>
 </div>
-
-
-
 </body>
 </html>

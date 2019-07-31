@@ -212,7 +212,7 @@ p {
     }
 }
 
-/*---------------------------------------------  custom-buttons  --------------------------------------------------*/
+/*----------------------------------------------  custom-buttons  --------------------------------------------------*/
 
 input[type=text], input[type=password], select {
     width:100%;
@@ -927,7 +927,7 @@ textarea {
     max-width: 500px;
 }
 
-/*--------------------------------------------------- footer -----------------------------------------------------*/
+/*-------------------------------------------------- footer -----------------------------------------------------*/
 
 #footer {
     font-weight: 300;
@@ -979,7 +979,7 @@ textarea {
     box-shadow: none;
 }
 
-/*--------------------------------------------------  login  -------------------------------------------------*/
+/*---------------------------------------------------  login  -------------------------------------------------*/
 
 #sign-in-overlay, #sign-up-overlay, #forget-overlay {
     position: fixed;
@@ -1113,6 +1113,8 @@ p#response-success {
     box-shadow: 0 10px 18px -10px rgba(0, 0, 0, 0.60);
 }
 
+/*------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------  show post page  -------------------------------------------------*/
 
 #p-header-container {
@@ -1299,7 +1301,7 @@ input:focus {
      margin-top: 20px;
      font-weight: 900;
      font-size: 15px;
- }
+}
 .author-right small {
     font-weight: 400;
     font-size: 12px;
@@ -1346,6 +1348,7 @@ input:focus {
     background-color: rgba(59, 192, 255, 0.67);
     box-shadow: 0 6px 6px -5px rgba(176, 176, 176, 0.7);
 }
+
 @media (max-width: 768px) {
     .p-content p {
 
@@ -1378,7 +1381,7 @@ input:focus {
     }
 }
 
-/*------------------------------------------ left sidebar -----------------------------------------------------*/
+/*---------------------------------------------- left sidebar -----------------------------------------------------*/
 
 #leftbar {
     border-radius: 15px;
@@ -1424,7 +1427,6 @@ input:focus {
     border-right-width: 1px;
     border-left-width: 1px;
 }
-
 .left-post-con {
     padding: 6px;
     border-radius: 30px 2px 2px 30px;
@@ -1477,12 +1479,8 @@ input:focus {
     }
 }
 
-/*-------------------------------------- show searched posts page --------------------------------------------------*/
+/*------------------------------------------- searched posts page --------------------------------------------------*/
 
-#search-posts-parent {
-    /*padding-top: 100px;*/
-
-}
 #search-posts-parent .post-con {
     background-color: #b3dbeb60;
     padding: 20px;
@@ -1492,13 +1490,34 @@ input:focus {
 
 }
 #search-posts-parent .card {
-    margin-bottom: 30px;
+    border:none !important;
+    border-left: 3px solid rgb(155, 35, 211) !important;
+    overflow: hidden;
+    height:90px;
+    margin-bottom: 10px;
     margin-left: 10px;
-    max-width: 440px;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,.1);
-    border-left: 4px solid rgb(155, 35, 211);
+    padding:  0;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,.7);
 }
-
+#search-posts-parent .card img{
+    height:90px;
+    width:90px;
+}
+#search-posts-parent .card h5 {
+    color:rgb(153, 153, 153) !important;
+    font-size: 15px !important;
+    font-weight: 700;
+    line-height: 3;
+    transition-duration: .3s;
+}
+#search-posts-parent .card:hover h5 {
+    color:rgb(66, 64, 64) !important;
+    font-size: 15px !important;
+    line-height: 3;
+}
+#search-posts-parent .card:hover {
+    box-shadow: 0 0 1px 0px rgba(0,0,0,.7) ,inset 0 0 50px 0px rgba(0,0,0,.1);
+}
 /*------------------------------------------------- comments ------------------------------------------------------*/
 
 .comments {
@@ -1679,7 +1698,7 @@ input:focus {
     }
 }
 
-/*--------------------------------------------- popup-box ----------------------------------------------------------*/
+/*------------------------------------------------ popup-box ----------------------------------------------------------*/
 
 #popup-box {
     position: fixed;
@@ -1716,5 +1735,4 @@ input:focus {
     border-left: 4px solid #ff385d;
 }
 
-/*--------------------------------------------- search-page ----------------------------------------------------------*/
 
