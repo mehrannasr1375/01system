@@ -5,6 +5,19 @@
     background-color: white;
     display:none;
 }
+.fixed-bg {
+    background: url("../includes/images/b35.jpg") center / cover no-repeat fixed;
+    position: relative;
+}
+.fixed-bg:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
 a:hover {
     text-decoration: none;
 }
@@ -440,9 +453,9 @@ textarea {
     padding-bottom: 2rem;
     position: relative;
     background: url("../includes/images/15.jpg") center / cover no-repeat;
-    /*border-radius:  0 0 40% 0;*/
+    /*border-radius:  0% 0% 0% 0% / 0% 0% 0% 0% ;*/
 }
-#order-sequences::before {
+#order-sequences::after {
     position: absolute;
     content: '';
     top: 0;
@@ -450,7 +463,7 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    /*border-radius:0 0  40%  0;*/
+    /*border-radius:  0% 0% 0% 0% / 0% 0% 0% 0% ;*/
 }
 #order-sequences .card {
     border: 0 !important;
@@ -477,7 +490,7 @@ textarea {
     border: 1px dashed rgba(2, 184, 179, 0.64);
     position: absolute;
     top: 72px;
-    left: 120px;
+    left: 100px;
 }
 
 @media (max-width: 600px) {
@@ -563,15 +576,17 @@ textarea {
     color: white !important;
     padding-top: 2.5rem;
     min-height:100vh;
+    /*border-radius: 120% 0% 0% 0% / 30% 0% 0% 0% ;*/
 }
 #skills::before {
     position: absolute;
+    content: '';
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(8, 8, 32, 0.3);
-    content: '';
+    /*border-radius: 120% 0% 0% 0% / 30% 0% 0% 0% ;*/
 }
 #skills h3.header-1 {
     font-size: 18px !important;
@@ -640,18 +655,18 @@ textarea {
     padding-top: 6rem;
     min-height:90vh;
     background: url("../includes/images/b34.jpg") center / cover no-repeat fixed;
-    border-radius: 0 0 90% 0 / 0 0 90% 0;
+    border-radius: 0% 0% 90% 0% / 0% 0% 90% 0%;
     margin-bottom: 30px;
 }
 .last-posts::before {
     position: absolute;
-    z-index: -1;
     content: '';
+    z-index: -1;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .owl-stage-outer {
     padding: 14px 0 ;
@@ -784,8 +799,9 @@ textarea {
     transition-duration:.2s;
 }
 .p-card-btn:hover {
-    color:#ffffff; 
-    background:#a7a5a8 ;
+    color:#ffffff;
+    transform: scale3d(2,2,2);
+    /*background:#a7a5a8 ;*/
 }
 #last-posts hr {
     margin: 0 !important;
@@ -824,17 +840,17 @@ textarea {
     padding-top: 3rem;
     padding-bottom: 2rem;
     background: url("../includes/images/b34.jpg") center / cover no-repeat fixed;
-    border-radius: 75% 0 0 0 / 100% 0 0 0 ;
+    border-radius: 75% 0% 0% 0% / 100% 0% 0% 0%;
 }
 #last-works::before {
     position: absolute;
-    z-index: -1;
     content: '';
+    z-index: -1;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .7);
 }
 .samples-slider-container {
     display: flex;
@@ -921,7 +937,7 @@ textarea {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .7);
 }
 #writer p:first-child {
     max-width: 500px;
@@ -1491,7 +1507,7 @@ input:focus {
 }
 #search-posts-parent .card {
     border:none !important;
-    border-left: 3px solid rgb(155, 35, 211) !important;
+    /*border-left: 3px solid rgb(155, 35, 211) !important;*/
     overflow: hidden;
     height:90px;
     margin-bottom: 10px;

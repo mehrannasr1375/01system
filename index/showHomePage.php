@@ -50,8 +50,8 @@
     <h3 class="header-2 text-white-50 mb-2">روال کاری</h3>
     <div class="container">
         <div class="row position-relative">
-            <hr class="dashed-hr d-none d-lg-block wow fadeIn" data-wow-delay="1.4s"/>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeIn" data-wow-delay=".2s">
+            <hr  class="dashed-hr d-none d-lg-block   wow fadeIn"   data-wow-delay="1.4s"/>
+            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-phone text-black-50"></i>
@@ -62,7 +62,7 @@
                     <p class="sm-font text-white-50">از طریق تماس، ایمیل و یا ارسال پیامک شما و هماهنگی ما با شما جهت برقراری جلسه ی دیدار حضوری</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeIn" data-wow-delay=".5s">
+            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-handshake-o text-black-50"></i>
@@ -73,7 +73,7 @@
                     <p class="sm-font text-white-50">جهت بررسی ویژگی های مورد نیاز و مورد درخواست بهمراه پیش پرداخت و عقد قرارداد و همچنین بررسی میزان زمان مورد نیاز جهت تکمیل پروژه</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeIn" data-wow-delay=".8s">
+            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-thumbs-o-up fa-stack-1x text-black-50"></i>
@@ -84,7 +84,7 @@
                     <p class="sm-font text-white-50">جلسه ای جهت بررسی قابلیت ها و ویژگی های بصری وب سایت با حضور شما و همچنین آموزش و معرفی قابلیت های وب سایت به شما</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeIn" data-wow-delay="1.1s">
+            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-check text-black-50"></i>
@@ -106,7 +106,7 @@
     <div class="container">
         <h3 class="header-1 text-dark">زمینه های کاری</h3>
         <div class="row justify-content-center">
-            <div class="wow fadeInUp col-12 col-sm-6 col-md-6 col-lg-3" data-wow-delay=".4s">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -119,7 +119,7 @@
                      </div>
                 </div>
             </div>
-            <div class="wow fadeInUp col-12 col-sm-6 col-md-6 col-lg-3" data-wow-delay=".6s">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -132,7 +132,7 @@
                      </div>
                 </div>
             </div>
-            <div class="wow fadeInUp col-12 col-sm-6 col-md-6 col-lg-3" data-wow-delay=".8s">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wow fadeInUp col-12 col-sm-6 col-md-6 col-lg-3" data-wow-delay="1s">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-database fa-stack-1x text-dark"></i>
@@ -170,63 +170,63 @@
         <h3 class="header-1">مهارت ها</h3>
         <div class="container">
             <div class="d-flex justify-content-center flex-row flex-wrap">
-                <div class="skill-part wow fadeIn" data-wow-delay=".2s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.2s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-php-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Php</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.6s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="fa fa-database fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">SQL Server</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.5s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-mysql-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">MySQL</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.6s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-csharp-line fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">#C</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.2s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-javascript-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Java Script</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".8s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.8s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-jquery-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">jQuery</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".9s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.9s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-bootstrap-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">BootStrap</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.5s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-laravel-plain  fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Laravel</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".7s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.7s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-html5-plain fa-stack-1x"></i>
@@ -234,63 +234,63 @@
                     <h4 class="skill-part-h">HTML</h4>
 
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.9s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-css3-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">CSS</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".7s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.7s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-linux-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Linux</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.1s">
+                <div class="skill-part wow fadeIn" data-wow-delay="1.0s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-wordpress-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Wordpress</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".6s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.6s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-github-original fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">GitHub</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".8s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.8s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-gitlab-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">GitLab</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.3s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.2s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="fa fa-laptop fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Hardware Repairs</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay=".5s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.5s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-photoshop-plain fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Photoshop</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.2s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.3s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-apache-plain-wordmark fa-stack-1x"></i>
                     </span>
                     <h4 class="skill-part-h">Apache</h4>
                 </div>
-                <div class="skill-part wow fadeIn" data-wow-delay="1.4s">
+                <div class="skill-part wow fadeIn" data-wow-delay="0.6s">
                     <span class="float-right fa-stack fa-2x m-auto">
                         <i class="fa fa-circle fa-stack-2x text-dark"></i>
                         <i class="di devicon-angularjs-plain fa-stack-1x"></i>
@@ -309,7 +309,7 @@
     <div class="container-fluid">
         <h3 class="header-1 text-dark">آخرین مطالب </h3>
         <div>
-            <div class="owl-carousel wow fadeIn" data-wow-delay=".4s">
+            <div class="owl-carousel wow fadeInUp" data-wow-delay=".3s">
                 <?php
                 if ($last_posts = Post::getAllPosts(1, 0, 6, 0)) {
                     foreach ($last_posts as $post) {
@@ -380,19 +380,19 @@
 <!-- last samples -->
 <div id="last-works">
     <div class="container">
-        <h3 class="header-1 text-dark">آخرین نمونه کارها</h3>
+        <h3 class="header-1 text-dark" data-wow-delay="0.2s">آخرین نمونه کارها</h3>
         <div class="samples-slider-container">
-            <div class="box">
+            <div class="box wow fadeIn">
                 <img src="./includes/images/sample-works/sample-2.jpg">
                 <span class="text-caption">CMS خبری - اجتماعی</span>
                 <span class="text-caption-sm">در 35 روز</span>
             </div>
-            <div class="box">
+            <div class="box wow fadeIn" data-wow-delay="0.4s">
                 <img src="./includes/images/sample-works/sample-3.jpg">
                 <span class="text-caption">CMS مرکز دانلود pdf</span>
                 <span class="text-caption-sm">در 28 روز</span>
             </div>
-            <div class="box">
+            <div class="box wow fadeIn" data-wow-delay="0.6s">
                 <img src="./includes/images/sample-works/sample-1.jpg">
                 <span class="text-caption">سامانه مدیریت تعمیرگاه</span>
                 <span class="text-caption-sm">در 14 روز</span>
@@ -406,13 +406,13 @@
 <!-- be a writer -->
 <section id="writer">
     <div class="container">
-        <h3 class="header-1 text-dark" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>
+        <h3 class="header-1 text-dark wow fadeInUp" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>
         <div class="d-flex justify-content-center align-items-center">
-            <div class="wow fadeInUp" data-wow-delay=".6s">
+            <div class="wow fadeInUp"   data-wow-delay=".6s">
                 <p class="text-vsm text-black-50">با کلیک بر روی دکمه ی ثبت نام در بالای مرورگر و تکمیل فرم خودتان نویسنده شوید و پست های تخصصی در زمینه ی تخصص های خود یا خدماتتان را با دیگر کاربران به اشتراک بگذارید!</p>
                 <p class="text-vvsm mt-2">به همین راحتی!</p>
             </div>
-            <div class="wow fadeInLeft" data-wow-delay=".6s">
+            <div class="wow fadeInUp" data-wow-delay=".6s">
                 <img src="includes/images/be-author.png" alt="">
             </div>
         </div>

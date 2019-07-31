@@ -21,14 +21,14 @@
         <div id="search-posts-parent" class="col-12 col-md-9">
             <?php
                 if ($count > 0 && $empty_flag == false) {   
-                    echo "<div class='alert alert-info mb-5'><p><span><i class='fa fa-info ml-4'></i></span>". $count. " نتیجه یافت شد! </p></div>";
+                    echo "<div class='alert alert-info mb-3'><p><span>". $count. " نتیجه یافت شد! </p></div>";
                     foreach ($last_posts as $post) {
                         ?>
                             <a href="./?post=<?=$post->id?>">
                                 <div class="card col-12">
                                     <div class="row no-gutters">
                                         <div class="col-2">
-                                            <img src="/01system/includes/images/uploads/posts/260x260/<?=$post->p_image?>" class="card-img" alt="post image">
+                                            <img src="./includes/images/uploads/posts/260x260/<?=$post->p_image?>" class="card-img" alt="post image">
                                         </div>
                                         <div class="col-10">
                                             <div class="card-body">
@@ -42,7 +42,7 @@
                     }
                 } 
                 else 
-                    echo "<div class='alert alert-danger mb-5'><span><i class='fa fa-close ml-4'></i></span><span>نتیجه ای یافت نشد!</span></div>";
+                    echo "<div class='alert alert-danger mb-5'><span>نتیجه ای یافت نشد!</span></div>";
                 ?>
 
         </div>
