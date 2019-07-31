@@ -35,42 +35,6 @@ li i {
 .text-area {
     height:160px;
 }
-
-#sign-in-btn-group {
-    display: flex;
-    line-height: 25px;
-    border-radius: 4px;
-}
-.btn-sign-in, .btn-sign-up, .btn-sign-out {
-    display: inline;
-    border-color: #58d6ff ;
-    font-size: 13px ;
-    font-weight: 300;
-    border: 1px solid rgba(134, 139, 148, 0.6);
-    padding: 4px .75rem ;
-    transition: .3s ease all;
-    background: transparent ;
-    cursor: pointer;
-}
-.btn-sign-in {
-    border-radius: 0 4px 4px 0;
-}
-.btn-sign-up, .btn-sign-out {
-    border-radius: 4px 0 0 4px;
-}
-.btn-sign-in:hover, .btn-sign-out:hover {
-    box-shadow: inset 0 -40px 0 0 #58d6ff;
-    border: 1px solid #58d6ff ;
-}
-.btn-sign-up:hover {
-    box-shadow: inset 0 -40px 0 0 #78ff7d;
-    border: 1px solid #78ff7d ;
-    color: black !important;
-}
-.btn-sign-up:hover, .btn-sign-in:hover {
-    color:black !important;
-}
-
 .text-nice-blue {
     color: #03f2ec;
 }
@@ -320,7 +284,7 @@ textarea {
 }
 #nav .btn1 {
     position:relative;
-  }
+}
 #nav .btn1:after {
     content:"";
     position:absolute;
@@ -337,6 +301,42 @@ textarea {
     left:0;
     right:0;
     width:100%;
+}
+
+/* sign-in btns */
+#sign-in-btn-group {
+    display: flex;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.btn-sign-in, .btn-sign-up, .btn-sign-out {
+    display: inline;
+    border-color: #58d6ff ;
+    font-family: Vazir-Thin;
+    font-size: 12px ;
+    font-weight: 400;
+    border: 1px solid rgba(134, 139, 148, 0.6);
+    padding: 4px .75rem ;
+    transition: .3s ease all;
+    background: transparent ;
+    cursor: pointer;
+}
+.btn-sign-in {
+    border-radius: 0 4px 4px 0;
+}
+.btn-sign-up, .btn-sign-out {
+    border-radius: 4px 0 0 4px;
+}
+.btn-sign-in:hover, .btn-sign-out:hover {
+    box-shadow: inset 0 -40px 0 0 #58d6ff;
+    border: 1px solid #58d6ff ;
+}
+.btn-sign-up:hover {
+    box-shadow: inset 0 -40px 0 0 #78ff7d;
+    border: 1px solid #59c05c ;
+}
+.btn-sign-up:hover, .btn-sign-in:hover, .btn-sign-out:hover {
+    color:black !important;
 }
 
 /*------------------------------------------  top navbar >=992px width  -------------------------------------------*/
@@ -516,7 +516,7 @@ textarea {
 #works::before {
     position: absolute;
     content: '';
-    background-color: rgba(255 , 255 , 255 , 0.8);
+    background-color: rgba(255 , 255 , 255 , 0.7);
     top: 0;
     right: 0;
     width: 100%;
@@ -719,7 +719,7 @@ textarea {
     text-align: center;
     overflow: hidden;
     background-color: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
 }
 .p-card-img-container {
     position: relative;
