@@ -205,7 +205,7 @@ class User extends Base
         self::disconnect($conn);
 
         // make last decesion (login || fail)
-        if ( $stmt->fetch()[0] > 3 )
+        if ( $stmt->fetch()[0] > 5 )
             die('max-requests') ;
         else {
             $conn = self::connect();
