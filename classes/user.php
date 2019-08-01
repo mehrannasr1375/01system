@@ -340,7 +340,7 @@ EOS;
         } else {
             return false;//0 = کاربری با این ایمیل ثبت نام نکرده است!
         }
-    }
+    } //ok
     public static function deleteUserById($user_id, $permanent=0)
     {
         $conn=self::connect();

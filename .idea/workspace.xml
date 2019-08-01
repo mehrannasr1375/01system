@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="295" column="136" selection-start-line="295" selection-start-column="136" selection-end-line="295" selection-end-column="136" />
+            <state relative-caret-position="269">
+              <caret line="184" column="51" selection-start-line="184" selection-start-column="51" selection-end-line="184" selection-end-column="51" />
               <folding>
                 <element signature="n#__construct#0;n#User#0;n#!!top" />
                 <element signature="n#__get#0;n#User#0;n#!!top" />
@@ -70,6 +69,7 @@
                 <element signature="n#getUserByName#0;n#User#0;n#!!top" />
                 <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
                 <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
+                <element signature="n#rememberUser#0;n#User#0;n#!!top" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
@@ -87,6 +87,15 @@
                 <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
                 <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/other/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -363,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77730000" />
+    <option name="totallyTimeSpent" value="78006000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,7 +387,7 @@
     <frame x="-1160" y="-8" width="1168" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -389,7 +398,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18109187" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18109187" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3288948" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -1130,13 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1214,8 +1216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="295" column="136" selection-start-line="295" selection-start-column="136" selection-end-line="295" selection-end-column="136" />
+        <state relative-caret-position="269">
+          <caret line="184" column="51" selection-start-line="184" selection-start-column="51" selection-end-line="184" selection-end-column="51" />
           <folding>
             <element signature="n#__construct#0;n#User#0;n#!!top" />
             <element signature="n#__get#0;n#User#0;n#!!top" />
@@ -1248,6 +1250,7 @@
             <element signature="n#getUserByName#0;n#User#0;n#!!top" />
             <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
             <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
+            <element signature="n#rememberUser#0;n#User#0;n#!!top" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
@@ -1265,6 +1268,13 @@
             <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
             <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="47" />
         </state>
       </provider>
     </entry>
