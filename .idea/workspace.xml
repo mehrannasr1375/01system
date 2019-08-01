@@ -29,7 +29,17 @@
     <favorites_list name="01system" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,8 +106,10 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/classes/user.php" />
         <option value="$PROJECT_DIR$/scripts/login.js" />
-        <option value="$PROJECT_DIR$/includes/other/config.php" />
         <option value="$PROJECT_DIR$/.gitignore.php" />
+        <option value="$PROJECT_DIR$/includes/other/config.php" />
+        <option value="$PROJECT_DIR$/.gitignore.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -166,6 +178,17 @@
             <path>
               <item name="01system" type="b2602c69:ProjectViewProjectNode" />
               <item name="01system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="01system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="01system" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="01system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="01system" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,7 +259,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74629000" />
+    <option name="totallyTimeSpent" value="74911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -249,6 +272,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1160" y="-8" width="1168" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1095,11 +1119,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/other/config.php" />
     <entry file="file://$PROJECT_DIR$/.gitignore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
