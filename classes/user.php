@@ -263,17 +263,67 @@ class User extends Base
         $salt = "10-20/3&poonzdah";
         $new_pass = rand(100000,999999);
         $content = <<<EOS
-<p style="direction:rtl; font-family: Tahoma;">
-با سلام
-<br/>
-نام کاربری و کلمه ی عبور جدید شما:
-<br/>
-کلمه عبور جدید : $new_pass<br/>
-<br/>
-لطفا در اسرع وقت از پنل کاربری خود اقدام به تعویض رمز عبور خود نمایید. باتشکر.
-</p>
+                        <a href="http://www.01system.ir" style="display: block;margin-bottom:0 !important;background-color:#c4a3f5;text-align: center;border-radius: 7px;padding: 20px;margin-bottom: 20px;">01System.ir</a>
+                        <div style="padding: 30px; background-color: rgba(224,212,249,0.65);">
+                            <p style="direction:rtl; font-family: Tahoma;line-height: 2">
+                                با سلام
+                                <br/>
+                                 کلمه ی عبور جدید شما در وبسایت <span style="font-weight: bold;">01System.ir</span> :
+                                <br/>
+                                کلمه عبور جدید : <span style="font-weight: bold;">$new_pass</span><br/>
+                                <br/>
+                                لطفا در اسرع وقت از پنل کاربری خود اقدام به تعویض رمز عبور خود نمایید و در نگهداری رمز خود کوشا باشید. با تشکر.
+                                <br/>
+                                برای دسترسی به صفحه ی اصلی سایت نیز می توانید از لینک های بالا و پایین صفحه استفاده نمایید.
+                            </p>
+                        </div>
+                        <a href="http://www.01system.ir" style="display: block;background-color:#c4a3f5;text-align: center;border-radius: 7px;padding: 20px;margin-bottom: 20px;">01System.ir</a>
+
 EOS;
         $new_hashed_pass = md5($new_pass.$salt);
+
+
+       /* Query :
+        *
+        * CREATE DEFINER=`systemir_mehran`@`localhost` PROCEDURE `SP_user_checkDosAndChangeUserPass`(IN `_u_email` VARCHAR(45), IN `_time` INT(11), IN `_u_name` VARCHAR(25), IN `_u_pass` VARCHAR(32))
+        *  BEGIN
+        *      DECLARE mail_count INT;
+        *      DECLARE result INT;
+        *
+        *      START TRANSACTION;
+        *
+        *          #1 : check mail counts of last hour
+        *          SET mail_count = (SELECT count(*) FROM tbl_sent_mails WHERE `time` > (select (_time - 3600))) AND u_email = _u_email;
+        *          IF (mail_count > 30) THEN
+        *                  set result = 0;
+        *          ELSE
+        *                  #2 : update password of user
+        *                  IF EXISTS(SELECT * FROM tbl_user WHERE u_email=_u_email) THEN
+        *                      UPDATE tbl_user SET u_pass=_u_pass WHERE u_name=_u_name;
+        *                      set result = 1;
+        *                  ELSE
+        *                      set result = 0;
+        *                  END IF;
+        *          END IF;
+        *
+        *          #3 : insert mail send event to tbl_sent_mails
+        *          IF(result = 1) THEN
+        *              INSERT INTO tbl_sent_mails(u_email,`time`) VALUES(_u_email,_time) ;
+        *              set result = 1;
+        *          ELSE
+        *              set result = 0;
+        *          END IF;
+        *
+        *          #4 : delete old records of emails table
+        *          DELETE FROM tbl_sent_mails WHERE `time`<(select (_time - 3600));
+        *
+        *          #5 : return result
+        *          select result;
+        *      COMMIT;
+        *  END
+        *
+        */
+
         $stmt = $conn -> prepare("SELECT FUNC_user_checkDosAndChangeUserPass(?,?,?)");
         $stmt -> execute([$u_email,$new_hashed_pass,$now_time]);
         self::disconnect($conn);
@@ -283,13 +333,13 @@ EOS;
                 return 1;//1= رمز عبور با موفقیت تغییر یافت!
             else
                 return 4;//4= عدم ارسال ایمیل!
-        }
-        else if ($result==2)
+        } else if ($result==2) {
             return 2;//2= در حال حاضر سرور قادر با ارسال ایمیل نمی باشد. لطفا بعدا تلاش نمایید!
-        else if ($result==3)
+        } else if ($result==3) {
             return 3;//3 = شما از حداکثر سقف مجاز تعداد ارسال های خود استفاده نموده اید. لطفا بعدا تلاش نمایید!
-        else
+        } else {
             return false;//0 = کاربری با این ایمیل ثبت نام نکرده است!
+        }
     }
     public static function deleteUserById($user_id, $permanent=0)
     {

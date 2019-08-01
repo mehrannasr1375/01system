@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +34,122 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+            <state relative-caret-position="290">
+              <caret line="295" column="136" selection-start-line="295" selection-start-column="136" selection-end-line="295" selection-end-column="136" />
+              <folding>
+                <element signature="n#__construct#0;n#User#0;n#!!top" />
+                <element signature="n#__get#0;n#User#0;n#!!top" />
+                <element signature="e#1332#1546#0#PHP" />
+                <element signature="n#__set#0;n#User#0;n#!!top" />
+                <element signature="e#1787#2280#0#PHP" />
+                <element signature="e#0#63#0" />
+                <element signature="e#1956#2221#0#PHP" />
+                <element signature="e#2102#2221#0#PHP" />
+                <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
+                <element signature="e#2494#3036#0#PHP" />
+                <element signature="n#getUserById#0;n#User#0;n#!!top" />
+                <element signature="e#3258#3741#0#PHP" />
+                <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
+                <element signature="n#insertUser#0;n#User#0;n#!!top" />
+                <element signature="e#4223#5214#0#PHP" />
+                <element signature="e#5076#5214#0#PHP" />
+                <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
+                <element signature="e#5554#5716#0#PHP" />
+                <element signature="e#5899#6061#0#PHP" />
+                <element signature="e#6626#6953#0#PHP" />
+                <element signature="n#activateUser#0;n#User#0;n#!!top" />
+                <element signature="n#authenticateUser#0;n#User#0;n#!!top" />
+                <element signature="e#0#107#0" />
+                <element signature="e#0#87#0" />
+                <element signature="e#56#87#0" />
+                <element signature="e#63#87#0" />
+                <element signature="e#0#116#1" />
+                <element signature="e#8410#9201#0#PHP" />
+                <element signature="n#getUserByName#0;n#User#0;n#!!top" />
+                <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
+                <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
+                <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
+                <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
+                <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
+                <element signature="n#getLikesOfUser#0;n#User#0;n#!!top" />
+                <element signature="n#updateUserAvatar#0;n#User#0;n#!!top" />
+                <element signature="n#updateUserPassByEmail#0;n#User#0;n#!!top" />
+                <element signature="n#updateUserPassByUserName#0;n#User#0;n#!!top" />
+                <element signature="n#setRandomHash#0;n#User#0;n#!!top" />
+                <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
+                <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+              <folding>
+                <element signature="e#87#1215#0" />
+                <element signature="e#436#1123#0" />
+                <element signature="e#457#1111#0" />
+                <element signature="e#660#1097#0" />
+                <element signature="e#1306#1532#0" />
+                <element signature="e#1323#1524#0" />
+                <element signature="e#1464#1514#0" />
+                <element signature="e#3568#4408#0" />
+                <element signature="e#3648#3745#0" />
+                <element signature="e#3751#4402#0" />
+                <element signature="e#3816#4390#0" />
+                <element signature="e#3997#4376#0" />
+                <element signature="e#4462#5296#0" />
+                <element signature="e#4637#5290#0" />
+                <element signature="e#4702#5278#0" />
+                <element signature="e#4878#5264#0" />
+                <element signature="e#5355#8515#0" />
+                <element signature="e#5868#5974#0" />
+                <element signature="e#6011#6117#0" />
+                <element signature="e#6153#6251#0" />
+                <element signature="e#6290#6388#0" />
+                <element signature="e#6447#8507#0" />
+                <element signature="e#6719#8497#0" />
+                <element signature="e#6755#6957#0" />
+                <element signature="e#6982#7135#0" />
+                <element signature="e#7170#7327#0" />
+                <element signature="e#7358#7568#0" />
+                <element signature="e#7600#7786#0" />
+                <element signature="e#7822#7978#0" />
+                <element signature="e#8011#8162#0" />
+                <element signature="e#8195#8330#0" />
+                <element signature="e#8336#8483#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+              <folding>
+                <element signature="e#105#3988#0#PHP" />
+                <element signature="e#222#1003#0#PHP" />
+                <element signature="e#575#941#0#PHP" />
+                <element signature="e#1036#3988#0#PHP" />
+                <element signature="e#1886#3988#0#PHP" />
+                <element signature="e#1933#2150#0#PHP" />
+                <element signature="e#2188#3988#0#PHP" />
+                <element signature="e#2236#2441#0#PHP" />
+                <element signature="e#2475#3988#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,13 +218,13 @@
         <option value="$PROJECT_DIR$/index/showHomePage.php" />
         <option value="$PROJECT_DIR$/styles/css.css" />
         <option value="$PROJECT_DIR$/actions/login-actions.php" />
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/classes/user.php" />
         <option value="$PROJECT_DIR$/scripts/login.js" />
         <option value="$PROJECT_DIR$/.gitignore.php" />
         <option value="$PROJECT_DIR$/.gitignore.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/includes/other/config.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/classes/user.php" />
       </list>
     </option>
   </component>
@@ -180,17 +293,6 @@
             <path>
               <item name="01system" type="b2602c69:ProjectViewProjectNode" />
               <item name="01system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="01system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="01system" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="01system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="01system" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -261,7 +363,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75175000" />
+    <option name="totallyTimeSpent" value="77730000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,6 +376,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1160" y="-8" width="1168" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -286,7 +389,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.30892143" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18109187" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3288948" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -1006,70 +1109,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#83#568#0#PHP" />
-            <element signature="e#571#860#0#PHP" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/user.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
-          <folding>
-            <element signature="n#__construct#0;n#User#0;n#!!top" />
-            <element signature="n#__get#0;n#User#0;n#!!top" />
-            <element signature="e#1332#1546#0#PHP" />
-            <element signature="n#__set#0;n#User#0;n#!!top" />
-            <element signature="e#1787#2280#0#PHP" />
-            <element signature="e#1956#2221#0#PHP" />
-            <element signature="e#2102#2221#0#PHP" />
-            <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
-            <element signature="e#2494#3036#0#PHP" />
-            <element signature="n#getUserById#0;n#User#0;n#!!top" />
-            <element signature="e#3258#3741#0#PHP" />
-            <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
-            <element signature="n#insertUser#0;n#User#0;n#!!top" />
-            <element signature="e#4223#5214#0#PHP" />
-            <element signature="e#5076#5214#0#PHP" />
-            <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
-            <element signature="e#5554#5716#0#PHP" />
-            <element signature="e#5899#6061#0#PHP" />
-            <element signature="e#6626#6953#0#PHP" />
-            <element signature="n#activateUser#0;n#User#0;n#!!top" />
-            <element signature="n#authenticateUser#0;n#User#0;n#!!top" />
-            <element signature="e#0#107#0" />
-            <element signature="e#8410#9201#0#PHP" />
-            <element signature="n#getUserByName#0;n#User#0;n#!!top" />
-            <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
-            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
-            <element signature="n#rememberUser#0;n#User#0;n#!!top" />
-            <element signature="e#10832#11067#0#PHP" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#11350#11879#0#PHP" />
-            <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
-            <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
-            <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
-            <element signature="n#getLikesOfUser#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserAvatar#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserPassByEmail#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserPassByUserName#0;n#User#0;n#!!top" />
-            <element signature="n#setRandomHash#0;n#User#0;n#!!top" />
-            <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
-            <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
-          </folding>
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="144">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding>
             <element signature="e#105#3988#0#PHP" />
             <element signature="e#222#1003#0#PHP" />
@@ -1086,11 +1157,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="48" column="68" lean-forward="true" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
+        <state relative-caret-position="462">
+          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding>
             <element signature="e#87#1215#0" />
+            <element signature="e#436#1123#0" />
+            <element signature="e#457#1111#0" />
+            <element signature="e#660#1097#0" />
             <element signature="e#1306#1532#0" />
+            <element signature="e#1323#1524#0" />
+            <element signature="e#1464#1514#0" />
             <element signature="e#3568#4408#0" />
             <element signature="e#3648#3745#0" />
             <element signature="e#3751#4402#0" />
@@ -1120,31 +1196,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="100">
+          <caret line="34" selection-start-line="34" selection-end-line="49" />
+          <folding>
+            <element signature="e#83#568#0#PHP" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
+    <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        <state relative-caret-position="290">
+          <caret line="295" column="136" selection-start-line="295" selection-start-column="136" selection-end-line="295" selection-end-column="136" />
+          <folding>
+            <element signature="n#__construct#0;n#User#0;n#!!top" />
+            <element signature="n#__get#0;n#User#0;n#!!top" />
+            <element signature="e#1332#1546#0#PHP" />
+            <element signature="n#__set#0;n#User#0;n#!!top" />
+            <element signature="e#1787#2280#0#PHP" />
+            <element signature="e#0#63#0" />
+            <element signature="e#1956#2221#0#PHP" />
+            <element signature="e#2102#2221#0#PHP" />
+            <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
+            <element signature="e#2494#3036#0#PHP" />
+            <element signature="n#getUserById#0;n#User#0;n#!!top" />
+            <element signature="e#3258#3741#0#PHP" />
+            <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
+            <element signature="n#insertUser#0;n#User#0;n#!!top" />
+            <element signature="e#4223#5214#0#PHP" />
+            <element signature="e#5076#5214#0#PHP" />
+            <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
+            <element signature="e#5554#5716#0#PHP" />
+            <element signature="e#5899#6061#0#PHP" />
+            <element signature="e#6626#6953#0#PHP" />
+            <element signature="n#activateUser#0;n#User#0;n#!!top" />
+            <element signature="n#authenticateUser#0;n#User#0;n#!!top" />
+            <element signature="e#0#107#0" />
+            <element signature="e#0#87#0" />
+            <element signature="e#56#87#0" />
+            <element signature="e#63#87#0" />
+            <element signature="e#0#116#1" />
+            <element signature="e#8410#9201#0#PHP" />
+            <element signature="n#getUserByName#0;n#User#0;n#!!top" />
+            <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
+            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
+            <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
+            <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
+            <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
+            <element signature="n#getLikesOfUser#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserAvatar#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserPassByEmail#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserPassByUserName#0;n#User#0;n#!!top" />
+            <element signature="n#setRandomHash#0;n#User#0;n#!!top" />
+            <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
+            <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
