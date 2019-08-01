@@ -17,7 +17,6 @@ $(document).ready(function () {
                 method:"POST",
                 data:{action:'login',user:uname, pass:upass, remember:remember},
                 success:function (data) {
-                    //console.log('result = ' + data);
                     if (data == false)
                         $('#response-signin').html('نام کاربری یا کلمه ی عبور اشتباه است!');
                     else if (data == 'max-requests')

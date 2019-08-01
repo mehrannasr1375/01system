@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/login-actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/login-actions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="374">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#993#3929#0#PHP" />
                 <element signature="e#1278#3929#0#PHP" />
@@ -58,73 +53,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="23" column="95" lean-forward="true" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="97" />
-              <folding>
-                <element signature="e#1106#1332#0" />
-                <element signature="e#1123#1324#0" />
-                <element signature="e#1264#1314#0" />
-                <element signature="e#1400#3311#0" />
-                <element signature="e#1542#3159#0" />
-                <element signature="e#1563#3147#0" />
-                <element signature="e#1741#3133#0" />
-                <element signature="e#1781#1976#0" />
-                <element signature="e#2007#2186#0" />
-                <element signature="e#2221#2409#0" />
-                <element signature="e#2442#2657#0" />
-                <element signature="e#2691#2921#0" />
-                <element signature="e#2927#3115#0" />
-                <element signature="e#3165#3305#0" />
-                <element signature="e#3368#4208#0" />
-                <element signature="e#3448#3545#0" />
-                <element signature="e#3551#4202#0" />
-                <element signature="e#3616#4190#0" />
-                <element signature="e#3797#4176#0" />
-                <element signature="e#4262#5096#0" />
-                <element signature="e#4437#5090#0" />
-                <element signature="e#4502#5078#0" />
-                <element signature="e#4678#5064#0" />
-                <element signature="e#5155#8315#0" />
-                <element signature="e#5668#5774#0" />
-                <element signature="e#5811#5917#0" />
-                <element signature="e#5953#6051#0" />
-                <element signature="e#6090#6188#0" />
-                <element signature="e#6247#8307#0" />
-                <element signature="e#6519#8297#0" />
-                <element signature="e#6555#6757#0" />
-                <element signature="e#6782#6935#0" />
-                <element signature="e#6970#7127#0" />
-                <element signature="e#7158#7368#0" />
-                <element signature="e#7400#7586#0" />
-                <element signature="e#7622#7778#0" />
-                <element signature="e#7811#7962#0" />
-                <element signature="e#7995#8130#0" />
-                <element signature="e#8136#8283#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="e#83#568#0#PHP" />
-                <element signature="e#571#860#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="209" column="14" lean-forward="true" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
+            <state relative-caret-position="428">
+              <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
               <folding>
                 <element signature="n#__construct#0;n#User#0;n#!!top" />
                 <element signature="n#__get#0;n#User#0;n#!!top" />
@@ -235,16 +167,16 @@
         <option value="$PROJECT_DIR$/styles/css.css" />
         <option value="$PROJECT_DIR$/actions/login-actions.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/scripts/login.js" />
         <option value="$PROJECT_DIR$/classes/user.php" />
+        <option value="$PROJECT_DIR$/scripts/login.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1160" />
-    <option name="y" value="-8" />
-    <option name="width" value="1168" />
-    <option name="height" value="840" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="15" />
+    <option name="y" value="30" />
+    <option name="width" value="935" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -368,12 +300,12 @@
       <workItem from="1564335012304" duration="2681000" />
       <workItem from="1564420055843" duration="9866000" />
       <workItem from="1564561854116" duration="6677000" />
-      <workItem from="1564593301007" duration="6286000" />
+      <workItem from="1564593301007" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72192000" />
+    <option name="totallyTimeSpent" value="73629000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,10 +317,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1160" y="-8" width="1168" height="840" extended-state="6" />
+    <frame x="15" y="30" width="935" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17881945" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2241567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1126,19 +1058,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
+    <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="428">
+          <caret line="212" column="41" lean-forward="true" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
           <folding>
-            <element signature="e#993#3929#0#PHP" />
-            <element signature="e#1278#3929#0#PHP" />
-            <element signature="e#1326#1800#0#PHP" />
-            <element signature="e#1835#3929#0#PHP" />
-            <element signature="e#1880#2097#0#PHP" />
-            <element signature="e#2133#3929#0#PHP" />
-            <element signature="e#2179#2384#0#PHP" />
-            <element signature="e#2416#3929#0#PHP" />
+            <element signature="n#__construct#0;n#User#0;n#!!top" />
+            <element signature="n#__get#0;n#User#0;n#!!top" />
+            <element signature="e#1339#1553#0#PHP" />
+            <element signature="n#__set#0;n#User#0;n#!!top" />
+            <element signature="e#1798#2291#0#PHP" />
+            <element signature="e#1967#2232#0#PHP" />
+            <element signature="e#2113#2232#0#PHP" />
+            <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
+            <element signature="e#2505#3047#0#PHP" />
+            <element signature="n#getUserById#0;n#User#0;n#!!top" />
+            <element signature="e#3273#3756#0#PHP" />
+            <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
+            <element signature="n#insertUser#0;n#User#0;n#!!top" />
+            <element signature="e#4246#5237#0#PHP" />
+            <element signature="e#5099#5237#0#PHP" />
+            <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
+            <element signature="e#5576#5738#0#PHP" />
+            <element signature="e#5921#6083#0#PHP" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#6648#6975#0#PHP" />
+            <element signature="n#activateUser#0;n#User#0;n#!!top" />
+            <element signature="n#getUserByName#0;n#User#0;n#!!top" />
+            <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
+            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
+            <element signature="n#rememberUser#0;n#User#0;n#!!top" />
+            <element signature="e#9773#10008#0#PHP" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#10291#10820#0#PHP" />
+            <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
+            <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
+            <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
+            <element signature="n#getLikesOfUser#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserAvatar#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserPassByEmail#0;n#User#0;n#!!top" />
+            <element signature="n#updateUserPassByUserName#0;n#User#0;n#!!top" />
+            <element signature="n#setRandomHash#0;n#User#0;n#!!top" />
+            <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
+            <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -1156,9 +1118,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="95" lean-forward="true" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="97" />
+        <state relative-caret-position="88">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding>
+            <element signature="e#87#1015#0" />
             <element signature="e#1106#1332#0" />
             <element signature="e#1123#1324#0" />
             <element signature="e#1264#1314#0" />
@@ -1202,49 +1165,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/user.php">
+    <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="209" column="14" lean-forward="true" selection-start-line="209" selection-start-column="14" selection-end-line="209" selection-end-column="14" />
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="n#__construct#0;n#User#0;n#!!top" />
-            <element signature="n#__get#0;n#User#0;n#!!top" />
-            <element signature="e#1339#1553#0#PHP" />
-            <element signature="n#__set#0;n#User#0;n#!!top" />
-            <element signature="e#1798#2291#0#PHP" />
-            <element signature="e#1967#2232#0#PHP" />
-            <element signature="e#2113#2232#0#PHP" />
-            <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
-            <element signature="e#2505#3047#0#PHP" />
-            <element signature="n#getUserById#0;n#User#0;n#!!top" />
-            <element signature="e#3273#3756#0#PHP" />
-            <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
-            <element signature="n#insertUser#0;n#User#0;n#!!top" />
-            <element signature="e#4246#5237#0#PHP" />
-            <element signature="e#5099#5237#0#PHP" />
-            <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
-            <element signature="e#5576#5738#0#PHP" />
-            <element signature="e#5921#6083#0#PHP" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#6648#6975#0#PHP" />
-            <element signature="n#activateUser#0;n#User#0;n#!!top" />
-            <element signature="n#getUserByName#0;n#User#0;n#!!top" />
-            <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
-            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
-            <element signature="n#rememberUser#0;n#User#0;n#!!top" />
-            <element signature="e#9773#10008#0#PHP" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#10291#10820#0#PHP" />
-            <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
-            <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
-            <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
-            <element signature="n#getLikesOfUser#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserAvatar#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserPassByEmail#0;n#User#0;n#!!top" />
-            <element signature="n#updateUserPassByUserName#0;n#User#0;n#!!top" />
-            <element signature="n#setRandomHash#0;n#User#0;n#!!top" />
-            <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
-            <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
+            <element signature="e#993#3929#0#PHP" />
+            <element signature="e#1278#3929#0#PHP" />
+            <element signature="e#1326#1800#0#PHP" />
+            <element signature="e#1835#3929#0#PHP" />
+            <element signature="e#1880#2097#0#PHP" />
+            <element signature="e#2133#3929#0#PHP" />
+            <element signature="e#2179#2384#0#PHP" />
+            <element signature="e#2416#3929#0#PHP" />
           </folding>
         </state>
       </provider>
