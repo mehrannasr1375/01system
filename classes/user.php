@@ -127,7 +127,7 @@ class User extends Base
             if ($stmt -> rowCount())
                 $ret = array(true,"کاربر گرامی: یک ایمیل به آدرس ایمیلتان ارسال گردید. جهت فعالسازی حساب کاربری خود ایمیلتان راچک کرده و روی لینک فعالسازی کلیک نمایید. با تشکر.");
             if ($ret[0])
-                if (!User::sendActivationEmail($u_name,$u_email))
+                if (!User::sendActivationEmail($u_name, $u_email))
                     $ret = array(false,"خطا: مشکلی در ارسال ایمیل تاییدیه رخ داده است. لطفا بعدا امتحان نمایید!");
         }
         catch (PDOException $e)
@@ -141,33 +141,41 @@ class User extends Base
         $conn = self::connect();
 
         // 1 = STOP DOS ATTACK FOR MAIL LIMITATION
-        $now_time=time();
-        $stmt=$conn->prepare("CALL SP_sent_mails_checkEmailExists(?,?);");
-        $stmt->execute([$u_email,$now_time]);
-        if (  (int)($stmt->fetchColumn())>30 ) {
+        $now_time = time();
+        $query = "SELECT COUNT(*) FROM tbl_sent_mails WHERE u_email=? AND `time`>?-3600";
+        $stmt = $conn->prepare($query);
+        $stmt->execute([$u_email, $now_time]);
+        if (  (int)($stmt->fetchColumn()) > 30 ) {
             self::disconnect($conn);
-            return array(false,'خطا:تجاوز از حدکثر محدودیت ارسال ایمیل!');
+            return array(false, 'خطا:تجاوز از حدکثر محدودیت ارسال ایمیل!');
         }
 
         // 2 = UPDATE ACTIVATION CODE INTO tbl_user
-        $activation_code=rand(1000000,9999999);
-        $stmt=$conn->prepare("CALL SP_user_updateActivationCode(?,?);");
-        if(!$stmt->execute([$activation_code,$u_name])) {
+        $activation_code = rand(1000000, 9999999);
+        $query = "UPDATE tbl_user SET activation_code=? WHERE u_name=?;";
+        $stmt = $conn->prepare($query);
+        if (!$stmt->execute([$activation_code, $u_name])) {
             self::disconnect($conn);
-            return array(false,'خطا:کد فعالسازی کاربر ثبت نشد!');
+            return array(false, 'خطا:کد فعالسازی کاربر ثبت نشد!');
         }
-        $subject="لینک فعالسازی حساب کاربری";
-        $content="<p style=\"direction=rtl;\">جهت فعالسازی حساب خود روی این لینک کلیک نمایید:<br/><a href=\"http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code</a></p>";
+        $subject = "لینک فعالسازی حساب کاربری";
+        $content = <<<EOS
+            <p style=\"direction=rtl;\">جهت فعالسازی حساب خود روی این لینک کلیک نمایید:
+            <br/>
+            <a href=\"http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code</a>
+            </p>
+EOS;
 
         // 3 = INSERT MAIL TIME TO TBL_SENT_MAILS AND DELETE OLD MAILS
-        $stmt=$conn->prepare("CALL SP_sent_mails_insertSendRecord(?,?);");
-        $stmt->execute([$u_email,$now_time]);
-
-        if($stmt -> rowCount()) {
-            if(self::sendMail($u_email,$subject,$content))
-            return array(true,"یک ایمیل حاوی لینک فعالسازی حساب کاربری به ایمیل شما ارسال شد. لطفا ایمیل خود را چک نموده و روی لینک فعالسازی کلیک نمایید.");
+        $query = "INSERT INTO tbl_sent_mails(u_email,`time`) VALUES(?, ?);
+                                        DELETE FROM tbl_sent_mails WHERE `time`<?-3600;";
+        $stmt = $conn->prepare($query);
+        $stmt->execute([$u_email, $now_time, $now_time]);
+        if ($stmt -> rowCount()) {
+            if ( self::sendMail($u_email, $subject, $content) )
+            return array(true, "یک ایمیل حاوی لینک فعالسازی حساب کاربری به ایمیل شما ارسال شد. لطفا ایمیل خود را چک نموده و روی لینک فعالسازی کلیک نمایید.");
         else
-            return array(false,"خطا در ارسال ایمیل فعالسازی");
+            return array(false, "خطا در ارسال ایمیل فعالسازی");
         }
 
     }

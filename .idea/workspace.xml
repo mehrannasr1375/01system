@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,18 +33,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="184" column="51" selection-start-line="184" selection-start-column="51" selection-end-line="184" selection-end-column="51" />
+            <state relative-caret-position="302">
+              <caret line="175" column="142" lean-forward="true" selection-start-line="175" selection-start-column="142" selection-end-line="175" selection-end-column="142" />
               <folding>
                 <element signature="n#__construct#0;n#User#0;n#!!top" />
                 <element signature="n#__get#0;n#User#0;n#!!top" />
                 <element signature="e#1332#1546#0#PHP" />
                 <element signature="n#__set#0;n#User#0;n#!!top" />
                 <element signature="e#1787#2280#0#PHP" />
-                <element signature="e#0#63#0" />
                 <element signature="e#1956#2221#0#PHP" />
                 <element signature="e#2102#2221#0#PHP" />
                 <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
@@ -51,31 +51,16 @@
                 <element signature="n#getUserById#0;n#User#0;n#!!top" />
                 <element signature="e#3258#3741#0#PHP" />
                 <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
-                <element signature="n#insertUser#0;n#User#0;n#!!top" />
-                <element signature="e#4223#5214#0#PHP" />
-                <element signature="e#5076#5214#0#PHP" />
-                <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
-                <element signature="e#5554#5716#0#PHP" />
-                <element signature="e#5899#6061#0#PHP" />
-                <element signature="e#6626#6953#0#PHP" />
+                <element signature="e#6506#6519#0#PHP" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
                 <element signature="n#activateUser#0;n#User#0;n#!!top" />
                 <element signature="n#authenticateUser#0;n#User#0;n#!!top" />
-                <element signature="e#0#107#0" />
-                <element signature="e#0#87#0" />
-                <element signature="e#56#87#0" />
-                <element signature="e#63#87#0" />
-                <element signature="e#0#116#1" />
                 <element signature="e#8410#9201#0#PHP" />
                 <element signature="n#getUserByName#0;n#User#0;n#!!top" />
                 <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
                 <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
                 <element signature="n#rememberUser#0;n#User#0;n#!!top" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
                 <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
                 <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
                 <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
@@ -91,20 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/other/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+            <state relative-caret-position="792">
+              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="e#87#1215#0" />
                 <element signature="e#436#1123#0" />
@@ -146,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="440">
               <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
                 <element signature="e#105#3988#0#PHP" />
@@ -195,6 +171,7 @@
       <find>.header</find>
       <find>last-wo</find>
       <find>order-se</find>
+      <find>transa</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;./includes</replace>
@@ -303,6 +280,11 @@
               <item name="01system" type="b2602c69:ProjectViewProjectNode" />
               <item name="01system" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="01system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="01system" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -368,11 +350,13 @@
       <workItem from="1564593301007" duration="7723000" />
       <workItem from="1564633038781" duration="83000" />
       <workItem from="1564650793576" duration="730000" />
+      <workItem from="1564760182520" duration="624000" />
+      <workItem from="1564768897847" duration="1910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78006000" />
+    <option name="totallyTimeSpent" value="80948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,7 +382,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18109187" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.24766977" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3288948" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -1118,20 +1102,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore.php" />
+    <entry file="file://$PROJECT_DIR$/.gitignore.txt" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1139,28 +1111,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
+    <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="100">
+          <caret line="34" selection-start-line="34" selection-end-line="49" />
           <folding>
-            <element signature="e#105#3988#0#PHP" />
-            <element signature="e#222#1003#0#PHP" />
-            <element signature="e#575#941#0#PHP" />
-            <element signature="e#1036#3988#0#PHP" />
-            <element signature="e#1886#3988#0#PHP" />
-            <element signature="e#1933#2150#0#PHP" />
-            <element signature="e#2188#3988#0#PHP" />
-            <element signature="e#2236#2441#0#PHP" />
-            <element signature="e#2475#3988#0#PHP" />
+            <element signature="e#83#568#0#PHP" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="70" column="27" lean-forward="true" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+        <state relative-caret-position="792">
+          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding>
             <element signature="e#87#1215#0" />
             <element signature="e#436#1123#0" />
@@ -1198,33 +1168,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/actions/login-actions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="34" selection-start-line="34" selection-end-line="49" />
+        <state relative-caret-position="440">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding>
-            <element signature="e#83#568#0#PHP" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="e#105#3988#0#PHP" />
+            <element signature="e#222#1003#0#PHP" />
+            <element signature="e#575#941#0#PHP" />
+            <element signature="e#1036#3988#0#PHP" />
+            <element signature="e#1886#3988#0#PHP" />
+            <element signature="e#1933#2150#0#PHP" />
+            <element signature="e#2188#3988#0#PHP" />
+            <element signature="e#2236#2441#0#PHP" />
+            <element signature="e#2475#3988#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="184" column="51" selection-start-line="184" selection-start-column="51" selection-end-line="184" selection-end-column="51" />
+        <state relative-caret-position="302">
+          <caret line="175" column="142" lean-forward="true" selection-start-line="175" selection-start-column="142" selection-end-line="175" selection-end-column="142" />
           <folding>
             <element signature="n#__construct#0;n#User#0;n#!!top" />
             <element signature="n#__get#0;n#User#0;n#!!top" />
             <element signature="e#1332#1546#0#PHP" />
             <element signature="n#__set#0;n#User#0;n#!!top" />
             <element signature="e#1787#2280#0#PHP" />
-            <element signature="e#0#63#0" />
             <element signature="e#1956#2221#0#PHP" />
             <element signature="e#2102#2221#0#PHP" />
             <element signature="n#getAllUsers#0;n#User#0;n#!!top" />
@@ -1232,31 +1210,16 @@
             <element signature="n#getUserById#0;n#User#0;n#!!top" />
             <element signature="e#3258#3741#0#PHP" />
             <element signature="n#getUserIdByPostId#0;n#User#0;n#!!top" />
-            <element signature="n#insertUser#0;n#User#0;n#!!top" />
-            <element signature="e#4223#5214#0#PHP" />
-            <element signature="e#5076#5214#0#PHP" />
-            <element signature="n#sendActivationEmail#0;n#User#0;n#!!top" />
-            <element signature="e#5554#5716#0#PHP" />
-            <element signature="e#5899#6061#0#PHP" />
-            <element signature="e#6626#6953#0#PHP" />
+            <element signature="e#6506#6519#0#PHP" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#activateUser#0;n#User#0;n#!!top" />
             <element signature="n#authenticateUser#0;n#User#0;n#!!top" />
-            <element signature="e#0#107#0" />
-            <element signature="e#0#87#0" />
-            <element signature="e#56#87#0" />
-            <element signature="e#63#87#0" />
-            <element signature="e#0#116#1" />
             <element signature="e#8410#9201#0#PHP" />
             <element signature="n#getUserByName#0;n#User#0;n#!!top" />
             <element signature="n#checkUserNameExists#0;n#User#0;n#!!top" />
             <element signature="n#checkEmailExists#0;n#User#0;n#!!top" />
             <element signature="n#rememberUser#0;n#User#0;n#!!top" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
             <element signature="n#deleteUserById#0;n#User#0;n#!!top" />
             <element signature="n#changeUserTypeById#0;n#User#0;n#!!top" />
             <element signature="n#getUserTypeById#0;n#User#0;n#!!top" />
@@ -1268,13 +1231,6 @@
             <element signature="n#getRandomHash#0;n#User#0;n#!!top" />
             <element signature="n#getUserInformations#0;n#User#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/other/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="47" />
         </state>
       </provider>
     </entry>
