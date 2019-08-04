@@ -52,6 +52,9 @@ $(document).ready(function () {
                 url:"actions/login-actions.php",
                 method:"POST",
                 data:{action:'forgetpass',email:email},
+                beforeSend:function () {
+
+                },
                 success:function (data) {
                     if (data == true) {
                         $('#res-failure-forget').html('');
@@ -85,20 +88,20 @@ $(document).ready(function () {
     $('#username').keyup(function () {
         var username = $('#username').val();
         if (username.length < 5) {
-            $('#response-signup').html('نام کاربری باید شامل حداقل 5 کاراکتر باشد!');
+            $('#signup-res').html('نام کاربری باید شامل حداقل 5 کاراکتر باشد!');
         } else {
-            $('#response-signup').html('');
+            $('#signup-res').html('');
             $.ajax({
                 url:"actions/login-actions.php",
                 method:"POST",
                 data:{action:'chkuser',username:username},
                 success:function (data) {
                     if (data == 'usernameexists')
-                        $('#response-signup').html('این نام کاربری قبلا استفاده شده است!');
+                        $('#signup-res').html('این نام کاربری قبلا استفاده شده است!');
                     else if (data == true)
-                        $('#response-signup').html('');
+                        $('#signup-res').html('');
                     else
-                        $('#response-signup').html('خطایی رخ داده است. بعدا امتحان نمایید!');
+                        $('#signup-res').html('خطایی رخ داده است. بعدا امتحان نمایید!');
                 }
             });
         }
@@ -109,20 +112,20 @@ $(document).ready(function () {
     $('#email').keyup(function () {
         var email = $("#email").val();
         if (email.length < 5)
-            $('#response-signup').html('خطا: ایمیل نمی تواند کمتر از چهار کاراکتر باشد!');
+            $('#signup-res').html('خطا: ایمیل نمی تواند کمتر از چهار کاراکتر باشد!');
         else {
-            $('#response-signup').html('');
+            $('#signup-res').html('');
             $.ajax({
                 url:"actions/login-actions.php",
                 method:"POST",
                 data:{action:'chkemail',email:email},
                 success:function (data) {
                     if (data == 'emailexists')
-                        $('#response-signup').html('خطا: این ایمیل قبلا استفاده شده است!');
+                        $('#signup-res').html('خطا: این ایمیل قبلا استفاده شده است!');
                     else if (data == true)
-                        $('#response-signup').html('');
+                        $('#signup-res').html('');
                     else
-                        $('#response-signup').html('خطا: خطایی رخ داده است. لطفا بعدا امتحان نمایید!');
+                        $('#signup-res').html('خطا: خطایی رخ داده است. لطفا بعدا امتحان نمایید!');
                 }
             });
         }
@@ -142,19 +145,19 @@ $(document).ready(function () {
         var description = $('#description').val();
 
         if (f_name =='' || l_name == '' || pass_1 == '' || pass_2 == '' || sex == '' || age == '' || description == '') {
-            $('#response-signup').html('لطفا تمامی فیلدها را پر نمایید!');
+            $('#signup-res').html('لطفا تمامی فیلدها را پر نمایید!');
             return;
         }
         else if (pass_1 !== pass_2) {
-            $('#response-signup').html('دو کلمه ی عبور مشابه هم نیستند!');
+            $('#signup-res').html('دو کلمه ی عبور مشابه هم نیستند!');
             return;
         }
         else if (email.length < 5) {
-            $('#response-signup').html('آدرس ایمیل نامعتبر است!');
+            $('#signup-res').html('آدرس ایمیل نامعتبر است!');
             return;
         }
         else if (username.length < 5) {
-            $('#response-signup').html('نام کاربری نامعتبر است!');
+            $('#signup-res').html('نام کاربری نامعتبر است!');
             return;
         }
 
@@ -166,32 +169,32 @@ $(document).ready(function () {
             data:{action:'signup',f_name:f_name,l_name:l_name,username:username,email:email,pass_1:pass_1,pass_2:pass_2,sex:sex,age:age,description:description},
             success:function (data) {
                 if (data == true) {
-                    $('#response-signup').html('');
-                    $('#response-success').html('مشخصات شما ثبت گردید. لطفا جهت فعالسازی حساب کاربری خود ایمیلتان را چک نمایید.');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('مشخصات شما ثبت گردید. لطفا جهت فعالسازی حساب کاربری خود ایمیلتان را چک نمایید.');
                 } else if (data == false) {
-                    $('#response-success').html('');
-                    $('#response-signup').html('خطا: لطفا بعدا امتحان نمایید!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('خطا: لطفا بعدا امتحان نمایید!');
                 } else if (data == 'differentpass') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('کلمه های عبور با هم برابر نیستند!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('کلمه های عبور با هم برابر نیستند!');
                 } else if (data == 'notstrong') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('رمز عبور به اندازه کافی قوی نیست! رمز عبور باید شامل حداقل یک عدد و یک حرف لاتین باشد.');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('رمز عبور به اندازه کافی قوی نیست! رمز عبور باید شامل حداقل یک عدد و یک حرف لاتین باشد.');
                 } else if (data == 'counterror') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('نام کاربری و رمز عبور هر کدام باید شامل حداقل 5 کاراکتر باشند!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('نام کاربری و رمز عبور هر کدام باید شامل حداقل 5 کاراکتر باشند!');
                 } else if (data == 'usernameexists') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('این نام کاربری قبلا ثبت شده است!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('این نام کاربری قبلا ثبت شده است!');
                 } else if (data == 'emailexists') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('این ایمیل قبلا ثبت شده است!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('این ایمیل قبلا ثبت شده است!');
                 } else if (data == 'servererror') {
-                    $('#response-success').html('');
-                    $('#response-signup').html('servererror');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('servererror');
                 } else {
-                    $('#response-success').html('');
-                    $('#response-signup').html('خطا: خطایی رخ داده است!');
+                    $('#signup-res').html('');
+                    $('#signup-res').html('خطا: خطایی رخ داده است!');
                 }
             }
         });

@@ -1037,13 +1037,14 @@ textarea {
     color: #be2b2f !important;
     cursor: pointer;
 }
-p#response-signin, p#response-signup {
+p#response-signin {
     color: #d11d1abd;
     padding-top: 10px;
     text-align: center;
     max-width: 330px;
 }
-p#response-success {
+p#signup-res {
+    margin-bottom: 5px !important;
     max-width: 330px;
     color: #508b4d;
     text-align: center;
@@ -1662,6 +1663,23 @@ input:focus {
 
 /*--------------------------------------------- waiting spinner ----------------------------------------------------*/
 
+.spinner {
+    display: inline-block !important;
+    /*margin: auto;*/
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-right: 3px solid rgb(66, 233, 57);
+    border-left: 3px solid rgb(66, 233, 57);
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    transition: .1s;
+    -webkit-animation: loading 1s linear infinite;
+    -moz-animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite;
+}
 #spinner {
     width: 50px;
     height: 50px;

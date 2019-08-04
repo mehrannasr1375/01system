@@ -138,8 +138,10 @@
                     <p>ایجاد حساب کاربری</p>
                 </div>
             </div>
-            <p id="response-signup"></p>
-            <p id="response-success"></p>
+            <p id="signup-res">
+                hi there
+                <div class="spinner"></div>
+            </p>
             <div class="login-body">
                 <table>
                     <tr>
