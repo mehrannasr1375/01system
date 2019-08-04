@@ -135,7 +135,7 @@ class User extends Base
             $ret = array(false, "DataBase Error Number: $e - Description: ".$e->getMessage());
         }
         return $ret;
-    }
+    } //ok
     public static function sendActivationEmail($u_name, $u_email)
     {
         $conn = self::connect();
@@ -158,10 +158,20 @@ class User extends Base
             return array(false, 'خطا:کد فعالسازی کاربر ثبت نشد!');
         $subject = "لینک فعالسازی حساب کاربری";
         $content = <<<EOS
-            <p style=\"direction=rtl;\">جهت فعالسازی حساب خود روی این لینک کلیک نمایید:
-            <br/>
-            <a href=\"http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/technology-store/?action=activate&username=$u_name&code=$activation_code</a>
-            </p>
+        <a href="http://www.01system.ir" style="display: block;margin-bottom:0 !important;background-color:#c4a3f5;text-align: center;border-radius: 7px;padding: 20px;margin-bottom: 20px;">01System.ir</a>
+            <div style="padding: 30px; background-color: rgba(224,212,249,0.65);">
+                <p style="direction:rtl; font-family: Tahoma;line-height: 2">
+                    با سلام
+                    <br>
+                    کاربر گرامی، لطفا جهت فعالسازی حساب کاربری خود روی لینک زیر کلیک نمایید.
+                    <br>
+                    باتشکر
+                    <br>
+                    <a href=\"http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code</a>
+                    </p>
+                </p>
+            </div>
+        <a href="http://www.01system.ir" style="display: block;margin-bottom:0 !important;background-color:#c4a3f5;text-align: center;border-radius: 7px;padding: 20px;margin-bottom: 20px;">01System.ir</a>
 EOS;
 
         // 3 = INSERT MAIL TIME TO TBL_SENT_MAILS AND DELETE OLD MAILS
@@ -177,18 +187,18 @@ EOS;
             return array(false, "خطا در ارسال ایمیل فعالسازی");
         }
 
-    }
+    } //should update URL for web
     public static function activateUser($u_name, $activation_code)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_activateUser(?,?);");
-        $stmt->execute([$u_name,$activation_code]);
+        $conn = self::connect();
+        $stmt = $conn->prepare("CALL SP_user_activateUser(?,?);");
+        $stmt->execute([$u_name, $activation_code]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if ( $stmt->rowCount() )
             return true;
         else
             return false;
-    }
+    } //ok
     public static function authenticateUser($u_name, $u_pass)
     {
         // returns an object or false or 'max-requests'
@@ -228,7 +238,7 @@ EOS;
                 return false;
         }
 
-    }
+    } //ok
     public static function getUserByName($u_name)
     {
         $conn=self::connect();

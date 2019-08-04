@@ -1046,8 +1046,8 @@ p#response-signin {
 p#signup-res {
     margin-bottom: 5px !important;
     max-width: 330px;
-    color: #508b4d;
     text-align: center;
+    transition: .3s ease all;
 }
 
 .login-close {
@@ -1100,6 +1100,7 @@ p#signup-res {
 #sign-up-frame {
     display: inline-block;
     padding: 3rem 1rem;
+    padding-bottom: 1rem;
 }
 #sign-up-overlay #i-title {
     position: absolute;

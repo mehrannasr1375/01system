@@ -71,7 +71,10 @@
             require_once "index/showPost.php";
         else if ( isset($_GET['action']) && $_GET['action']=='search' )
             require_once "index/searchPage.php";
-        else
+        else if ( isset($_GET['action']) && $_GET['action']=='activate' ) {
+            if ( isset($_GET['username']) && isset($_GET['code']) )
+                require_once "actions/login-actions.php?action=activateUser&username=" . $_GET['username'] . "&code=" . $_GET['code'];
+        } else
             require_once "index/showHomePage.php";
     ?>
 
@@ -139,8 +142,7 @@
                 </div>
             </div>
             <p id="signup-res">
-                hi there
-                <div class="spinner"></div>
+
             </p>
             <div class="login-body">
                 <table>
