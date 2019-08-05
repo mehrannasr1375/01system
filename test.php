@@ -31,8 +31,7 @@ if (isset($_GET['id'])) {
     echo "no parameters sended! insert id as an query string parameter at the end of url!";
 */
 
-
+echo __DIR__;
 
 ?>
-
 

@@ -134,18 +134,7 @@ if ( isset($_POST['action']) )
 
 
 
-    // activate user
-    else if ( isset($_GET['action']) && $_GET['action']=='activate' ) {
-        $username = htmlspecialchars(trim($_GET['username']), ENT_QUOTES);
-        $code = htmlspecialchars(trim($_GET['code']), ENT_QUOTES);
-        $res = User::activateUser($username, $code);
-        if ($res) {
-            echo " حساب کاربری شما با موفقیت فعال گردید! ";
-        } else {
-            echo " خطایی رخ داده است! ";
-        }
 
-    }
 
 
 

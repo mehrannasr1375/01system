@@ -5,19 +5,19 @@
      */
     require_once ("include_all.php");
     session_start();
-    if (isset($_COOKIE['remember'])) {
-        if ($user = User::getUserByName($_COOKIE['u_name'])) {
-            if (isset($_COOKIE['hash'])) {
+    if ( isset($_COOKIE['remember']) ) {
+        if ( $user = User::getUserByName($_COOKIE['u_name']) ) {
+            if ( isset($_COOKIE['hash']) ) {
                 $hash_1 = $_COOKIE['hash'];
                 $hash_2 = User::getRandomHash($_COOKIE['u_name']);
-                if ($hash_1 == $hash_2) {
+                if ( $hash_1 == $hash_2 ) {
                     $_SESSION['u_id']    =  $user ->  id;
                     $_SESSION['u_name']  =  $user ->  u_name;
                     $_SESSION['u_type']  =  $user ->  u_type;
                     $_SESSION['f_name']  =  $user ->  f_name;
                     $_SESSION['l_name']  =  $user ->  l_name;
                     $_SESSION['avatar']  =  $user ->  avatar;
-                    setcookie("remember", $user->u_name, time() + REMEMBER_TIME, null, null, null, true);
+                    setcookie("remember", $user->u_name, time() + REMEMBER_TIME, null, null, null, false);
                 }
             }
         }
@@ -64,19 +64,26 @@
     <?php require_once "index/navbar.php"; ?>
 
 
+    <!-- home || postPage || searchPostsPage || activateUserPage  -->
+    <div>
+        <?php
 
-    <!-- home or postPage or searchPostsPage  -->
-    <?php
         if ( isset($_GET['post']) && is_numeric($_GET['post']) )
-            require_once "index/showPost.php";
+            require_once __DIR__ ."/index/showPost.php";
+
         else if ( isset($_GET['action']) && $_GET['action']=='search' )
-            require_once "index/searchPage.php";
+            require_once __DIR__ ."/index/searchPage.php";
+
         else if ( isset($_GET['action']) && $_GET['action']=='activate' ) {
             if ( isset($_GET['username']) && isset($_GET['code']) )
-                require_once "actions/login-actions.php?action=activateUser&username=" . $_GET['username'] . "&code=" . $_GET['code'];
-        } else
-            require_once "index/showHomePage.php";
-    ?>
+                require_once __DIR__ ."/index/activated_page.php";
+        }
+
+        else
+            require_once __DIR__ ."/index/showHomePage.php";
+
+        ?>
+    </div>
 
 
 
@@ -141,9 +148,7 @@
                     <p>ایجاد حساب کاربری</p>
                 </div>
             </div>
-            <p id="signup-res">
-
-            </p>
+            <p id="signup-res"></p>
             <div class="login-body">
                 <table>
                     <tr>

@@ -10,15 +10,22 @@ class Base
     protected static function connect()
     {
         try {
-            $dsn = "mysql:host=".HOST_NAME.";dbname=".DB_NAME.";charset=utf8";
+            $dsn  = "mysql:host=".HOST_NAME.";dbname=".DB_NAME.";charset=utf8";
             $conn = new PDO($dsn,DB_USER,DB_PASS);
-            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);   //auto exception made
-            //$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT);        //disble errors
-            //$conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);     //return all errors
+
+            // PDO::ERRMODE_EXCEPTION   //auto exception made
+            // PDO::ERRMODE_SILENT      //disble errors
+            // PDO::ERRMODE_WARNING     //return all errors
+
+            if ( DEVELOPING_MODE === true )
+                $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+            else
+                $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT);
+
             return $conn;//returns 'false' or an object from 'PDOStatement' class
         }
-        catch (Exception $e){
-            return "DATABASE CONNECTION ERROR: " . $e -> getMessage();
+        catch (Exception $e) {
+            return "DATABASE CONNECTION ERROR: " . $e->getMessage();
         }
     }
     protected static function disconnect($conn)
@@ -27,7 +34,7 @@ class Base
     }
     public static function sendMail($target_email,$subject,$content)
     {
-        $mail=new PHPMailer(true);           // Passing `true` enables exceptions
+        $mail = new PHPMailer(true);           // Passing `true` enables exceptions
         try {
             $mail -> SMTPDebug = 0;                      // Enable verbose debug output
             $mail -> isSMTP();                           // Set mailer to use SMTP
@@ -44,12 +51,12 @@ class Base
             $mail -> AltBody = $content;
             $mail -> addAddress($target_email);
             $mail -> FromName='zero 1 system';
-            if($mail -> send())
+            if ( $mail -> send() )
                 return [true,"Email has been sent!"];
             else
                 return [false,"an Error has been eccured!"];
         }
-        catch (Exception $e){
+        catch ( Exception $e ) {
             return [false,"$mail->ErrorInfo"];
         }
 

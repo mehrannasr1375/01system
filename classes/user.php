@@ -157,6 +157,11 @@ class User extends Base
         if (!$stmt->execute([$activation_code, $u_name]))
             return array(false, 'خطا:کد فعالسازی کاربر ثبت نشد!');
         $subject = "لینک فعالسازی حساب کاربری";
+        if ( DEVELOPING_MODE === true )
+            $activate_url = "<a href=\"http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code</a>";
+        else
+            $activate_url = "<a href=\"http://www.01system.ir/index.php?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://www.01system.ir/index.php?action=activate&username=$u_name&code=$activation_code</a>";
+
         $content = <<<EOS
         <a href="http://www.01system.ir" style="display: block;margin-bottom:0 !important;background-color:#c4a3f5;text-align: center;border-radius: 7px;padding: 20px;margin-bottom: 20px;">01System.ir</a>
             <div style="padding: 30px; background-color: rgba(224,212,249,0.65);">
@@ -167,7 +172,7 @@ class User extends Base
                     <br>
                     باتشکر
                     <br>
-                    <a href=\"http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code\" target='_blank'>http://localhost/01system/index.php?action=activate&username=$u_name&code=$activation_code</a>
+                    $activate_url
                     </p>
                 </p>
             </div>
