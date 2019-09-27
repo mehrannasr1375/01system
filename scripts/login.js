@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 
     // logout
-    $('#btn-sign-out').click(function () {
+    $('.btn-sign-out').click(function () {
         $.ajax({
             url:"actions/login-actions.php",
             method:"POST",

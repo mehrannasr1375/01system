@@ -50,21 +50,22 @@
 
 
 
-<!-- spinner -->
+<!--  Spinner  --------------------------------------------------------------------------------------------------------------------------------------------------->
 <?php if (DEVELOPING_MODE === false)  echo "<div id='spinner'></div>"; ?>
 
 
 
-<!-- html body parent -->
+<!--  Body Parent  ----------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="body">
 
 
 
-    <!-- navbar -->
+    <!--  Navbar  -->
     <?php require_once "index/navbar.php"; ?>
 
 
-    <!-- home || postPage || searchPostsPage || activateUserPage  -->
+
+    <!--  home || postPage || searchPostsPage || activateUserPage  -->
     <div>
         <?php
 
@@ -87,12 +88,12 @@
 
 
 
-    <!-- footer -->
+    <!--  Footer  -->
     <?php require_once "index/footer.php"; ?>
 
 
 
-    <!-- login form -->
+    <!--  Login Form  -->
     <div id="sign-in-overlay">
         <div id="login-frame">
             <div>
@@ -133,7 +134,7 @@
 
 
 
-    <!-- sign-up form -->
+    <!--  Sign Up Form  -->
     <div id="sign-up-overlay">
         <div id="sign-up-frame">
             <div>
@@ -199,7 +200,7 @@
 
 
 
-    <!-- forget-password form -->
+    <!--  Forget Password Form  -->
     <div id="forget-overlay">
         <div id="forget-frame">
             <div>
@@ -225,12 +226,12 @@
 
 
     
-    <!-- go top -->
+    <!--  Go Top  -->
     <a href="#home" id="go-to-top"><i class="fa fa-chevron-up"></i></a>
 
 
 
-    <!-- popup box -->
+    <!--  Popup Box  -->
     <div id="popup-box" class="border-lr-red">
         <div class="popup-right">
             <i id="popup-i" class="fa fa-2x"></i>
@@ -242,7 +243,7 @@
 
 
 
-    <!-- scripts -->
+    <!--  Scripts  -->
     <script src="scripts/jquery-3.3.1.js"></script>
     <script src="scripts/popper.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
@@ -254,5 +255,6 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/changeAnswer.js"></script>
 </div>
+
 </body>
 </html>

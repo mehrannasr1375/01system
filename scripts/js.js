@@ -1,17 +1,17 @@
-
 //smooth scroll
 new SmoothScroll('a[href*="#"]' , {
     easing: 'linear',
-    speed: 500
+    speed: 400
 });
 
 
+
 //right menu toggler
-$('#right-menu-toggler').on('click',function() {
+$('#right-menu-toggler, #right-menu-toggler i').on('click',function() {
     var icon = $('#right-menu-toggler i');
-    var nav = $('#nav');
+    var nav = $('#right-menu');
     if (nav.css('right') === '0px') {
-        nav.css('right','-250px');
+        nav.css('right','-280px');
         icon.removeClass('fa-times').addClass('fa-bars');
     }
     else {
@@ -21,33 +21,43 @@ $('#right-menu-toggler').on('click',function() {
 });
 
 
+
+//right menu hide on click out
+$(window).on('load', function () {
+    var icon = $('#right-menu-toggler i');
+    $("html").click(function (event) {
+        if ( event.target.id !== 'right-menu' && event.target.id !== 'right-menu-toggler' && event.target.id !== 'right-menu-toggler-i' ) {
+            $('#right-menu').css('right','-280px');
+            icon.removeClass('fa-times').addClass('fa-bars');
+        }
+    });
+});
+
+
+
 //top navbar styles & go top btn
 $(window).on('scroll load',function () {
-        //show & hide top-menu background
-        if ($(window).scrollTop() > 300) {
-            if ($(window).width() >= 876) {
-                $('#navbar').css('background-color','rgba(22,22,22,.95)').css('padding','4px 10px').css('box-shadow','0 0 1px 0 rgba(222,222,222,.5)');
-                $('#sign-in-btn-group').css('top','5px');
-                $('#right-menu-toggler').css('font-size','16px').css('top','5px');
-            } else {
-                $('#navbar').css('background-color','rgba(22,22,22,.95)').css('box-shadow','0 0 1px 0 rgba(222,222,222,.5)');
-                $('#sign-in-btn-group').css('top','5px');
-                $('#right-menu-toggler');
-            }
-        }
-        else {
-            $('#navbar').css('background-color','rgba(66,55,66,.95)').css('padding','8px 10px').css('box-shadow','0 0 0 0');
-            $('#sign-in-btn-group').css('top','10px');
-            $('#right-menu-toggler').css('font-size','32px').css('top','8px');
-        }
 
-        //go top
-        if ($(window).scrollTop() > 400) {
+
+    navbar = $("#navbar");
+    if ( $(window).scrollTop() > 200 ) {
+        navbar.css('padding','6px 25px').css('background-color','#1c1f22');
+    }
+    else {
+        navbar.css('padding','14px 25px').css('background-color','transparent');
+    }
+
+
+    //go top
+    if ($(window).scrollTop() > 700) {
             $('#go-to-top').css('opacity','1');
         } else {
             $('#go-to-top').css('opacity','0'); 
         }
+
+
 });
+
 
 
 //last posts slider
@@ -66,16 +76,14 @@ $(".owl-carousel").owlCarousel({
 });
 
 
-//wow initialize
-
 
 // sign in section
-$("#btn-signin").on('click',function () {
+$(".btn-sign-in").on('click',function () {
     $("#sign-in-overlay").fadeToggle(500);
     var x = $('body').width();
     $("#login-frame").css({'top':100,'left':(x-296)/2});
 });
-$("#btn-signup").on('click',function () {
+$(".btn-sign-up").on('click',function () {
     var x = $('body').width();
     $("#sign-up-overlay").fadeIn(500);
     $("#sign-up-frame").css({'top':100,'left':(x-372)/2});
@@ -99,9 +107,10 @@ $("#btn-forget").on('click',function () {
     var x = $('body').width();
     $("#forget-frame").css({'top':100,'left':(x-360)/2});
 });
-$(".login-close").on('click',function(){
-    $(this).parent().parent().parent().fadeToggle(0);
+$(".login-close").on('click',function() {
+    $(this).parent().parent().parent().fadeToggle(300);
 });
+
 
 
 //waiting spinner for load page

@@ -1,7 +1,6 @@
-
-<!-- main slider -->
+<!--  Main Slider  -------------------------------------------------------------------------------------------------------------------------------------------->
 <section id="slider">
-    <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
+    <div id="top-carousel" class="carousel slide" data-ride="carousel" data-pause="false" data-interval="300000">
         <div class="carousel-inner">
             <div class="carousel-item active" style="background-image: url('./includes/images/slider/s1.jpg')">
                 <div class="carousel-overlay">
@@ -44,14 +43,14 @@
 
 
 
-<!--order sequences -->
+<!--  Order Sequences  ---------------------------------------------------------------------------------------------------------------------------------------->
 <section id="order-sequences">
     <h3 class="header-1 text-light">راه اندازی وب سایت شخصی شما!</h3>
     <h3 class="header-2 text-white-50 mb-2">روال کاری</h3>
     <div class="container">
         <div class="row position-relative">
-            <hr  class="dashed-hr d-none d-lg-block   wow fadeIn"   data-wow-delay="1.4s"/>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+            <hr  class="dashed-hr d-none d-lg-block wow fadeIn" data-wow-delay="1.4s"/>
+            <div class="card col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-phone text-black-50"></i>
@@ -62,7 +61,7 @@
                     <p class="sm-font text-white-50">از طریق تماس، ایمیل و یا ارسال پیامک شما و هماهنگی ما با شما جهت برقراری جلسه ی دیدار حضوری</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="card col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-handshake-o text-black-50"></i>
@@ -73,7 +72,7 @@
                     <p class="sm-font text-white-50">جهت بررسی ویژگی های مورد نیاز و مورد درخواست بهمراه پیش پرداخت و عقد قرارداد و همچنین بررسی میزان زمان مورد نیاز جهت تکمیل پروژه</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+            <div class="card col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-thumbs-o-up fa-stack-1x text-black-50"></i>
@@ -84,7 +83,7 @@
                     <p class="sm-font text-white-50">جلسه ای جهت بررسی قابلیت ها و ویژگی های بصری وب سایت با حضور شما و همچنین آموزش و معرفی قابلیت های وب سایت به شما</p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
+            <div class="card col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
                 <span class="fa-stack fa-3x m-auto">
                     <i class="fa fa-circle fa-stack-2x text-nice-blue"></i>
                     <i class="fa fa-stack-1x fa-check text-black-50"></i>
@@ -101,12 +100,12 @@
 
 
 
-<!-- works -->
+<!--  Works  -------------------------------------------------------------------------------------------------------------------------------------------------->
 <section id="works">
     <div class="container">
         <h3 class="header-1 text-dark">زمینه های کاری</h3>
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -119,7 +118,7 @@
                      </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -132,7 +131,7 @@
                      </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+            <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle-thin fa-stack-2x text-warning"></i>
@@ -145,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
+            <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="1.0s">
                 <div class="card-2">
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-database fa-stack-1x text-dark"></i>
@@ -164,7 +163,7 @@
 
 
 
-<!-- skills -->
+<!--  Skills  ------------------------------------------------------------------------------------------------------------------------------------------------->
 <section id="skills">
     <div class="bg-skills">
         <h3 class="header-1">مهارت ها</h3>
@@ -304,7 +303,7 @@
 
 
 
-<!-- last-posts -->
+<!--  Last Posts  -------------------------------------------------------------------------------------------------------------------------------------------->
 <section id="last-posts" class="last-posts">
     <div class="container-fluid">
         <h3 class="header-1 text-dark">آخرین مطالب </h3>
@@ -377,7 +376,7 @@
 
 
 
-<!-- last samples -->
+<!--  Last Samples  ------------------------------------------------------------------------------------------------------------------------------------------->
 <div id="last-works">
     <div class="container">
         <h3 class="header-1 text-dark" data-wow-delay="0.2s">آخرین نمونه کارها</h3>
@@ -403,7 +402,7 @@
 
 
 
-<!-- be a writer -->
+<!--  Be a Writer  -------------------------------------------------------------------------------------------------------------------------------------------->
 <section id="writer">
     <div class="container">
         <h3 class="header-1 text-dark wow fadeInUp" data-wow-delay=".3s">خودتان هم می توانید نویسنده شوید!</h3>

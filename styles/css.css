@@ -115,6 +115,12 @@ p {
 .mb-6 {
     margin-bottom: 6rem !important;
 }
+.hr-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 1px;
+    background-color: grey;
+}
 
 .res {
     padding: 5px;
@@ -229,168 +235,129 @@ textarea {
 /*----------------------------------------  top navbar in minimum width  ------------------------------------------*/
 
 #navbar {
-    position: fixed !important;
-    left: 0 !important;
-    right: 0;
+    position: fixed;
     z-index: 10000;
-    padding: 8px 10px;
-    display: flex;
-    transition-duration: .3s;
+    top: 0;
+    right: 0;
+    left: 0;
     font-size: 12px;
-    font-weight:200;
+    font-weight: 200;
+    transition: .3s ease all;
+    box-shadow: 0 10px 30px -14px black;
 }
-#logo a {
-    color: whitesmoke;
+#logo img {
+    height: 36px;
+}
+ul#nav {
+    list-style-type: none;
+    color: white;
+    margin-bottom: 0 !important;
+    margin-right: -30px;
+}
+ul#nav li {
+    margin-right: 30px;
+}
+ul#nav a, #login-state {
+    color: white;
+    cursor: pointer;
+}
+ul#nav li:hover a, ul#nav li:hover i {
+    color: gold;
+    transition: .3s ease all;
+}
+ul#nav i, #login-state i {
+    color: white;
+    margin-left: 4px;
+}
+#login-state, #nav {
+    display: none;
 }
 #right-menu-toggler {
-    position: absolute;
-    top: 1rem;
-    left: 1.25rem;
-    font-size: 32px;
+    color: #c69651;
     cursor: pointer;
+    box-sizing: content-box !important;
 }
 #right-menu-toggler i {
+    display: inline-block;
+    font-size: 26px !important;
+}
+#btn-signup, #btn-profile {
+    background-color: #4eff44;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: black;
+}
+#btn-signup:hover, #btn-profile:hover {
+    background-color: rgba(80, 255, 70, .5);
+}
+#btn-sign-out, #btn-signin {
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    margin-right: 10px;
     color: whitesmoke;
 }
-#nav {
-    position: fixed;
-    text-align: center;
-    top:0 ;
-    bottom: 0;
-    right: -250px;
-    width: 250px;
-    line-height: 3rem;
-    padding-top: 3rem;
-    background-color: rgba(49, 44, 44, 0.9);
-    background: linear-gradient(45deg, rgba(77, 68, 68, 0.9), rgba(0, 0, 0, 0.9) 40%);
-    border-left: 10px solid rgba(111, 99, 111, 0.5);
-    transition-duration: .2s;
-    font-size: 13px;
-    font-weight: 400;
+#btn-sign-out:hover, #btn-signin:hover {
+    background-color: rgb(40, 40, 40);
 }
-#nav a {
-    padding-bottom: 5px;
-    color: white;
-    display: block;
-    margin: auto;
+#btn-signup i, #btn-profile i {
+    color: black;
 }
-#sign-in-btn-group {
-    top:8px;
-    margin-bottom: 3rem;
-    margin-right: 40px;
-}
-#sign-in-btn-group a {
-    margin: 0px !important;
-}
-#nav .btn1 {
-    position:relative;
-}
-#nav .btn1:after {
-    content:"";
-    position:absolute;
-    z-index: -1;
-    bottom:0;
-    left:50%;
-    right:50%;
-    width:0;
-    height:2px;
-    background-color: rgb(208, 170, 99);
-    transition:.3s ease-out all;
-}
-#nav .btn1:hover:after {
-    left:0;
-    right:0;
-    width:100%;
+#btn-sign-out {
+    margin-right: 10px;
 }
 
-/* sign-in btns */
-#sign-in-btn-group {
-    display: flex;
-    line-height: 25px;
-    border-radius: 4px;
-}
-.btn-sign-in, .btn-sign-up, .btn-sign-out {
-    display: inline;
-    border-color: #58d6ff ;
-    font-family: Vazir-Thin;
-    font-size: 12px ;
-    font-weight: 400;
-    border: 1px solid rgba(134, 139, 148, 0.6);
-    padding: 4px .75rem ;
+#right-menu {
+    position: fixed;
+    right:-280px;
+    top:0;
+    bottom:0;
+    width:280px;
+    background: linear-gradient(45deg, #1b1e21 5%, #0f1012 60%, #5d6973 95%);
     transition: .3s ease all;
-    background: transparent ;
+    padding: 40px;
+    font-size: 15px;
+    line-height: 3;
+    box-shadow: 0 14px 30px -10px black;
+    border-left: 1px solid rgba(200, 150, 80, 0.05);
+}
+#right-nav {
+    list-style-type: none;
+    color: white;
+}
+#right-menu img {
+    width:50px;
+    height:50px;
+}
+#right-menu a {
+    color: white;
     cursor: pointer;
+    transition: .2s ease all;
 }
-.btn-sign-in {
-    border-radius: 0 4px 4px 0;
+#right-menu #right-nav a {
+    color: white;
+    cursor: pointer;
+    transition: .2s ease all;
+    display: block;
 }
-.btn-sign-up, .btn-sign-out {
-    border-radius: 4px 0 0 4px;
+#right-menu #right-nav a:hover {
+    color: gold;
 }
-.btn-sign-in:hover, .btn-sign-out:hover {
-    box-shadow: inset 0 -40px 0 0 #58d6ff;
-    border: 1px solid #58d6ff ;
-}
-.btn-sign-up:hover {
-    box-shadow: inset 0 -40px 0 0 #78ff7d;
-    border: 1px solid #59c05c ;
-}
-.btn-sign-up:hover, .btn-sign-in:hover, .btn-sign-out:hover {
-    color:black !important;
+#right-menu i {
+    margin-left: 4px;
 }
 
 /*------------------------------------------  top navbar >=992px width  -------------------------------------------*/
 
 @media (min-width: 992px)
- {
-    #navbar {
-        display: flex;
+{
+    #login-state, ul#nav {
+        display: inline-block;
     }
-    #logo {
-        margin-top: 2px;
-    }
-    #right-menu-toggler {
-        display: none;
-    }
-    #nav {
-        position: static;
-        width:auto;
-        padding-top: 0;
-        padding-right: 0;
-        margin-right: 1rem;
-        background: transparent;
-        border-left: none;
-    }
-    #nav li {
-        float: right;
-        transition-duration: .4s;
-    }
-    #nav li a {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        line-height: 2.25rem;
-    }
-    #nav li:hover {
-        /*box-shadow: inset 0 18px 0 0 rgba(47, 47, 47,.5), inset 0 -18px 0 0 rgba(47,47,47,.5);*/
-    }
-    #nav li:first-child {
-        margin-top: 0;
-    }
-    #sign-in-btn-group {
-        position: absolute;
-        top:10px;
-        left: 1rem;
-    }
-    /*top slider*/
-    #top-carousel .carousel-text {
-        font-size:16px;
-    }
-    #skills #right-text {
-        color: #afb4b4;
-        position: absolute;
-        top: 43%;
-        /*padding-left:10%;
-        padding-right: 10%;*/
+    #logo img {
+        height: 30px;
     }
 }
 
@@ -445,6 +412,21 @@ textarea {
     font-weight: 200;
     font-size: 16px !important;
 }
+
+@media (min-width: 992px)
+{
+    #top-carousel .carousel-text {
+        font-size:16px;
+    }
+    #skills #right-text {
+        color: #afb4b4;
+        position: absolute;
+        top: 43%;
+        /*padding-left:10%;
+        padding-right: 10%;*/
+    }
+}
+
 
 /*---------------------------------------------  order-sequences  --------------------------------------------------*/
 
@@ -981,17 +963,17 @@ textarea {
     display: inline-block;
     width: 34px;
     height: 34px;
-    color:rgb(175, 95, 255);
+    color: rgb(90, 105, 115);
     font-weight: bold;
     border-radius: 50%;
     text-align: center;
     line-height: 2.2em;
     transition-duration: 0.3s;
-    box-shadow: 0 6px 1px 0px rgb(175, 95, 255); 
+    box-shadow: 0 6px 1px 0px rgb(90, 105, 115);
 }
 #go-to-top:hover {
     color:white;
-    background-color: rgba(126, 0, 255, 0.9);
+    background-color: rgba(40, 40, 40, 0.9);
     box-shadow: none;
 }
 
