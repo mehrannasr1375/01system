@@ -120,7 +120,7 @@ $(window).on("load",function() {
             $('#body').show();
             $('#spinner').hide();
             new WOW().init();
-        }, 500);
+        }, 1000);
     } else
         $('#body').show();
     
