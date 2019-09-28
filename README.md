@@ -8,7 +8,7 @@ How to use:
 
 - forth rename the config file on '/includes/other/config-sample.php' to  'config.php'
 
-- at last these attributes on it:
+- finally set these attributes on it:
     
         1- DB_USER => your database username
         2- DB_PASS => your database password
