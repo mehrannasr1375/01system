@@ -24,6 +24,7 @@ class User extends Base
     private $random_hash;
     private $deleted;
 
+
     public function __construct($a,$b,$c,$d,$e,$f,$g,$h,$i,$j,$k,$l,$m,$n,$o,$p,$q,$r,$s,$t)
     {
         $this->id = (int)$a;
@@ -61,7 +62,7 @@ class User extends Base
         if (in_array($key,$keys)) {
             $conn = self::connect();
             $res = $conn->query("UPDATE tbl_user SET $key='$value' WHERE id = $this->id;");
-            if ($res->rowCount()) {
+            if ($res->rowcount()) {
                 $this->$key = $value;
                 self::disconnect($conn);
                 return true;
@@ -74,45 +75,137 @@ class User extends Base
             return 'not possible!';
     }
 
-    public static function getAllUsers()
+
+    public static function all($start=0, $count=10)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_getAllUsers();");
+        $conn = self::connect();
+
+        $stmt = $conn->prepare("SELECT * FROM tbl_user WHERE id!=1 AND deleted=0 ORDER BY id LIMIT ? , ?");
+        $stmt->bindValue(1,(int)$start, PDO::PARAM_INT);
+        $stmt->bindValue(2,(int)$count, PDO::PARAM_INT);
         $stmt->execute();
+
         self::disconnect($conn);
-        if($stmt->rowCount()){
-            $users=array();
-            foreach($stmt->fetchAll() as $row)
-                $users[]=new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
+
+        if ($stmt->rowcount()){
+            $users = array();
+            foreach ($stmt->fetchAll() as $row){
+                $users[] = new User(
+                    $row['id'],
+                    $row['u_name'],
+                    $row['u_pass'],
+                    $row['u_type'],
+                    $row['u_rate'],
+                    $row['u_email'],
+                    $row['f_name'],
+                    $row['l_name'],
+                    $row['activated'],
+                    $row['age'],
+                    $row['sex'],
+                    $row['bio'],
+                    $row['avatar'],
+                    $row['signup_time'],
+                    $row['activation_code'],
+                    $row['post_count'],
+                    $row['follower_count'],
+                    $row['following_count'],
+                    $row['random_hash'],
+                    $row['deleted']
+                );
+            }
             return $users;
         }
         else
             return false;
     }
+
+    public static function count()
+    {
+        $conn = self::connect();
+
+        $res = $conn->query("SELECT COUNT(id) FROM tbl_user WHERE id != 1");
+
+        self::disconnect($conn);
+
+        return $res->fetchColumn();
+    } //ok
+
     public static function getUserById($id)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_getUserById(?);");
+        $conn = self::connect();
+
+        $stmt = $conn->prepare("SELECT * FROM tbl_user WHERE id = ?");
         $stmt->execute([$id]);
+
         self::disconnect($conn);
-        if($stmt->rowCount()){
-            $row=$stmt->fetch(PDO::FETCH_ASSOC);
-            return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
+
+        if ($stmt->rowcount()){
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            return new User(
+                $row['id'],
+                $row['u_name'],
+                $row['u_pass'],
+                $row['u_type'],
+                $row['u_rate'],
+                $row['u_email'],
+                $row['f_name'],
+                $row['l_name'],
+                $row['activated'],
+                $row['age'],
+                $row['sex'],
+                $row['bio'],
+                $row['avatar'],
+                $row['signup_time'],
+                $row['activation_code'],
+                $row['post_count'],
+                $row['follower_count'],
+                $row['following_count'],
+                $row['random_hash'],
+                $row['deleted']
+            );
         }
         else
             return false;
-    }
-    public static function getUserIdByPostId($id)
+    } //ok
+
+    public static function getUserByName($u_name)
     {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_getUserIdByPostId(?);");
-        $stmt->execute([$id]);
+        $conn = self::connect();
+
+        $stmt = $conn->prepare("SELECT * FROM tbl_user WHERE u_name = ?");
+        $stmt->execute([$u_name]);
+
         self::disconnect($conn);
-        if($stmt->rowCount())
-            return $stmt->fetch()['u_id'];
+
+        $row = $stmt->fetch();
+        if ($stmt->rowcount()){
+            return new User(
+                $row['id'],
+                $row['u_name'],
+                $row['u_pass'],
+                $row['u_type'],
+                $row['u_rate'],
+                $row['u_email'],
+                $row['f_name'],
+                $row['l_name'],
+                $row['activated'],
+                $row['age'],
+                $row['sex'],
+                $row['bio'],
+                $row['avatar'],
+                $row['signup_time'],
+                $row['activation_code'],
+                $row['post_count'],
+                $row['follower_count'],
+                $row['following_count'],
+                $row['random_hash'],
+                $row['deleted']
+            );
+        }
         else
             return false;
-    }
+    } //ok
+
     public static function insertUser($u_name,$u_pass,$u_email,$f_name,$l_name,$age,$sex,$bio,$avatar='avatar_default.png')
     {
         try
@@ -124,7 +217,7 @@ class User extends Base
             $stmt = $conn->prepare("CALL SP_user_insertUser(?,?,?,?,?,?,?,?,?,?);");
             $stmt->execute([$u_name,$hashed_pass,$u_email,$f_name,$l_name,$age,$sex,$bio,$avatar,$signup_time]);
             self::disconnect($conn);
-            if ( $stmt->rowCount() )
+            if ( $stmt->rowcount() )
                 $ret = array(true,"کاربر گرامی: یک ایمیل به آدرس ایمیلتان ارسال گردید. جهت فعالسازی حساب کاربری خود ایمیلتان راچک کرده و روی لینک فعالسازی کلیک نمایید. با تشکر.");
             if ( $ret[0] )
                 if (!User::sendActivationEmail($u_name, $u_email))
@@ -136,13 +229,14 @@ class User extends Base
         }
         return $ret;
     } //ok
+
     public static function sendActivationEmail($u_name, $u_email)
     {
         $conn = self::connect();
 
         // 1 = STOP DOS ATTACK FOR MAIL LIMITATION
         $now_time = time();
-        $query = "SELECT COUNT(*) FROM tbl_sent_mails WHERE u_email=? AND `time`>?-3600";
+        $query = "SELECT count(*) FROM tbl_sent_mails WHERE u_email=? AND `time`>?-3600";
         $stmt = $conn->prepare($query);
         $stmt->execute([$u_email, $now_time]);
         self::disconnect($conn);
@@ -185,7 +279,7 @@ EOS;
         $stmt = $conn->prepare($query);
         $stmt->execute([$u_email, $now_time, $now_time]);
         self::disconnect($conn);
-        if ($stmt -> rowCount()) {
+        if ($stmt -> rowcount()) {
             if ( self::sendMail($u_email, $subject, $content) )
             return array(true, "یک ایمیل حاوی لینک فعالسازی حساب کاربری به ایمیل شما ارسال شد. لطفا ایمیل خود را چک نموده و روی لینک فعالسازی کلیک نمایید.");
         else
@@ -193,17 +287,19 @@ EOS;
         }
 
     } //should update URL for web
+
     public static function activateUser($u_name, $activation_code)
     {
         $conn = self::connect();
         $stmt = $conn->prepare("CALL SP_user_activateUser(?,?);");
         $stmt->execute([$u_name, $activation_code]);
         self::disconnect($conn);
-        if ( $stmt->rowCount() )
+        if ( $stmt->rowcount() )
             return true;
         else
             return false;
-    } //ok
+    }
+
     public static function authenticateUser($u_name, $u_pass)
     {
         // returns an object or false or 'max-requests'
@@ -222,7 +318,7 @@ EOS;
 
         // get requersts count
         $conn = self::connect();
-        $stmt = $conn->prepare("SELECT COUNT(*) FROM tbl_login_history WHERE username=? AND `time` > DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 MINUTE );");
+        $stmt = $conn->prepare("SELECT count(*) FROM tbl_login_history WHERE username=? AND `time` > DATE_SUB(CURRENT_TIMESTAMP, INTERVAL 3 MINUTE );");
         $stmt->execute([$u_name]);
         self::disconnect($conn);
 
@@ -237,25 +333,14 @@ EOS;
             $stmt->execute([$u_name, $hashed_pass]);
             self::disconnect($conn);
             $row = $stmt->fetch();
-            if ( $stmt->rowCount() )
+            if ( $stmt->rowcount() )
                 return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
             else
                 return false;
         }
 
     } //ok
-    public static function getUserByName($u_name)
-    {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_getUserByName(?);");
-        $stmt->execute([$u_name]);
-        self::disconnect($conn);
-        $row=$stmt->fetch();
-        if($stmt->rowCount())
-            return new User($row['id'],$row['u_name'],$row['u_pass'],$row['u_type'],$row['u_rate'],$row['u_email'],$row['f_name'],$row['l_name'],$row['activated'],$row['age'],$row['sex'],$row['bio'],$row['avatar'],$row['signup_time'],$row['activation_code'],$row['post_count'],$row['follower_count'],$row['following_count'],$row['random_hash'], $row['deleted']);
-        else
-            return false;
-    }
+
     public static function checkUserNameExists($u_name)
     {
         $conn=self::connect();
@@ -267,6 +352,7 @@ EOS;
         else
             return true;
     }
+
     public static function checkEmailExists($u_email)
     {
         $conn=self::connect();
@@ -278,6 +364,7 @@ EOS;
         else
             return true;
     }
+
     public static function rememberUser($u_email)
     {
         $conn = self::connect();
@@ -362,62 +449,68 @@ EOS;
         } else {
             return false;//0 = کاربری با این ایمیل ثبت نام نکرده است!
         }
-    } //ok
-    public static function deleteUserById($user_id, $permanent=0)
-    {
-        $conn=self::connect();
-        $stmt=$conn->prepare("CALL SP_user_deleteUserById(?,?);");
-        $stmt->execute([$user_id,$permanent]);
-        self::disconnect($conn);
-        if($stmt->rowCount())
-            return true;
-        else
-            return false;
     }
+
+    public static function delete($user_id, $permanent=0)
+    {
+        $conn = self::connect();
+
+        $stmt = $conn->prepare("CALL SP_User_Delete(?,?);");
+        $stmt->execute([$user_id, $permanent]);
+
+        self::disconnect($conn);
+
+        return true;
+    }//ok
+
     public static function changeUserTypeById($id, $u_type)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_changeUserTypeById(?,?);");
         $stmt->execute([$id,$u_type]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if($stmt->rowcount())
             return true;
         else
             return false;
     }
+
     public static function getUserTypeById($id)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("SELECT FUNC_user_getUserType(?);");
         $stmt->execute([$id]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if($stmt->rowcount())
             return $stmt->fetch()[0];
         else
             return false;
     }
+
     public static function getLikesOfUser($u_id)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_getLikesOfUser(?);");
         $stmt->execute([$u_id]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if($stmt->rowcount())
             return $stmt->fetch()[0];
         else
             return false;
     }
+
     public static function updateUserAvatar($u_id, $new_path)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_user_updateUserAvatar(?,?);");
         $stmt->execute([$new_path,$u_id]);
         self::disconnect($conn);
-        if ($stmt->rowCount())
+        if ($stmt->rowcount())
             return true;
         else
             return false;
     }
+
     public static function updateUserPassByEmail($u_pass, $u_email)
     {
         $conn=self::connect();
@@ -431,6 +524,7 @@ EOS;
         else
             return false;
     }
+
     public static function updateUserPassByUserName($u_pass, $u_name)
     {
         $conn=self::connect();
@@ -439,45 +533,49 @@ EOS;
         $hashed_pass=md5($u_pass.$salt);
         $stmt->execute([$hashed_pass,$u_name]);
         self::disconnect($conn);
-        if ($stmt->rowCount())
+        if ($stmt->rowcount())
             return true;
         else
             return false;
 
     }
+
     public static function setRandomHash($u_name, $random_hash)
     {
         $conn = self::connect();
         $stmt = $conn->prepare("CALL SP_user_setRandomHash(?,?);");
         $stmt->execute([$u_name, $random_hash]);
         self::disconnect($conn);
-        if ( $stmt->rowCount() )
+        if ( $stmt->rowcount() )
             return true;
         else
             return false;
     }
+
     public static function getRandomHash($u_name)
     {
         $conn = self::connect();
         $stmt = $conn->prepare("CALL SP_user_getRandomHash(?);");
         $stmt->execute([$u_name]);
         self::disconnect($conn);
-        if ( $stmt->rowCount() )
+        if ( $stmt->rowcount() )
             return $stmt->fetch()[0];
         else
             return false;
     }
+
     public static function getUserInformations($u_id)
     {
         $conn=self::connect();
         $stmt=$conn->prepare("CALL SP_getInformationsOfUser(?);");
         $stmt->execute([$u_id]);
         self::disconnect($conn);
-        if($stmt->rowCount())
+        if($stmt->rowcount())
             return $stmt->fetch();
         else
             return false;
     }
+
 
 }
 

@@ -1,10 +1,395 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+    <list default="true" id="6ef8adbb-082e-49a2-b7fd-e2737075a531" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/classes/PostMeta.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/multimedia/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/multimedia/store.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/post/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/post/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/post/store.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/post_meta/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/post_meta/store.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/controllers/user/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/cpanel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/dashboard/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/multimedia/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/post/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/post/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/post/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel/views/post_meta/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/avatars/1565028929.1047053602.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/16x9/1563373743.934275287.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/16x9/1568314766.421905006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/4x3/1563373743.934275287.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/4x3/1568314766.421905006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/thumbnail/1563373743.934275287.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/multimedia/thumbnail/1568314766.421905006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/1024x500/1563373757.77265615.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/1024x500/1564209495.1203791980.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/1024x500/1568315073.260877938.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/1024x500/1570914577.394211967.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1563373757.77265615.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1564209495.1203791980.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1568315073.260877938.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1570914577.394211967.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/frameworks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/jquery.popper.bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/01system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/01system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/error_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/login-actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/login-actions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/show-post-actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/actions/show-post-actions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/cat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/friendship.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/friendship.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/pic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/post_cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/PostMetaRelation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/include_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/AMosalas.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/BHoma.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/BTitrBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/IRANSansWeb300.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/IRANSansWeb400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/IRANSansWeb600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/Vazir-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/Vazir-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/Vazir-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/Vazir.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/fonts/yekan.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/sample-works/sample-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/sample-works/sample-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/sample-works/sample-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/sample-works/sample-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/sample-works/sample-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/sample-works/sample-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1550063246.963262000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1550063246.963262000.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1563262053.53667242.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/includes/images/uploads/posts/260x260/1563262053.53667242.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/other/config-sample.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/other/config-sample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/other/convert_date.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/other/convert_date.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/leftbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/leftbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/searchPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/searchPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/showHomePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/showHomePage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/showPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/index/showPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/categories.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/change_pass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/check_and_upload_img.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/dashboard_actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/controllers/dashboard/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/multimedia.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/newpost.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/showposts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/signout.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/controllers/signout/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/action/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/views/user/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/contents.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/contents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/about/dialogs/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/about/dialogs/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/clipboard/dialogs/paste.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/clipboard/dialogs/paste.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/colordialog/dialogs/colordialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/colordialog/dialogs/colordialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/copyformatting/cursors/cursor.svg" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/copyformatting/cursors/cursor.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/copyformatting/styles/copyformatting.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/dialog/dialogDefinition.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/dialog/dialogDefinition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/div/dialogs/div.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/div/dialogs/div.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/find/dialogs/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/find/dialogs/find.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/flash/dialogs/flash.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/flash/dialogs/flash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/flash/images/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/flash/images/placeholder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/checkbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/hiddenfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/textarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/dialogs/textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/dialogs/textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/forms/images/hiddenfield.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/forms/images/hiddenfield.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/icons_hidpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/icons_hidpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/iframe/dialogs/iframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/iframe/dialogs/iframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/iframe/images/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/iframe/images/placeholder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/image/dialogs/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/image/dialogs/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/image/images/noimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/image/images/noimage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/link/dialogs/anchor.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/link/dialogs/anchor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/link/images/anchor.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/link/images/anchor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/link/images/hidpi/anchor.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/link/images/hidpi/anchor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/liststyle/dialogs/liststyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/magicline/images/hidpi/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/magicline/images/hidpi/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/magicline/images/icon-rtl.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/magicline/images/icon-rtl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/magicline/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/magicline/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/pagebreak/images/pagebreak.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/pastefromword/filter/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/pastefromword/filter/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/preview/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/preview/preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/dialogs/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/dialogs/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/dialogs/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/dialogs/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/dialogs/toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/dialogs/toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_address.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_address.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_blockquote.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_blockquote.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_div.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_div.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h1.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h2.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h3.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h4.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h5.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_h6.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_h6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_p.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/showblocks/images/block_pre.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/showblocks/images/block_pre.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/dialogs/smiley.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/dialogs/smiley.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/angel_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/angel_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/angel_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/angel_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/angry_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/angry_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/angry_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/angry_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/broken_heart.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/broken_heart.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/broken_heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/broken_heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/confused_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/confused_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/confused_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/confused_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/cry_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/cry_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/cry_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/cry_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/devil_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/devil_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/devil_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/devil_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/embaressed_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/embarrassed_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/embarrassed_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/envelope.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/envelope.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/envelope.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/envelope.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/heart.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/heart.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/kiss.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/kiss.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/kiss.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/kiss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/lightbulb.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/lightbulb.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/lightbulb.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/lightbulb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/omg_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/omg_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/omg_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/omg_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/regular_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/regular_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/regular_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/regular_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/sad_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/sad_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/sad_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/sad_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/shades_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/shades_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/shades_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/shades_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/teeth_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/teeth_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/teeth_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/teeth_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/thumbs_down.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/thumbs_down.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/thumbs_down.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/thumbs_down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/thumbs_up.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/thumbs_up.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/thumbs_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/thumbs_up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/tongue_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/tongue_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/tongue_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/tongue_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/tounge_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/tounge_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/wink_smile.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/wink_smile.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/smiley/images/wink_smile.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/smiley/images/wink_smile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/table/dialogs/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/table/dialogs/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/tableselection/styles/tableselection.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/tableselection/styles/tableselection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/dialogs/templates.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/dialogs/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/dialogs/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/templates/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/templates/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/templates/images/template1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/templates/images/template1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/templates/images/template2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/templates/images/template2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/templates/templates/images/template3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/templates/templates/images/template3.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/widget/images/handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/widget/images/handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/dialogs/ciframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/dialogs/ciframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/dialogs/wsc.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/dialogs/wsc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/dialogs/wsc.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/dialogs/wsc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/dialogs/wsc_ie.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/dialog_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/dialog_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/editor_gecko.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/editor_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/editor_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/editor_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/icons_hidpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/icons_hidpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/hidpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/hidpi/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/hidpi/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/lock-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/lock-open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/images/spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/images/spinner.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/skins/moono-lisa/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/ckeditor/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpanel/ckeditor/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/cpanel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management_system/error_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/changeAnswer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/cpanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/jquery-3.3.1.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/show-post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/smooth-scroll.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/animate.bootstrap.owlCarousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/cpanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/cpanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemir_mehran/.ftpquota" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/systemir_my_db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,102 +402,14 @@
       <executable />
     </execution>
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="01system" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectId" id="1RPiBZ6xM8VjuBDkvojCfrPocIT" />
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript function metricsJavaScript</id>
-          </State>
-          <State>
-            <id>LESS</id>
-          </State>
-          <State>
-            <id>PHP</id>
-          </State>
-          <State>
-            <id>Probable bugsJavaScript</id>
-          </State>
-          <State>
-            <id>SASS/SCSS</id>
-          </State>
-          <State>
-            <id>UndefinedPHP</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>CoffeeScript</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
+  <component name="ProjectId" id="1Sz9mnNNsSPK3NlvCJFw6BYPpJB" />
   <component name="PropertiesComponent">
-    <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="css&#10;config" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.2.14/php.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -126,64 +423,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" singleton="true">
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d8cd133-2c1e-4b08-b01b-c2eaae0f807c" name="Default Changelist" comment="" />
-      <created>1563303014934</created>
+      <changelist id="6ef8adbb-082e-49a2-b7fd-e2737075a531" name="Default Changelist" comment="" />
+      <created>1572555719393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1563303014934</updated>
-      <workItem from="1563303016467" duration="180000" />
-      <workItem from="1563303463420" duration="2794000" />
-      <workItem from="1563385267884" duration="2286000" />
-      <workItem from="1563449634162" duration="517000" />
-      <workItem from="1563465072418" duration="3591000" />
-      <workItem from="1563547196373" duration="4968000" />
-      <workItem from="1564218441484" duration="681000" />
-      <workItem from="1564253329766" duration="3408000" />
-      <workItem from="1564297761289" duration="4492000" />
-      <workItem from="1564304078205" duration="9564000" />
-      <workItem from="1564335012304" duration="2681000" />
-      <workItem from="1564420055843" duration="9866000" />
-      <workItem from="1564561854116" duration="6677000" />
-      <workItem from="1564593301007" duration="7723000" />
-      <workItem from="1564633038781" duration="83000" />
-      <workItem from="1564650793576" duration="730000" />
-      <workItem from="1564760182520" duration="624000" />
-      <workItem from="1564768897847" duration="1999000" />
-      <workItem from="1564823408150" duration="999000" />
-      <workItem from="1564893080531" duration="177000" />
-      <workItem from="1564945781404" duration="3365000" />
-      <workItem from="1564992761859" duration="3121000" />
-      <workItem from="1565113850355" duration="705000" />
-      <workItem from="1569574998607" duration="275000" />
-      <workItem from="1569575929001" duration="216000" />
-      <workItem from="1569577900604" duration="1189000" />
-      <workItem from="1569593897553" duration="17105000" />
-      <workItem from="1569611961807" duration="1503000" />
-      <workItem from="1569644227816" duration="2081000" />
+      <updated>1572555719393</updated>
+      <workItem from="1572555724477" duration="945000" />
+      <workItem from="1572599222440" duration="13015000" />
+      <workItem from="1572625628260" duration="3565000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -199,11 +453,6 @@
           </value>
         </entry>
       </map>
-    </option>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
     </option>
   </component>
 </project>

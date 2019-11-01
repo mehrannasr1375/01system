@@ -55,7 +55,7 @@ function convertDate($time)
             break;
     }
     $newDate['day']=$dayNumber;
-    $newDate['month_num']=$monthNumber;
+        $newDate['month_num']=$monthNumber;
     $newDate['month_name']=$months[$monthNumber-1];
     if(($monthNumber<3) or (($monthNumber==3) and ($dayNumber<21))){
         $newDate['year']=$year-622;

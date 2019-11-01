@@ -10,6 +10,7 @@ class  Upload
     private $fileNameNew;
     private $destination;
 
+
     public function __construct($uploadFieldName)
     {
         $this -> fileName    =  $_FILES[$uploadFieldName]['name'];
@@ -25,6 +26,7 @@ class  Upload
         else
             return 'try to get an invalid or inaccessible property : '."$property";
     }
+
 
     public function checkImg($maxSize=1024, $acceptable_types=['jpg', 'jpeg', 'png', 'gif'])
     {
@@ -49,6 +51,7 @@ class  Upload
         } else
             return [false, "notimage"];
     }
+
     public function resizeAndSaveImg($newWidth, $newHeight, $new_path='../includes/images/uploads/posts/', $quality=100)
     {
         if(!$this -> fileType)

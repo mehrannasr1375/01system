@@ -1,7 +1,7 @@
 <?php
 
 //PUBLIC CONFIGURE
-define("DEVELOPING_MODE",true);
+define("DEVELOPING_MODE",false);
 define("MAX_POST",5);
 define("MAX_POSTS_TABLE",7);
 define("MAX_PICS_GRID",10);
@@ -9,7 +9,7 @@ define("MAX_LAST_POST",10);
 
 //DATABASE CONFIGURE
 define("HOST_NAME","localhost");
-define("DB_NAME","systemir_my_db");
+define("DB_NAME","");
 define("DB_USER","");
 define("DB_PASS","");
 
@@ -22,9 +22,14 @@ define("EMAIL_PASSWORD","");
 
 //SOCIAL NETWORK LINKS CONFIGURE
 define("FACEBOOK_ADDRESS","#");
-define("TELEGRAM_ADDRESS","#");
 define("GOOGLE_PLUS_ADDRESS","#");
-define("INSTAGRAM","#");
+define("TELEGRAM_ADDRESS","#");
+define("INSTAGRAM_ADDRESS","#");
+define("WHATSUP_ADDRESS","#");
+define("LINKEDIN_ADDRESS","#");
+define("CODEPEN_ADDRESS","#");
+define("GITHUB_ADDRESS","#");
+define("TWITTER_ADDRESS","#");
 
 //IMAGE RESIZE QUALITIES
 define("POST_IMG_DEFAULT","post_default.jpg");

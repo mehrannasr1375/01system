@@ -7,6 +7,7 @@ require_once "PHPMailer/SMTP.php";
 
 class Base
 {
+
     protected static function connect()
     {
         try {
@@ -25,13 +26,16 @@ class Base
             return $conn;//returns 'false' or an object from 'PDOStatement' class
         }
         catch (Exception $e) {
-            return "DATABASE CONNECTION ERROR: " . $e->getMessage();
+            if ( DEVELOPING_MODE === true )
+                return "DATABASE CONNECTION ERROR: " . $e->getMessage();
         }
     }
+
     protected static function disconnect($conn)
     {
         unset($conn);
     }
+
     public static function sendMail($target_email,$subject,$content)
     {
         $mail = new PHPMailer(true);           // Passing `true` enables exceptions
@@ -61,4 +65,5 @@ class Base
         }
 
     }
+
 }

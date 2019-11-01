@@ -2,7 +2,6 @@
 
 
 
-
     <!-- Logo --------------------------------------------------------------------------------------------------------------------------------------->
     <a id="logo" href="http://www.01system.ir">
         <img src="includes/images/2.png">
@@ -37,11 +36,11 @@
     <!-- Login Btns --------------------------------------------------------------------------------------------------------------------------------->
     <div id="login-state">
         <?php
-            if (isset($_SESSION['u_name']))
-                echo "<a id='btn-profile' class='btn-sign-in' href='management_system/cpanel.php'><i class='fa fa-user-circle-o'></i>".$_SESSION["u_name"]."</a>
+        if (isset($_SESSION['u_name']))
+            echo "<a id='btn-profile' class='btn-sign-in' href='cpanel/cpanel.php'><i class='fa fa-user-circle-o'></i>".$_SESSION["u_name"]."</a>
                       <a id='btn-sign-out' class='btn-sign-out'><i class='fa fa-sign-out'></i>خروج</a>";
-            else
-                echo "<a id='btn-signin' class='btn-sign-in'><i class='fa fa-lock'></i>ورود</a>
+        else
+            echo "<a id='btn-signin' class='btn-sign-in'><i class='fa fa-lock'></i>ورود</a>
                       <a id='btn-signup' class='btn-sign-up'><i class='fa fa-sign-in'></i>ثبت نام</a>";
         ?>
     </div>
@@ -63,7 +62,7 @@
         <div class="my-2 mb-3 mx-auto">
             <?php
             if (isset($_SESSION['u_name']))
-                echo "<a id='btn-profile'  class='btn-user text-dark' href='management_system/cpanel.php'><i class='fa fa-user-circle-o'></i>".$_SESSION["u_name"]."</a>
+                echo "<a id='btn-profile'  class='btn-user text-dark' href='cpanel/cpanel.php'><i class='fa fa-user-circle-o'></i>".$_SESSION["u_name"]."</a>
                       <a id='btn-sign-out' class='btn-sign-out'><i class='fa fa-sign-out'></i>خروج</a>";
             else
                 echo "<a id='btn-signin'   class='btn-sign-in'><i class='fa fa-lock'></i>ورود</a>

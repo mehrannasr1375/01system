@@ -1,14 +1,6 @@
-@font-face {  font-family: 'bhoma';         src: url(../includes/fonts/BHoma.ttf) ;  }
-@font-face {  font-family: 'Vazir';         src: url(../includes/fonts/Vazir.ttf) ;  }
-@font-face {  font-family: 'Vazir-Light';   src: url(../includes/fonts/Vazir-Light.ttf) ;  }
-@font-face {  font-family: 'Vazir-Medium';  src: url(../includes/fonts/Vazir-Medium.ttf) ;  }
-@font-face {  font-family: 'Vazir-Thin';    src: url(../includes/fonts/Vazir-Thin.ttf) ;  }
-@font-face {  font-family: 'yekan';         src: url("../includes/fonts/yekan.woff") format('woff');  font-weight: normal;  }
 @font-face {  font-family: 'IranSans';  font-weight:200;  src: url('../includes/fonts/IRANSansWeb200.woff') format('woff');  }
-@font-face {  font-family: 'IranSans';  font-weight:300;  src: url('../includes/fonts/IRANSansWeb300.woff') format('woff');  }
 @font-face {  font-family: 'IranSans';  font-weight:400;  src: url('../includes/fonts/IRANSansWeb400.woff') format('woff');  }
 @font-face {  font-family: 'IranSans';  font-weight:500;  src: url('../includes/fonts/IRANSansWeb500.woff') format('woff');  }
-@font-face {  font-family: 'IranSans';  font-weight:600;  src: url('../includes/fonts/IRANSansWeb600.woff') format('woff');  }
 @font-face {  font-family: 'IranSans';  font-weight:900;  src: url('../includes/fonts/IRANSansWeb900.woff') format('woff');  }
 
 .cke_dialog_ui_input_text{

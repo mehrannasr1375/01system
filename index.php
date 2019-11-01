@@ -31,6 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>01System</title>
     <link rel="icon" type="image/png" href="./includes/images/2.png"/>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139533490-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -38,13 +39,12 @@
         gtag('js', new Date());
         gtag('config', 'UA-139533490-1');
     </script>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/animate.css">
-    <link rel="stylesheet" href="styles/owl.carousel.min.css" />
+    <link rel="stylesheet" href="styles/animate.bootstrap.owlCarousel.css">
     <link rel="stylesheet" href="styles/css.css">
     <link rel="stylesheet" href="styles/rtl.css">
     <link rel="stylesheet" href="styles/devicon.min.css">
+    <script src="scripts/frameworks.js"></script>
 </head>
 <body id="home">
 
@@ -72,10 +72,10 @@
         if ( isset($_GET['post']) && is_numeric($_GET['post']) )
             require_once __DIR__ ."/index/showPost.php";
 
-        else if ( isset($_GET['action']) && $_GET['action']=='search' )
+        else if ( isset($_GET['action']) && $_GET['action'] == 'search' )
             require_once __DIR__ ."/index/searchPage.php";
 
-        else if ( isset($_GET['action']) && $_GET['action']=='activate' ) {
+        else if ( isset($_GET['action']) && $_GET['action'] == 'activate' ) {
             if ( isset($_GET['username']) && isset($_GET['code']) )
                 require_once __DIR__ ."/index/activated_page.php";
         }
@@ -243,18 +243,14 @@
 
 
 
-    <!--  Scripts  -->
-    <script src="scripts/jquery-3.3.1.js"></script>
-    <script src="scripts/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/owl.carousel.min.js"></script>
-    <script src="scripts/wow.min.js"></script>
-    <script src="scripts/smooth-scroll.min.js"></script>
-    <script src="scripts/js.js"></script>
-    <script src="scripts/show-post.js"></script>
-    <script src="scripts/login.js"></script>
-    <script src="scripts/changeAnswer.js"></script>
 </div>
+
+
+
+<!--  Scripts  --------------------------------------------------------------------------------------------------------------------------------------------------->
+<script src="scripts/js.js"></script>
+
+
 
 </body>
 </html>

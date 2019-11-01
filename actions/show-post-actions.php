@@ -8,19 +8,17 @@ if (!isset($_SESSION['u_id']))
 //send comment
 if (isset($_POST['action']) && $_POST['action'] == 'send-comment')
 {
-    if ($_POST['parent'] != 0)
-        $parent_id = (int)$_POST['parent'];
-    elseif ($_POST['parent'] == 0)
-        $parent_id = 1;
-    $name      =  $_POST['name'];
-    $email     =  $_POST['email'];
-    $site      =  $_POST['site'];
-    $comment   =  $_POST['comment'];
-    $post_id   =  $_POST['post'];
-    if ($name=="" || $comment=="")
+    $parent_id = ($_POST['parent'] != 0) ? (int)$_POST['parent'] : 0;
+
+    $email   = $_POST['email'];
+    $site    = $_POST['site'];
+    $comment = $_POST['comment'];
+    $post_id = $_POST['post'];
+
+    if ($comment == "")
         die("false");
-    else {
-        $res = Comment::insertComment($name, $email, $site, $comment, $post_id, $parent_id, $_SESSION['u_id']);
+    else{
+        $res = Comment::insertComment($email, $site, $comment, $post_id, $parent_id, $_SESSION['u_id']);
         if ($res)
             die("true");
         else

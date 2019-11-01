@@ -7,6 +7,7 @@ class Pic extends Base
     private $u_id;
     private $date;
 
+
     public function __construct($a,$b,$c,$d){
         $this->id       = (int)$a;
         $this->pic_name = $b;
@@ -17,10 +18,12 @@ class Pic extends Base
         return $this->$property;
     }
 
+
     public static function insertPic($pic_name, $u_id)
     {
-        $date = time();
         $conn = self::connect();
+
+        $date = time();
         $stmt = $conn->prepare("CALL SP_pic_insertPic(?,?,?)");
         try {
             $stmt->execute([$pic_name,$u_id,$date]);
@@ -28,59 +31,87 @@ class Pic extends Base
         catch (PDOException $e){
             return false;
         }
+
         self::disconnect($conn);
-        if ($stmt->rowCount())
+
+        if ($stmt->rowcount())
             return true;
         else
             return false;
     }//ok
+
     public static function deletePicById($pic_id)
     {
         $conn = self::connect();
         $stmt = $conn->prepare("CALL SP_pic_deletePicById(?)");
         $stmt->execute([$pic_id]);
         self::disconnect($conn);
-        if ($stmt->rowCount())
+        if ($stmt->rowcount())
             return true;
         else
             return false;
     }//ok
+
+    public static function deletePicByName($pic_name)
+    {
+        $conn = self::connect();
+        $stmt = $conn->prepare("DELETE FROM tbl_pic WHERE pic_name=?");
+        $stmt->execute([$pic_name]);
+        self::disconnect($conn);
+        if ($stmt->rowcount())
+            return true;
+        else
+            return false;
+    }//ok
+
     public static function deletePicsOfUser($user_id)
     {
         $conn = self::connect();
         $stmt = $conn->prepare("CALL SP_pic_deletePicsOfUser(?)");
         $stmt->execute([$user_id]);
         self::disconnect($conn);
-        if ($stmt->rowCount())
+        if ($stmt->rowcount())
             return true;
         else
             return false;
     }//ok
+
     public static function getPicsOfUser($u_id, $limit=0, $start=1)
     {
         $conn = self::connect();
+
         $stmt = $conn->prepare("CALL SP_pic_getPicsOfUser(?,?,?)");
         $stmt->execute([$u_id,$limit,$start]);
-        if($stmt->rowCount()) {
+
+        if ($stmt->rowcount()) {
             $ret = array();
             foreach ($stmt->fetchAll() as $res) {
                 $ret[] = new Pic($res['id'], $res['pic_name'], $res['u_id'], $res['date']);
             }
-        } else
+        }
+        else
             $ret = false;
+
         self::disconnect($conn);
+
         return $ret;
     }//ok
-    public static function getPicsCountOfUser($u_id)
+
+    public static function getPicscountOfUser($u_id)
     {
         $conn = self::connect();
-        $stmt = $conn->prepare("CALL SP_pic_getPicsCountOfUser(?)");
+
+        $stmt = $conn->prepare("CALL SP_Pic_GetPicsCountOfUser(?)");
         $stmt->execute([$u_id]);
-        if($stmt->rowCount()) {
-            $ret = (int)$stmt->fetch()[0];
-        } else
-            $ret = (int)0;
+
+        if ($stmt->rowcount()) {
+            $ret = $stmt->fetch();
+        }
+        else
+            $ret = 0;
+
         self::disconnect($conn);
+
         return $ret;
     }//ok
 

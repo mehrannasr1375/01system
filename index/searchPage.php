@@ -21,7 +21,7 @@
         <div id="search-posts-parent" class="col-12 col-md-9">
             <?php
                 if ($count > 0 && $empty_flag == false) {   
-                    echo "<div class='alert alert-info mb-3'><p><span>". $count. " نتیجه یافت شد! </p></div>";
+                    echo "<div class='alert alert-info mb-3'><p>". $count. " نتیجه یافت شد! </p></div>";
                     foreach ($last_posts as $post) {
                         ?>
                             <a href="./?post=<?=$post->id?>">

@@ -9,8 +9,10 @@
 ?>
 
 
-<!-- left sidebar -->
+
+<!-- CONTAINER ------------------------------------------------------------------------------------------------------------------------->
 <div id="leftbar" class="col-12 col-lg-3 bg-light">
+
 
 
     <!-- search -->
@@ -18,7 +20,7 @@
         <div class="left-part-header">
             <p>جستجو در مطالب</p>
         </div>
-        <form method="post" action="/01system/index.php?action=search" class="m-0 p-0">
+        <form method="post" action="./index.php?action=search" class="m-0 p-0">
             <div class="left-part-body">
                 <div class="input-group">
                     <input type="text" id="search" name="search-text" class="form-control" placeholder="جستجو کنید ..." autocomplete="off"/>
@@ -31,11 +33,14 @@
     </div>
 
 
+
     <!-- last posts -->
     <div class="left-part">
+
         <div class="left-part-header">
             <p>آخرین مطالب</p>
         </div>
+
         <div class="left-part-body">
             <?php
             if (count((array)$last_posts)>=1 && $last_posts!==false) {
@@ -53,14 +58,18 @@
             }
             ?>
         </div>
+
     </div>
+
 
 
     <!-- top posts -->
     <div class="left-part">
+
         <div class="left-part-header">
             <p>برترین مطالب</p>
         </div>
+
         <div class="left-part-body">
             <?php
             if (count((array)$top_posts)>=1 && $top_posts!==false) {
@@ -78,7 +87,9 @@
             }
             ?>
         </div>
+
     </div>
+
 
 
 </div>
